@@ -18,9 +18,6 @@ import { resolve } from "path";
 import { HardhatUserConfig, task } from "hardhat/config";
 import { HttpNetworkUserConfig } from "hardhat/types";
 
-import "./tasks/accounts";
-import "./tasks/clean";
-
 const { isAddress, getAddress, formatUnits, parseUnits } = utils;
 
 //
