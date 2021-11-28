@@ -1,29 +1,63 @@
-import React from "react"
-import logo from "./logo.jpg"
-import "./App.css"
+import { useDisclosure } from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
+import { HashRouter } from "react-router-dom";
+import { RecoilRoot } from "recoil";
+import { useWeb3Context } from "web3-react";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import ConnectWalletModal from "./components/wallet/ConnectWalletModal";
+import Routes from "./routes";
+
+import Web3Provider from "./services/web3/Web3Provider";
+import { ThemeProvider } from "./theme";
+import "./theme/App.scss";
 
 function App() {
   return (
     <div className="App">
-      <div className="stars"></div>
-      <div className="twinkling"></div>
-      <header className="App-header">
-        <div style={{ zIndex: 1 }}>
-          <h1 className="test" style={{ marginBottom: 0 }}>
-            Celostrials
-          </h1>
-          <p style={{ marginTop: "1em", marginBottom: "2em" }}>
-            Coming soon to a solar system near you...
-          </p>
-          <div className="homecardContainerContainer">
-            <div className="homeCardContainer">
-              <img src={logo} className="homeCard" alt="logo" />
-            </div>
-          </div>
-        </div>
-      </header>
+      <ThemeProvider>
+        <RecoilRoot>
+          <Web3Provider>
+            <HashRouter>
+              <AppLayout />
+            </HashRouter>
+          </Web3Provider>
+        </RecoilRoot>
+      </ThemeProvider>
     </div>
-  )
+  );
 }
 
-export default App
+const AppLayout = () => {
+  const canAccess = useAppGuard();
+  const connectModal = useDisclosure();
+
+  return (
+    <>
+      <div className="stars"></div>
+      <div className="twinkling"></div>
+      <div className="clouds"></div>
+      <Routes />
+      <Header />
+      {/* <Footer /> */}
+      <ConnectWalletModal isOpen={!canAccess} onClose={connectModal.onClose} />
+    </>
+  );
+};
+
+const useAppGuard = () => {
+  const context = useWeb3Context();
+  const [canAccess, setCanAccess] = useState(false);
+
+  useEffect(() => {
+    if (context.active) {
+      setCanAccess(true);
+    } else {
+      setCanAccess(false);
+    }
+  }, [context]);
+
+  return canAccess;
+};
+
+export default App;

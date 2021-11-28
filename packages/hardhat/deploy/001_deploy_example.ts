@@ -1,18 +1,14 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
-import { deployProxyAndSave } from "../utils/utils";
 import { deployments, ethers } from "hardhat";
 
 const func: DeployFunction = async function(
   hardhat: HardhatRuntimeEnvironment
 ) {
-  const { relaySigner } = await hardhat.getNamedAccounts();
-
-  // nothingToken deploy
-  // const nothingTokenAbi = (await hardhat.artifacts.readArtifact("Name")).abi
-  // const nothingTokenArgs = [hardhat.ethers.utils.parseEther("100000000"), []]
-
-  // await deployProxyAndSave("NothingToken", nothingTokenArgs, hardhat, nothingTokenAbi)
+  const vesting = await deployments.deploy("Celostrials", {
+    from: (await hardhat.ethers.getSigners())[0].address,
+    args: [],
+  });
 };
 export default func;
-func.tags = ["NOTHING"];
+func.tags = ["Celostrials"];
