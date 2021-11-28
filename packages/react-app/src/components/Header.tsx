@@ -9,23 +9,83 @@ import { useWeb3Context } from "web3-react";
 import Button from "./Button";
 import AddressInfo from "./wallet/AddressInfo";
 import logoImage from "../assets/logo.png";
+import { ethers } from "ethers";
+import config from "../config";
+import { gradients } from "../theme/foundations/colors";
+import { useEffect } from "react";
+
+const metaMaskIcon =
+  "https://cdn.iconscout.com/icon/free/png-256/metamask-2728406-2261817.png";
 
 export const Header = () => {
   const history = useHistory();
   const location = useLocation();
   const context = useWeb3Context();
 
+  const connect = async () => {
+    Promise.all([
+      requestAddNetwork(),
+      context.setFirstValidConnector(["MetaMask"]),
+    ]).then(() => {
+      context.setFirstValidConnector(["MetaMask"]);
+    });
+  };
+
+  useEffect(() => {
+    if (context.error) {
+      context.unsetConnector();
+    }
+  }, [context]);
+
+  const requestAddNetwork = async () => {
+    const _window = window as any;
+
+    await _window.ethereum.request({
+      method: "wallet_addEthereumChain",
+      params: [
+        {
+          chainId: ethers.utils.parseUnits(
+            config.NETWORK_CHAIN_ID.toString(),
+            "wei"
+          )._hex,
+          chainName: config.NETWORK_NAME,
+          nativeCurrency: {
+            name: config.NETWORK_CURRENCY_NAME,
+            symbol: config.NETWORK_CURRENCY_SYMBOL,
+            decimals: 18,
+          },
+          rpcUrls: [config.NETWORK_URL],
+          blockExplorerUrls: [config.NETWORK_EXPLORER_URL],
+          iconUrls: ["future"],
+        },
+      ],
+    });
+  };
+
   return (
-    <Flex {...containerStyles}>
-      <Image w="2em" src={logoImage} />
-      <HStack align="center" spacing={6}>
-        {context.library && (
-          <>
-            <AddressInfo />
-          </>
-        )}
-      </HStack>
-    </Flex>
+    <>
+      <Flex {...containerStyles}>
+        <Image w="2em" src={logoImage} />
+        <HStack align="center" spacing={6}>
+          {context.library && (
+            <>
+              <AddressInfo />
+            </>
+          )}
+          {!context.library && (
+            <Button
+              size="md"
+              onClick={async () => await connect()}
+              background={gradients.primary}
+              justifyContent="space-between"
+              rightIcon={<Image width="2em" src={metaMaskIcon} />}
+            >
+              Connect Wallet
+            </Button>
+          )}
+        </HStack>
+      </Flex>
+    </>
   );
 };
 

@@ -29,7 +29,6 @@ function App() {
 }
 
 const AppLayout = () => {
-  const canAccess = useAppGuard();
   const connectModal = useDisclosure();
 
   return (
@@ -40,24 +39,8 @@ const AppLayout = () => {
       <Routes />
       <Header />
       {/* <Footer /> */}
-      <ConnectWalletModal isOpen={!canAccess} onClose={connectModal.onClose} />
     </>
   );
-};
-
-const useAppGuard = () => {
-  const context = useWeb3Context();
-  const [canAccess, setCanAccess] = useState(false);
-
-  useEffect(() => {
-    if (context.active) {
-      setCanAccess(true);
-    } else {
-      setCanAccess(false);
-    }
-  }, [context]);
-
-  return canAccess;
 };
 
 export default App;
