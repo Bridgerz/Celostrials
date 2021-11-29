@@ -20,7 +20,7 @@ import {
 import { getTxEvents } from "../../../services/web3/utils/getTxEvent";
 
 const HomePage = () => {
-  const { mint, totalSupply } = useCelostrialsContract();
+  // const { mint, totalSupply } = useCelostrialsContract();
   const mintModal = useDisclosure();
   const connect = useConnectWallet();
 
@@ -38,43 +38,43 @@ const HomePage = () => {
     return Number(ethers.utils.formatUnits(event?.args?.tokenId, "wei"));
   };
 
-  const submitTx = async (amount: number) => {
-    const test = ethers.utils.formatUnits((await totalSupply()) || 0, "wei");
-    setLoading(true);
-    let tx;
-    try {
-      tx = await mint(amount);
-    } catch (e) {
-      const error = e as any;
-      if (error.data)
-        toast({
-          title: getVMErrorMessage(error.data.message),
-          status: "error",
-        });
-      else {
-        let internalError = tryGetErrorMessage(error.message);
-        if (internalError)
-          toast({
-            title: internalError,
-            status: "error",
-          });
-        else
-          toast({
-            title: error.message,
-            status: "error",
-          });
-      }
-    }
-    if (!tx) {
-      connect();
-      return;
-    }
-    const receipt = await tx.wait();
-    const events = getTxEvents(receipt, "Transfer");
-    const tokenIds = events.map((event) => getTokenId(event));
-    console.log(tokenIds);
-    setLoading(false);
-  };
+  // const submitTx = async (amount: number) => {
+  //   const test = ethers.utils.formatUnits((await totalSupply()) || 0, "wei");
+  //   setLoading(true);
+  //   let tx;
+  //   try {
+  //     tx = await mint(amount);
+  //   } catch (e) {
+  //     const error = e as any;
+  //     if (error.data)
+  //       toast({
+  //         title: getVMErrorMessage(error.data.message),
+  //         status: "error",
+  //       });
+  //     else {
+  //       let internalError = tryGetErrorMessage(error.message);
+  //       if (internalError)
+  //         toast({
+  //           title: internalError,
+  //           status: "error",
+  //         });
+  //       else
+  //         toast({
+  //           title: error.message,
+  //           status: "error",
+  //         });
+  //     }
+  //   }
+  //   if (!tx) {
+  //     connect();
+  //     return;
+  //   }
+  //   const receipt = await tx.wait();
+  //   const events = getTxEvents(receipt, "Transfer");
+  //   const tokenIds = events.map((event) => getTokenId(event));
+  //   console.log(tokenIds);
+  //   setLoading(false);
+  // };
 
   return (
     <>
