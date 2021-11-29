@@ -1,21 +1,25 @@
-import { ethers } from "ethers"
-import { useEffect, useState } from "react"
-import { useWeb3Context } from "web3-react"
-import { WalletConnectionNotFoundError } from "../../errors/errors"
+import { ethers } from "ethers";
+import { useEffect, useState } from "react";
+import { useWeb3Context } from "web3-react";
 
 export const useGetEthersProviderAndSigner = () => {
-  const context = useWeb3Context()
-  if (!context.library) throw WalletConnectionNotFoundError
+  const context = useWeb3Context();
   const [provider, setProvider] = useState(
-    new ethers.providers.Web3Provider(context.library.provider),
-  )
-  const [signer, setSigner] = useState(provider.getSigner())
+    context.library
+      ? new ethers.providers.Web3Provider(context.library.provider)
+      : null
+  );
+  const [signer, setSigner] = useState(provider ? provider.getSigner() : null);
 
   useEffect(() => {
-    const newProvider = new ethers.providers.Web3Provider(context.library.provider)
-    setProvider(newProvider)
-    setSigner(newProvider.getSigner())
-  }, [context.library.provider])
+    if (context?.library?.provider) {
+      const newProvider = new ethers.providers.Web3Provider(
+        context.library.provider
+      );
+      setProvider(newProvider);
+      setSigner(newProvider.getSigner());
+    }
+  }, [context?.library?.provider]);
 
-  return { provider, signer }
-}
+  return { provider, signer };
+};

@@ -1,3 +1,5 @@
-import { config } from "../../config"
+import { config } from "../../config";
 
-export const CONTRACTS = {}
+export const CONTRACTS = {
+  Celostrials: config.CELOSTRIALS_ADDRESS,
+};

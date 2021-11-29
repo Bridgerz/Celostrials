@@ -23,7 +23,12 @@ const Footer = ({ ...rest }: BoxProps) => {
         <Text>© 2021 Celostrails. All Rights Reserved</Text>
         <Text>
           Official Contract Address -{" "}
-          <Text as="a" fontWeight={"bold"} href="https://explorer.celo.org/">
+          <Text
+            as="a"
+            target={"_blank"}
+            fontWeight={"bold"}
+            href="https://explorer.celo.org/"
+          >
             Coming soon!
           </Text>
         </Text>

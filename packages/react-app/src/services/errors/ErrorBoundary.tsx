@@ -1,31 +1,31 @@
-import React from "react"
-import SomethingWentWrongPage from "../../pages/SomethingWentWrongPage"
+import React from "react";
+import SomethingWentWrongPage from "../../pages/SomethingWentWrongPage";
 
-type Props = {}
+type Props = {};
 
-type State = { hasError: boolean }
+type State = { hasError: boolean };
 
 class ErrorBoundary extends React.Component<Props, State> {
   constructor(props) {
-    super(props)
-    this.state = { hasError: false }
+    super(props);
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error) {
-    return { hasError: true, errorMessage: error.message }
+    return { hasError: true, errorMessage: error.message };
   }
 
   componentDidCatch(error, errorInfo) {
-    return { ...this.state }
+    return { ...this.state };
   }
 
   render() {
     if (this.state.hasError) {
-      return <SomethingWentWrongPage />
+      return <SomethingWentWrongPage />;
     } else {
-      return this.props.children
+      return this.props.children;
     }
   }
 }
 
-export default ErrorBoundary
+export default ErrorBoundary;

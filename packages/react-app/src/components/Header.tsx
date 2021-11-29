@@ -1,18 +1,13 @@
 import { Flex, HStack, StackProps } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/react";
-
-import { faChartPie, faStore } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import { useWeb3Context } from "web3-react";
 import Button from "./Button";
 import AddressInfo from "./wallet/AddressInfo";
 import logoImage from "../assets/logo.png";
-import { ethers } from "ethers";
-import config from "../config";
+
 import { gradients } from "../theme/foundations/colors";
-import { useEffect } from "react";
+import { useConnectWallet } from "../services/web3/utils/useConnectWallet";
 
 const metaMaskIcon =
   "https://cdn.iconscout.com/icon/free/png-256/metamask-2728406-2261817.png";
@@ -21,46 +16,7 @@ export const Header = () => {
   const history = useHistory();
   const location = useLocation();
   const context = useWeb3Context();
-
-  const connect = async () => {
-    Promise.all([
-      requestAddNetwork(),
-      context.setFirstValidConnector(["MetaMask"]),
-    ]).then(() => {
-      context.setFirstValidConnector(["MetaMask"]);
-    });
-  };
-
-  useEffect(() => {
-    if (context.error) {
-      context.unsetConnector();
-    }
-  }, [context]);
-
-  const requestAddNetwork = async () => {
-    const _window = window as any;
-
-    await _window.ethereum.request({
-      method: "wallet_addEthereumChain",
-      params: [
-        {
-          chainId: ethers.utils.parseUnits(
-            config.NETWORK_CHAIN_ID.toString(),
-            "wei"
-          )._hex,
-          chainName: config.NETWORK_NAME,
-          nativeCurrency: {
-            name: config.NETWORK_CURRENCY_NAME,
-            symbol: config.NETWORK_CURRENCY_SYMBOL,
-            decimals: 18,
-          },
-          rpcUrls: [config.NETWORK_URL],
-          blockExplorerUrls: [config.NETWORK_EXPLORER_URL],
-          iconUrls: ["future"],
-        },
-      ],
-    });
-  };
+  const connect = useConnectWallet();
 
   return (
     <>

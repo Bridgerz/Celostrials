@@ -9,6 +9,8 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/security/Pausable.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "hardhat/console.sol";
+
 
 contract Celostrials is Ownable, Pausable, ERC721Enumerable {
     using Strings for uint256;
@@ -16,7 +18,7 @@ contract Celostrials is Ownable, Pausable, ERC721Enumerable {
     string public baseURI;
     string public baseExtension = ".json";
     uint256 public maxSupply = 5000;
-    uint256 private traunchSize = 500;
+    uint256 private traunchSize = 100;
     uint256 private currentTraunch = 0;
     uint256 public maxMintAmount = 50;
     uint256 public cost = 2 ether;
@@ -44,12 +46,13 @@ contract Celostrials is Ownable, Pausable, ERC721Enumerable {
             require(msg.value >= cost * _mintAmount, "Celostrials: Insuffcient Celo");
         }
         for (uint16 i = 1; i <= _mintAmount; i++) {
-          mintRandom(_to, supply);
+          mintRandom(_to);
         }
     }
 
-    function mintRandom(address _to, uint256 supply) internal {
-      if ((supply + 1) % traunchSize == 0) {
+    function mintRandom(address _to) internal {
+      uint256 supply = totalSupply();
+      if (supply % traunchSize == 0) {
         currentTraunch++;
       }
       uint256 index = getRandomInTraunch(supply);
@@ -70,8 +73,8 @@ contract Celostrials is Ownable, Pausable, ERC721Enumerable {
     }
 
     function getRandomInTraunch(uint256 supply) internal returns (uint256) {
-      uint256 offset = traunchSize * currentTraunch;
-      uint256 randomnumber = uint(keccak256(abi.encodePacked(block.timestamp, msg.sender, supply))) % (traunchSize +1);
+      uint256 offset = traunchSize * currentTraunch + 1;
+      uint256 randomnumber = uint(keccak256(abi.encodePacked(block.timestamp, msg.sender, supply))) % (traunchSize + 1);
       randomnumber = randomnumber + offset;
       return randomnumber;
     }

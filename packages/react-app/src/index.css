@@ -1,5 +1,5 @@
 body {
-  background-color: #000 !important;
+  /* background-color: #000 !important; */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -15,7 +15,6 @@ code {
 
 .App {
   text-align: center;
-  min-height: 110vh;
 }
 
 .homeCard {
@@ -23,7 +22,6 @@ code {
   height: 75vmin;
   max-height: 500px;
   pointer-events: none;
-  margin-top: 3em;
 }
 
 .homeCardContainer {
@@ -81,12 +79,19 @@ code {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.ufo {
+  animation: ufo 1.5s linear alternate infinite;
+}
+
+@keyframes ufo {
+  0% {
+    transform: translatey(0px);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translatey(-3px);
+  }
+  100% {
+    transform: translatey(0px);
   }
 }
 
@@ -169,6 +174,11 @@ code {
   display: block;
 }
 
+.clouds {
+  opacity: 0.4;
+  filter: contrast(0.1);
+}
+
 .stars {
   background: #000
     url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top
@@ -198,4 +208,75 @@ code {
   -o-animation: move-clouds-back 200s linear infinite;
   -webkit-animation: move-clouds-back 200s linear infinite;
   animation: move-clouds-back 200s linear infinite;
+}
+
+.card {
+  position: relative;
+  cursor: pointer;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card::before,
+.card::after,
+.card .card-inner {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 0.5em;
+  transition: transform 0.3s;
+}
+
+.card::before,
+.card-inner {
+  z-index: 1;
+}
+
+.card-inner {
+  position: relative;
+}
+
+/*TOP LEFT*/
+.card-top-left::before {
+  transform: translate(
+    calc(-1 * var(--offset-before)),
+    calc(-1 * var(--offset-before))
+  );
+}
+
+.card-top-left::after {
+  transform: translate(
+    calc(-1 * var(--offset-after)),
+    calc(-1 * var(--offset-after))
+  );
+}
+
+.card-top-left:hover::before,
+.card-top-left:hover::after,
+.card-top-left:hover .card-inner {
+  transform: translate(calc(-1 * var(--offset-before)), 0);
+}
+
+:root {
+  --card-border-color: #e2d9d5;
+  /* --card-bg-color: #fff; */
+  --offset-before: 8px;
+  --offset-after: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.mintCard {
+  border-radius: 0.5em;
 }

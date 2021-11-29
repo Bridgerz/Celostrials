@@ -53,40 +53,131 @@ describe("ReSourcetoken Tests", function() {
     }
   });
 
-  it("Successfully mints the rest of the supply", async function() {
-    this.timeout(10000000);
-    const maxSupply = Number(
-      ethers.utils.formatUnits(await celostrials.maxSupply(), "wei")
-    );
-    const totalSupply = Number(
-      ethers.utils.formatUnits(await celostrials.totalSupply(), "wei")
-    );
+  it("Successfully mints 6", async function() {
+    let tx = await (await celostrials.mint(memberA.address, 6)).wait();
 
-    let gas = BigNumber.from(1000000);
-    for (var i = 0; i < maxSupply - totalSupply; i++) {
-      await ethers.provider.send("evm_increaseTime", [30]); // wait 30 seconds
-      await ethers.provider.send("evm_mine", []);
-      let confirmed = false;
-      let tx;
-      while (!confirmed) {
-        try {
-          tx = await (
-            await celostrials.mint(memberA.address, 1, {
-              gasLimit: gas,
-            })
-          ).wait();
-          confirmed = true;
-        } catch (e) {
-          console.log(e);
-          gas = gas.mul(2);
-        }
-      }
-      const tokenId = ethers.utils.formatUnits(
-        tx.events?.find(
-          (e: any) => e.eventSignature == "Transfer(address,address,uint256)"
-        )?.args?.tokenId,
-        "wei"
+    const events = tx.events ? tx.events : [];
+
+    for (let value of events) {
+      console.log(
+        "printed: ",
+        ethers.utils.formatUnits(value.args?.tokenId, "wei")
       );
+      expect(Number(value.args?.tokenId)).to.be.greaterThan(0);
     }
   });
+
+  it("Successfully mints 35", async function() {
+    let tx = await (await celostrials.mint(memberA.address, 35)).wait();
+
+    const events = tx.events ? tx.events : [];
+
+    for (let value of events) {
+      console.log(
+        "printed: ",
+        ethers.utils.formatUnits(value.args?.tokenId, "wei")
+      );
+      expect(Number(value.args?.tokenId)).to.be.greaterThan(0);
+    }
+  });
+
+  it("Successfully mints 35", async function() {
+    let tx = await (await celostrials.mint(memberA.address, 35)).wait();
+
+    const events = tx.events ? tx.events : [];
+
+    for (let value of events) {
+      console.log(
+        "printed: ",
+        ethers.utils.formatUnits(value.args?.tokenId, "wei")
+      );
+      expect(Number(value.args?.tokenId)).to.be.greaterThan(0);
+    }
+  });
+
+  it("Successfully mints 10", async function() {
+    let tx = await (await celostrials.mint(memberA.address, 10)).wait();
+
+    const events = tx.events ? tx.events : [];
+
+    for (let value of events) {
+      console.log(
+        "printed: ",
+        ethers.utils.formatUnits(value.args?.tokenId, "wei")
+      );
+      expect(Number(ethers.utils.formatUnits(value.args?.tokenId, "wei")))
+        .to.be.greaterThan(100)
+        .but.lessThan(201);
+    }
+  });
+
+  // it("Successfully mints 20", async function() {
+  //   let tx = await (await celostrials.mint(memberA.address, 20)).wait();
+
+  //   const events = tx.events ? tx.events : [];
+
+  //   for (let value of events) {
+  //     console.log(
+  //       "printed: ",
+  //       ethers.utils.formatUnits(value.args?.tokenId, "wei")
+  //     );
+  //     expect(Number(ethers.utils.formatUnits(value.args?.tokenId, "wei")))
+  //       .to.be.greaterThan(100)
+  //       .but.lessThan(201);
+  //   }
+  // });
+
+  // it("Successfully mints 20", async function() {
+  //   let tx = await (await celostrials.mint(memberA.address, 20)).wait();
+
+  //   const events = tx.events ? tx.events : [];
+
+  //   for (let value of events) {
+  //     console.log(
+  //       "printed: ",
+  //       ethers.utils.formatUnits(value.args?.tokenId, "wei")
+  //     );
+  //     expect(Number(ethers.utils.formatUnits(value.args?.tokenId, "wei")))
+  //       .to.be.greaterThan(100)
+  //       .but.lessThan(201);
+  //   }
+  // });
+
+  // it("Successfully mints the rest of the supply", async function() {
+  //   this.timeout(10000000);
+  //   const maxSupply = Number(
+  //     ethers.utils.formatUnits(await celostrials.maxSupply(), "wei")
+  //   );
+  //   const totalSupply = Number(
+  //     ethers.utils.formatUnits(await celostrials.totalSupply(), "wei")
+  //   );
+
+  //   let gas = BigNumber.from(1000000);
+  //   for (var i = 0; i < maxSupply - totalSupply; i++) {
+  //     await ethers.provider.send("evm_increaseTime", [30]); // wait 30 seconds
+  //     await ethers.provider.send("evm_mine", []);
+  //     let confirmed = false;
+  //     let tx;
+  //     while (!confirmed) {
+  //       try {
+  //         tx = await (
+  //           await celostrials.mint(memberA.address, 1, {
+  //             gasLimit: gas,
+  //           })
+  //         ).wait();
+  //         confirmed = true;
+  //       } catch (e) {
+  //         console.log(e);
+  //         gas = gas.mul(2);
+  //       }
+  //     }
+  //     const tokenId = ethers.utils.formatUnits(
+  //       tx.events?.find(
+  //         (e: any) => e.eventSignature == "Transfer(address,address,uint256)"
+  //       )?.args?.tokenId,
+  //       "wei"
+  //     );
+  //     console.log("printed: ", tokenId, " at ", i);
+  //   }
+  // });
 });

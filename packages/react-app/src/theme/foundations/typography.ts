@@ -41,7 +41,7 @@ const typography = {
   },
 
   fonts: {
-    heading: "Poppins",
+    heading: "Bungee",
     body: "Poppins",
     mono: "Courier Prime",
   },
@@ -77,6 +77,6 @@ const typography = {
     //   h6: "1.2rem",
     //   p: "1.4rem",
   },
-}
+};
 
-export default typography
+export default typography;

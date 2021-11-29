@@ -1,7 +1,7 @@
-import { SystemStyleObjectRecord } from "@chakra-ui/react"
-import typography from "./foundations/typography"
+import { SystemStyleObjectRecord } from "@chakra-ui/react";
+import typography from "./foundations/typography";
 
-const { fonts, fontWeights } = typography
+const { fonts, fontWeights } = typography;
 
 export const title = {
   // fontSize: ["24px"],
@@ -9,23 +9,23 @@ export const title = {
   fontFamily: fonts.heading,
   fontWeight: fontWeights.black,
   fontStyle: "normal",
-}
+};
 
 export const subtitle = {
   // fontSize: ["18px"],
   fontSize: ["h2"],
-  fontFamily: fonts.heading,
+  fontFamily: fonts.body,
   fontWeight: fontWeights.bold,
   fontStyle: "normal",
-}
+};
 
 export const header = {
   // fontSize: ["18px"],
   fontSize: ["h3"],
-  fontFamily: fonts.heading,
+  fontFamily: fonts.body,
   fontWeight: fontWeights.medium,
   fontStyle: "normal",
-}
+};
 
 export const subheader = {
   // fontSize: ["14px"],
@@ -33,7 +33,7 @@ export const subheader = {
   fontFamily: fonts.heading,
   fontWeight: fontWeights.bold,
   fontStyle: "normal",
-}
+};
 
 export const number = {
   // fontSize: ["16px"],
@@ -42,7 +42,7 @@ export const number = {
   fontWeight: fontWeights.normal,
   fontStyle: "normal",
   lineHeight: "none",
-}
+};
 
 export const caption = {
   // fontSize: ["12px"],
@@ -50,7 +50,7 @@ export const caption = {
   fontFamily: fonts.body,
   fontWeight: fontWeights.normal,
   fontStyle: "normal",
-}
+};
 
 export const body = {
   // fontSize: ["14px"],
@@ -58,7 +58,7 @@ export const body = {
   fontFamily: fonts.body,
   fontWeight: fontWeights.normal,
   fontStyle: "normal",
-}
+};
 
 // convenience for alternate naming convention
 const aliases = {
@@ -70,7 +70,7 @@ const aliases = {
   price: number,
   h6: caption,
   p: body,
-}
+};
 
 export const textStyles: SystemStyleObjectRecord = {
   title,
@@ -81,4 +81,4 @@ export const textStyles: SystemStyleObjectRecord = {
   caption,
   body,
   ...aliases,
-}
+};
