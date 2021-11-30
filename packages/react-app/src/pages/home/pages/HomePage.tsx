@@ -9,7 +9,7 @@ import ufo from "../../../assets/ufo.svg";
 import { useDisclosure } from "@chakra-ui/react";
 import { Wrap, WrapItem } from "@chakra-ui/react";
 import { gradients } from "../../../theme/foundations/colors";
-import MintModal from "../../../components/modals/MintModal";
+import MintModal, { Token } from "../../../components/modals/MintModal";
 import { useCelostrialsContract } from "../../../services/web3/contracts/celostrials";
 import { useConnectWallet } from "../../../services/web3/utils/useConnectWallet";
 import { ethers } from "ethers";
@@ -24,7 +24,7 @@ const HomePage = () => {
   const mintModal = useDisclosure();
   const connect = useConnectWallet();
 
-  const [amount, setAmount] = useState(0);
+  const [tokens, setTokens] = useState<Token[]>([]);
   const [loading, setLoading] = useState(false);
 
   const myRef = useRef<null | HTMLDivElement>(null);
@@ -34,8 +34,16 @@ const HomePage = () => {
   const executeScroll = () =>
     myRef?.current?.scrollIntoView({ behavior: "smooth" });
 
-  const getTokenId = (event: ethers.Event) => {
-    return Number(ethers.utils.formatUnits(event?.args?.tokenId, "wei"));
+  const getTokens = (
+    event: ethers.Event,
+    receipt: ethers.ContractReceipt
+  ): Token => {
+    return {
+      id: Number(
+        ethers.utils.formatUnits(event?.args?.tokenId, "wei")
+      ).toString(),
+      txHash: receipt.transactionHash,
+    };
   };
 
   // const submitTx = async (amount: number) => {
@@ -71,8 +79,9 @@ const HomePage = () => {
   //   }
   //   const receipt = await tx.wait();
   //   const events = getTxEvents(receipt, "Transfer");
-  //   const tokenIds = events.map((event) => getTokenId(event));
-  //   console.log(tokenIds);
+  //   const tokens = events.map((event) => getTokens(event, receipt));
+  //   setTokens(tokens);
+  //   mintModal.onOpen();
   //   setLoading(false);
   // };
 
@@ -103,7 +112,7 @@ const HomePage = () => {
                 onClick={executeScroll}
                 background={gradients.primary}
                 justifyContent="space-between"
-                rightIcon={<Image width="2em" src={ufo} />}
+                rightIcon={<Image className="ufo" width="2em" src={ufo} />}
               >
                 Mint
               </Button>
@@ -198,7 +207,7 @@ const HomePage = () => {
       <MintModal
         isOpen={mintModal.isOpen}
         onClose={mintModal.onClose}
-        amount={amount}
+        tokens={tokens}
       />
     </>
   );

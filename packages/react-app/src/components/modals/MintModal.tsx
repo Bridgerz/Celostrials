@@ -8,31 +8,75 @@ import {
   ModalHeader,
   ModalOverlay,
   VStack,
+  Heading,
+  Center,
+  Button,
 } from "@chakra-ui/react";
 import { gradients } from "../../theme/foundations/colors";
-import Button from "../Button";
+import Slider from "react-slick";
+import config from "../../config";
 
-const MintModal = ({ isOpen, onClose, amount }) => {
+export interface Token {
+  id: string;
+  txHash: string;
+}
+
+export interface MintModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  tokens: Token[];
+}
+
+const MintModal = ({ isOpen, onClose, tokens }: MintModalProps) => {
+  const getTokenImage = (tokenId: string) => {
+    return `https://celostrials.mypinata.cloud/ipfs/QmZ3EFB1XhncBqg723mDPLjyyy3V6HnxtzKSt8bKwktXxo/${tokenId}.png`;
+  };
+  const getTransactionLink = (txHash: string) => {
+    return `${config.NETWORK_EXPLORER_URL}/${txHash}`;
+  };
+
+  var settings = {
+    dots: true,
+    infinite: false,
+    speed: 0,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <>
-      <Modal size="2xl" isOpen={isOpen} onClose={onClose} isCentered>
+      <Modal size="4xl" isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
-        <ModalContent m="1em" h="50vh">
+        <ModalContent m="1em">
           <ModalHeader alignSelf={"center"}>
-            Mint {amount} Celostrial{amount === 1 ? "" : "s"}
+            <Heading color="white" size="xl">
+              Minted nfETs
+            </Heading>
           </ModalHeader>
           <ModalBody>
-            <VStack>
-              <Button
-                size="lg"
-                onClick={() => console.log("confirm tx")}
-                background={gradients.primary}
-                justifyContent="space-between"
-                // rightIcon={<Image width="2em" src={ufo} />}
-              >
-                Confirm
-              </Button>
-            </VStack>
+            <Slider {...settings}>
+              {tokens.map((token) => {
+                return (
+                  <VStack>
+                    <Center>
+                      <Image
+                        height={"70vmin"}
+                        className="mintCard"
+                        src={getTokenImage(token.id)}
+                      />
+                      <Button
+                        size="lg"
+                        background={gradients.primary}
+                        as="a"
+                        target="_blank"
+                        href={getTransactionLink(token.txHash)}
+                      >
+                        View Transaction
+                      </Button>
+                    </Center>
+                  </VStack>
+                );
+              })}
+            </Slider>
           </ModalBody>
           <ModalFooter>
             <HStack alignItems="center"></HStack>

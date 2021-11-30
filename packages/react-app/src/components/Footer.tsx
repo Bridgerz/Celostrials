@@ -20,7 +20,7 @@ const Footer = ({ ...rest }: BoxProps) => {
   return (
     <Center {...footerStyles} {...rest}>
       <VStack>
-        <Text>© 2021 Celostrails. All Rights Reserved</Text>
+        <Text>© 2021 Celostrials. All Rights Reserved</Text>
         <Text>
           Official Contract Address -{" "}
           <Text
