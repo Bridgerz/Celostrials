@@ -58,20 +58,22 @@ const MintModal = ({ isOpen, onClose, tokens }: MintModalProps) => {
                 return (
                   <VStack>
                     <Center>
-                      <Image
-                        height={"70vmin"}
-                        className="mintCard"
-                        src={getTokenImage(token.id)}
-                      />
-                      <Button
-                        size="lg"
-                        background={gradients.primary}
-                        as="a"
-                        target="_blank"
-                        href={getTransactionLink(token.txHash)}
-                      >
-                        View Transaction
-                      </Button>
+                      <VStack>
+                        <Image
+                          height={"70vmin"}
+                          className="mintCard"
+                          src={getTokenImage(token.id)}
+                        />
+                        <Button
+                          size="lg"
+                          background={gradients.primary}
+                          as="a"
+                          target="_blank"
+                          href={getTransactionLink(token.txHash)}
+                        >
+                          View Transaction
+                        </Button>
+                      </VStack>
                     </Center>
                   </VStack>
                 );

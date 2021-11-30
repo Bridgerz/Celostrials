@@ -1,7 +1,7 @@
 export const NETWORKS = {
   localhost: {
     chainId: 31337,
-    blockExplorer: "https://alfajores-forno.celo-testnet.org",
+    blockExplorer: "https://alfajores-blockscout.celo-testnet.org",
     rpcUrl: "http://127.0.0.1:8545",
     currencySymbol: "CELO",
     currencyName: "Celo",
@@ -20,4 +20,4 @@ export const NETWORKS = {
     currencySymbol: "CELO",
     currencyName: "Celo",
   },
-}
+};
