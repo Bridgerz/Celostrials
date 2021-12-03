@@ -1,5 +1,13 @@
 import { VStack, Heading, HStack } from "@chakra-ui/layout";
-import { Center, Text, Image, Button, useToast } from "@chakra-ui/react";
+import {
+  Center,
+  Text,
+  Image,
+  Button,
+  useToast,
+  useBreakpointValue,
+  IconButton,
+} from "@chakra-ui/react";
 
 import { useRef, useState } from "react";
 
@@ -8,7 +16,7 @@ import mintImage from "../../../assets/basic.jpg";
 import ufo from "../../../assets/ufo.svg";
 import { useDisclosure } from "@chakra-ui/react";
 import { Wrap, WrapItem } from "@chakra-ui/react";
-import { gradients } from "../../../theme/foundations/colors";
+import colors, { gradients } from "../../../theme/foundations/colors";
 import MintModal, { Token } from "../../../components/modals/MintModal";
 import { useCelostrialsContract } from "../../../services/web3/contracts/celostrials";
 import { useConnectWallet } from "../../../services/web3/utils/useConnectWallet";
@@ -18,11 +26,20 @@ import {
   tryGetErrorMessage,
 } from "../../../services/web3/utils/getVMErrorMessage";
 import { getTxEvents } from "../../../services/web3/utils/getTxEvent";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faDiscord,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 const HomePage = () => {
   // const { mint, totalSupply } = useCelostrialsContract();
   const mintModal = useDisclosure();
   const connect = useConnectWallet();
+
+  const device = useBreakpointValue({ base: "mobile", md: "desktop" });
+  const isMobile = device === "mobile";
 
   const [tokens, setTokens] = useState<Token[]>([]);
   const [loading, setLoading] = useState(false);
@@ -100,6 +117,7 @@ const HomePage = () => {
               maxW="350px"
             >
               nfETs on the Celo blockchain
+              {/* https://www.npmjs.com/package/react-date-countdown-timer  FOR WHEN WE HAVE A DATE */}
             </Heading>
             <VStack h="100vh">
               <VStack className="preview" mb="5em">
@@ -202,6 +220,7 @@ const HomePage = () => {
               </Wrap> */}
             </VStack>
           </VStack>
+          {isMobile && <Socials />}
         </VStack>
       </Center>
       <MintModal
@@ -210,6 +229,51 @@ const HomePage = () => {
         tokens={tokens}
       />
     </>
+  );
+};
+
+export const Socials = ({ ...props }) => {
+  return (
+    <HStack {...props}>
+      <Wrap justifyContent="space-between">
+        <WrapItem>
+          <IconButton
+            variant="ghost"
+            as={"a"}
+            href={"https://discord.gg/qgCWPrkWaW"}
+            target={"_blank"}
+            aria-label="Telegram"
+            size="lg"
+            color={colors.gray.cement}
+            icon={<FontAwesomeIcon icon={faDiscord} />}
+          />
+        </WrapItem>
+        <WrapItem>
+          <IconButton
+            variant="ghost"
+            as={"a"}
+            href={"https://www.instagram.com/celostrials/"}
+            target={"_blank"}
+            aria-label="Discord"
+            size="lg"
+            color={colors.gray.cement}
+            icon={<FontAwesomeIcon icon={faInstagram} />}
+          />
+        </WrapItem>
+        <WrapItem>
+          <IconButton
+            variant="ghost"
+            as={"a"}
+            href={"https://twitter.com/celostrials"}
+            target={"_blank"}
+            aria-label="Twitter"
+            size="lg"
+            color={colors.gray.cement}
+            icon={<FontAwesomeIcon icon={faTwitter} />}
+          />
+        </WrapItem>
+      </Wrap>
+    </HStack>
   );
 };
 
