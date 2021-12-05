@@ -58,7 +58,11 @@
       "**/hardhat",
       "**/hardhat/**",
       "**/react-app",
-      "**/react-app/**"
+      "**/react-app/**",
+      "**/rarity",
+      "**/rarity/**",
+      "**/art-gen",
+      "**/art-gen/**"
     ]
   },
   "dependencies": {
