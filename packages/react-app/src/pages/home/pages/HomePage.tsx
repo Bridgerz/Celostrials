@@ -13,6 +13,7 @@ import { useRef, useState } from "react";
 
 import basicImage from "../../../assets/preview.gif";
 import mintImage from "../../../assets/basic.jpg";
+import logoImage from "../../../assets/Celostrials_Logo.png";
 import ufo from "../../../assets/ufo.svg";
 import { useDisclosure } from "@chakra-ui/react";
 import { Wrap, WrapItem } from "@chakra-ui/react";
@@ -45,8 +46,6 @@ const HomePage = () => {
   const [loading, setLoading] = useState(false);
 
   const myRef = useRef<null | HTMLDivElement>(null);
-
-  const toast = useToast();
 
   const executeScroll = () =>
     myRef?.current?.scrollIntoView({ behavior: "smooth" });
@@ -107,9 +106,9 @@ const HomePage = () => {
       <Center mt="5em" zIndex={10}>
         <VStack w="100%" h="100%">
           <VStack zIndex={1} w="100%" h="100%">
-            <Heading color="white" size="xl">
-              Celostrials
-            </Heading>
+            <Center>
+              <Image w="30em" maxW="90%" src={logoImage} />
+            </Center>
             <Heading
               size="subtitle"
               color="gray.500"
