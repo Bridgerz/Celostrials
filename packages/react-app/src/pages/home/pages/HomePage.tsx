@@ -93,7 +93,9 @@ const HomePage = () => {
             <About />
             {/* <Mint myRef={myRef} /> */}
           </VStack>
-          {isMobile && <Socials />}
+          {isMobile && (
+            <Socials color={colors.gray.cement} margin="1em !important" />
+          )}
         </VStack>
       </Center>
       <Modal isCentered isOpen={isOpen} onClose={onClose}>
