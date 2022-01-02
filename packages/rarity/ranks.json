@@ -1,0 +1,3226 @@
+[
+  {
+    "name": "Celostrials #1",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/1.png",
+    "dna": "6d3234dddd1df4c0fc2fe922e12e35414e8b17f4",
+    "id": 1,
+    "date": 1640555153176,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "pink_yellow",
+        "count": 12,
+        "percentile": 0.24,
+        "rarity_score": 4.166666666666667
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "clothes",
+        "rarity_score": 6.25,
+        "count": 8,
+        "percentile": 0.16
+      },
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 2,
+      "percentile": 0.06,
+      "rarity_score": 16.666666666666668
+    },
+    "rarity_score": 33.14816103166552,
+    "rarity_rank": 44
+  },
+  {
+    "name": "Celostrials #2",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/2.png",
+    "dna": "6164e35455b64709bfb172d584bdc0136569a0cc",
+    "id": 2,
+    "date": 1640555153424,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "yellow",
+        "count": 5,
+        "percentile": 0.1,
+        "rarity_score": 10
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "leather_jacket",
+        "count": 1,
+        "percentile": 0.02,
+        "rarity_score": 50
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 68.0648276983322,
+    "rarity_rank": 19
+  },
+  {
+    "name": "Celostrials #3",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/3.png",
+    "dna": "384accb276ef40d5b84b9d4d3ee8a23151cd5e85",
+    "id": 3,
+    "date": 1640555153659,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "gray",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "black_nfET",
+        "count": 1,
+        "percentile": 0.02,
+        "rarity_score": 50
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 74.73149436499887,
+    "rarity_rank": 14
+  },
+  {
+    "name": "Celostrials #4",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/4.png",
+    "dna": "579fcc411221a95559d840874ea4e7887b099897",
+    "id": 4,
+    "date": 1640555153884,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "green",
+        "count": 6,
+        "percentile": 0.12,
+        "rarity_score": 8.333333333333334
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "red_white_hoodie",
+        "count": 1,
+        "percentile": 0.02,
+        "rarity_score": 50
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 66.39816103166552,
+    "rarity_rank": 20
+  },
+  {
+    "name": "Celostrials #5",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/5.png",
+    "dna": "0e5cad3451887a400d0ad5071137c8da50d6951e",
+    "id": 5,
+    "date": 1640555154112,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "black",
+        "count": 1,
+        "percentile": 0.02,
+        "rarity_score": 50
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "mouth",
+        "value": "pog",
+        "count": 2,
+        "percentile": 0.04,
+        "rarity_score": 25
+      },
+      {
+        "trait_type": "clothes",
+        "value": "yee_haw",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 4,
+      "percentile": 0.34,
+      "rarity_score": 2.941176470588235
+    },
+    "rarity_score": 95.28649197379848,
+    "rarity_rank": 3
+  },
+  {
+    "name": "Celostrials #6",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/6.png",
+    "dna": "657d58df3e8c2a7933249c8641c2b71ff7355073",
+    "id": 6,
+    "date": 1640555154342,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "green",
+        "count": 6,
+        "percentile": 0.12,
+        "rarity_score": 8.333333333333334
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "hoodie_headphones",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      },
+      {
+        "trait_type": "head",
+        "value": "Hype",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 4,
+      "percentile": 0.34,
+      "rarity_score": 2.941176470588235
+    },
+    "rarity_score": 49.356881361902886,
+    "rarity_rank": 31
+  },
+  {
+    "name": "Celostrials #7",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/7.png",
+    "dna": "da0cf74378dbf785401ca4104b70a0bb8b71f84c",
+    "id": 7,
+    "date": 1640555154601,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "yellow",
+        "count": 5,
+        "percentile": 0.1,
+        "rarity_score": 10
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "jaguar_hoodie",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      },
+      {
+        "trait_type": "head",
+        "value": "top_hat",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      },
+      {
+        "trait_type": "laser",
+        "value": "green",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 5,
+      "percentile": 0.1,
+      "rarity_score": 10
+    },
+    "rarity_score": 65.27934125495102,
+    "rarity_rank": 21
+  },
+  {
+    "name": "Celostrials #8",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/8.png",
+    "dna": "55daf1d050a560c410ca7db2c2b1753318036dee",
+    "id": 8,
+    "date": 1640555154822,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "pink_yellow",
+        "count": 12,
+        "percentile": 0.24,
+        "rarity_score": 4.166666666666667
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "head",
+        "value": "top_hat",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "clothes",
+        "rarity_score": 6.25,
+        "count": 8,
+        "percentile": 0.16
+      },
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 29.665704891314647,
+    "rarity_rank": 46
+  },
+  {
+    "name": "Celostrials #9",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/9.png",
+    "dna": "985375ddb4be3192e834675c4d3f23ce7f38a7c5",
+    "id": 9,
+    "date": 1640555155059,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "pink_yellow",
+        "count": 12,
+        "percentile": 0.24,
+        "rarity_score": 4.166666666666667
+      },
+      {
+        "trait_type": "skin",
+        "value": "blue",
+        "count": 1,
+        "percentile": 0.02,
+        "rarity_score": 50
+      },
+      {
+        "trait_type": "clothes",
+        "value": "checkered_jacket",
+        "count": 1,
+        "percentile": 0.02,
+        "rarity_score": 50
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 110.94944308294757,
+    "rarity_rank": 0
+  },
+  {
+    "name": "Celostrials #10",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/10.png",
+    "dna": "fec8602733c71e5dc933c6fcdecee7e5e47dc80a",
+    "id": 10,
+    "date": 1640555155280,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "dark_pink",
+        "count": 9,
+        "percentile": 0.18,
+        "rarity_score": 5.555555555555555
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "blue",
+        "count": 2,
+        "percentile": 0.04,
+        "rarity_score": 25
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 38.62038325388775,
+    "rarity_rank": 37
+  },
+  {
+    "name": "Celostrials #11",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/11.png",
+    "dna": "63be8649e05a443b866d1347889160424cc01685",
+    "id": 11,
+    "date": 1640555155532,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "purple_pink",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "yellow_hoodie",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      },
+      {
+        "trait_type": "laser",
+        "value": "green",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 4,
+      "percentile": 0.34,
+      "rarity_score": 2.941176470588235
+    },
+    "rarity_score": 53.70297386589012,
+    "rarity_rank": 25
+  },
+  {
+    "name": "Celostrials #12",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/12.png",
+    "dna": "b7809c91552b93d3d7931c261394cf5a15f3fabc",
+    "id": 12,
+    "date": 1640555155773,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "blue",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "hoodie_headphones",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      },
+      {
+        "trait_type": "head",
+        "value": "red_beanie",
+        "count": 1,
+        "percentile": 0.02,
+        "rarity_score": 50
+      },
+      {
+        "trait_type": "laser",
+        "value": "green",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 5,
+      "percentile": 0.1,
+      "rarity_score": 10
+    },
+    "rarity_score": 105.27934125495102,
+    "rarity_rank": 1
+  },
+  {
+    "name": "Celostrials #13",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/13.png",
+    "dna": "25bf0c912515e663a23b506894568da9687012f2",
+    "id": 13,
+    "date": 1640555156000,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "green",
+        "count": 6,
+        "percentile": 0.12,
+        "rarity_score": 8.333333333333334
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "white_nfET",
+        "count": 1,
+        "percentile": 0.02,
+        "rarity_score": 50
+      },
+      {
+        "trait_type": "head",
+        "value": "top_hat",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 4,
+      "percentile": 0.34,
+      "rarity_score": 2.941176470588235
+    },
+    "rarity_score": 78.52354802856955,
+    "rarity_rank": 11
+  },
+  {
+    "name": "Celostrials #14",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/14.png",
+    "dna": "64666528ad66ab970124170e3dc04a7a9b5f3925",
+    "id": 14,
+    "date": 1640555156220,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "blue",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "hoodie_headphones",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 37.23149436499886,
+    "rarity_rank": 40
+  },
+  {
+    "name": "Celostrials #15",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/15.png",
+    "dna": "dbffb88b2e94462825aeb4f3409755d7326518da",
+    "id": 15,
+    "date": 1640555156442,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "green",
+        "count": 6,
+        "percentile": 0.12,
+        "rarity_score": 8.333333333333334
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "mouth",
+        "value": "drip",
+        "count": 2,
+        "percentile": 0.04,
+        "rarity_score": 25
+      },
+      {
+        "trait_type": "head",
+        "value": "Hype",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "clothes",
+        "rarity_score": 6.25,
+        "count": 8,
+        "percentile": 0.16
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 4,
+      "percentile": 0.34,
+      "rarity_score": 2.941176470588235
+    },
+    "rarity_score": 62.720702500114264,
+    "rarity_rank": 22
+  },
+  {
+    "name": "Celostrials #16",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/16.png",
+    "dna": "7ac5567f1e21e8d1f0e6628dba20418b6fc57f93",
+    "id": 16,
+    "date": 1640555156680,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "green_blue",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "blue",
+        "count": 2,
+        "percentile": 0.04,
+        "rarity_score": 25
+      },
+      {
+        "trait_type": "laser",
+        "value": "blue",
+        "count": 2,
+        "percentile": 0.04,
+        "rarity_score": 25
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 4,
+      "percentile": 0.34,
+      "rarity_score": 2.941176470588235
+    },
+    "rarity_score": 70.36964053255679,
+    "rarity_rank": 18
+  },
+  {
+    "name": "Celostrials #17",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/17.png",
+    "dna": "1e6b1de8e0f1d63d3ced2c153134a27150b713f3",
+    "id": 17,
+    "date": 1640555156913,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "dark_pink",
+        "count": 9,
+        "percentile": 0.18,
+        "rarity_score": 5.555555555555555
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "blue_monke_hoodie",
+        "count": 2,
+        "percentile": 0.04,
+        "rarity_score": 25
+      },
+      {
+        "trait_type": "head",
+        "value": "Hype",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 4,
+      "percentile": 0.34,
+      "rarity_score": 2.941176470588235
+    },
+    "rarity_score": 54.912436917458436,
+    "rarity_rank": 24
+  },
+  {
+    "name": "Celostrials #18",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/18.png",
+    "dna": "9009b8b1b8c0092a2218fce129c387cd7749f07b",
+    "id": 18,
+    "date": 1640555157143,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "yellow",
+        "count": 5,
+        "percentile": 0.1,
+        "rarity_score": 10
+      },
+      {
+        "trait_type": "skin",
+        "value": "copper",
+        "count": 6,
+        "percentile": 0.12,
+        "rarity_score": 8.333333333333334
+      },
+      {
+        "trait_type": "clothes",
+        "value": "zebra",
+        "count": 2,
+        "percentile": 0.04,
+        "rarity_score": 25
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 50.116109749614246,
+    "rarity_rank": 28
+  },
+  {
+    "name": "Celostrials #19",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/19.png",
+    "dna": "b826f963565e91b96d6bac5efa8545449c116375",
+    "id": 19,
+    "date": 1640555157368,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "dark_pink",
+        "count": 9,
+        "percentile": 0.18,
+        "rarity_score": 5.555555555555555
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "red_stripe",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 30.287049920554416,
+    "rarity_rank": 45
+  },
+  {
+    "name": "Celostrials #20",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/20.png",
+    "dna": "8ea09b85237b2bc233432a9aed0070acb70f1171",
+    "id": 20,
+    "date": 1640555157605,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "yellow",
+        "count": 5,
+        "percentile": 0.1,
+        "rarity_score": 10
+      },
+      {
+        "trait_type": "skin",
+        "value": "copper",
+        "count": 6,
+        "percentile": 0.12,
+        "rarity_score": 8.333333333333334
+      },
+      {
+        "trait_type": "clothes",
+        "value": "jaguar_hoodie",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 41.78277641628091,
+    "rarity_rank": 33
+  },
+  {
+    "name": "Celostrials #21",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/21.png",
+    "dna": "666329ad4569354c0c2dd5f5bc4256123b4f8a75",
+    "id": 21,
+    "date": 1640555157833,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "green_blue",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "zebra",
+        "count": 2,
+        "percentile": 0.04,
+        "rarity_score": 25
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 45.564827698332195,
+    "rarity_rank": 32
+  },
+  {
+    "name": "Celostrials #22",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/22.png",
+    "dna": "11a1e7396d57720fada01a29971176fcc7ff6dd7",
+    "id": 22,
+    "date": 1640555158059,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "pink_yellow",
+        "count": 12,
+        "percentile": 0.24,
+        "rarity_score": 4.166666666666667
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "blue_stripe",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 24.73149436499886,
+    "rarity_rank": 49
+  },
+  {
+    "name": "Celostrials #23",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/23.png",
+    "dna": "391e6b4d3e0fe4994ba912a11d70a5f9b64f20d7",
+    "id": 23,
+    "date": 1640555158300,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "green_blue",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "jaguar_hoodie",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 37.23149436499886,
+    "rarity_rank": 41
+  },
+  {
+    "name": "Celostrials #24",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/24.png",
+    "dna": "692957e7e28e53cf7406fcba47471035ed6c8d3f",
+    "id": 24,
+    "date": 1640555158530,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "dark_pink",
+        "count": 9,
+        "percentile": 0.18,
+        "rarity_score": 5.555555555555555
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "yee_haw",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      },
+      {
+        "trait_type": "head",
+        "value": "brown_hair",
+        "count": 2,
+        "percentile": 0.04,
+        "rarity_score": 25
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 4,
+      "percentile": 0.34,
+      "rarity_score": 2.941176470588235
+    },
+    "rarity_score": 50.74577025079177,
+    "rarity_rank": 27
+  },
+  {
+    "name": "Celostrials #25",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/25.png",
+    "dna": "6c60d4c72fb6772b16a65f098edd628ac9e1d523",
+    "id": 25,
+    "date": 1640555158755,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "dark_pink",
+        "count": 9,
+        "percentile": 0.18,
+        "rarity_score": 5.555555555555555
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "blue_monke_hoodie",
+        "count": 2,
+        "percentile": 0.04,
+        "rarity_score": 25
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 38.62038325388775,
+    "rarity_rank": 38
+  },
+  {
+    "name": "Celostrials #26",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/26.png",
+    "dna": "1561cad673069d713687ecf82586a386ce707d4e",
+    "id": 26,
+    "date": 1640555158989,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "dark_pink",
+        "count": 9,
+        "percentile": 0.18,
+        "rarity_score": 5.555555555555555
+      },
+      {
+        "trait_type": "skin",
+        "value": "hot_pink",
+        "count": 2,
+        "percentile": 0.04,
+        "rarity_score": 25
+      },
+      {
+        "trait_type": "clothes",
+        "value": "red_hoodie",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 49.83833197183647,
+    "rarity_rank": 29
+  },
+  {
+    "name": "Celostrials #27",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/27.png",
+    "dna": "082dd03d23654ad996d9127bf7340823bc268df3",
+    "id": 27,
+    "date": 1640555159212,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "dark_pink",
+        "count": 9,
+        "percentile": 0.18,
+        "rarity_score": 5.555555555555555
+      },
+      {
+        "trait_type": "skin",
+        "value": "copper",
+        "count": 6,
+        "percentile": 0.12,
+        "rarity_score": 8.333333333333334
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "clothes",
+        "rarity_score": 6.25,
+        "count": 8,
+        "percentile": 0.16
+      },
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 2,
+      "percentile": 0.06,
+      "rarity_score": 16.666666666666668
+    },
+    "rarity_score": 41.58833197183647,
+    "rarity_rank": 34
+  },
+  {
+    "name": "Celostrials #28",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/28.png",
+    "dna": "28fcb81f467fc517b896c0e0e6f7a22c5e6bb170",
+    "id": 28,
+    "date": 1640555159464,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "pink_blue",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      },
+      {
+        "trait_type": "skin",
+        "value": "copper",
+        "count": 6,
+        "percentile": 0.12,
+        "rarity_score": 8.333333333333334
+      },
+      {
+        "trait_type": "mouth",
+        "value": "drip",
+        "count": 2,
+        "percentile": 0.04,
+        "rarity_score": 25
+      },
+      {
+        "trait_type": "clothes",
+        "value": "blue_stripe",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      },
+      {
+        "trait_type": "laser",
+        "value": "blue",
+        "count": 2,
+        "percentile": 0.04,
+        "rarity_score": 25
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 5,
+      "percentile": 0.1,
+      "rarity_score": 10
+    },
+    "rarity_score": 99.92690058479532,
+    "rarity_rank": 2
+  },
+  {
+    "name": "Celostrials #29",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/29.png",
+    "dna": "44d7e041f6733eabbcbc35405110ae9e9194e945",
+    "id": 29,
+    "date": 1640555159690,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "green",
+        "count": 6,
+        "percentile": 0.12,
+        "rarity_score": 8.333333333333334
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "yee_haw",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 28.898161031665524,
+    "rarity_rank": 47
+  },
+  {
+    "name": "Celostrials #30",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/30.png",
+    "dna": "fa4fb3963bbfdef719cfaf8d28adad989242df2f",
+    "id": 30,
+    "date": 1640555159928,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "green_blue",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      },
+      {
+        "trait_type": "skin",
+        "value": "blue_green",
+        "count": 1,
+        "percentile": 0.02,
+        "rarity_score": 50
+      },
+      {
+        "trait_type": "clothes",
+        "value": "red_stripe",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 85.94944308294758,
+    "rarity_rank": 9
+  },
+  {
+    "name": "Celostrials #31",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/31.png",
+    "dna": "4b3d50962b98bbe25c166028607e9b8d79abfecb",
+    "id": 31,
+    "date": 1640555160154,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "blue",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "green_zebra",
+        "count": 1,
+        "percentile": 0.02,
+        "rarity_score": 50
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 70.5648276983322,
+    "rarity_rank": 17
+  },
+  {
+    "name": "Celostrials #32",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/32.png",
+    "dna": "718375c7412a5e39d14bfea5c639cddc46cd7f33",
+    "id": 32,
+    "date": 1640555160383,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "pink_yellow",
+        "count": 12,
+        "percentile": 0.24,
+        "rarity_score": 4.166666666666667
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "yellow_hoodie",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 28.898161031665524,
+    "rarity_rank": 48
+  },
+  {
+    "name": "Celostrials #33",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/33.png",
+    "dna": "ec3aec0d31c9cfb1150652d8fd8696a3c5b9858a",
+    "id": 33,
+    "date": 1640555160603,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "gray",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "suit_blue",
+        "count": 1,
+        "percentile": 0.02,
+        "rarity_score": 50
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 74.73149436499887,
+    "rarity_rank": 15
+  },
+  {
+    "name": "Celostrials #34",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/34.png",
+    "dna": "786208a91b05f75b6a3385bbc9fe55f7c237114f",
+    "id": 34,
+    "date": 1640555160841,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "pink_blue",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "mouth",
+        "value": "big_smile",
+        "count": 1,
+        "percentile": 0.02,
+        "rarity_score": 50
+      },
+      {
+        "trait_type": "clothes",
+        "value": "blue_stripe",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 4,
+      "percentile": 0.34,
+      "rarity_score": 2.941176470588235
+    },
+    "rarity_score": 86.95315864046515,
+    "rarity_rank": 6
+  },
+  {
+    "name": "Celostrials #35",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/35.png",
+    "dna": "9a35c588f7a6609d96cca9bc14b4b66fcca7f991",
+    "id": 35,
+    "date": 1640555161074,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "pink_yellow",
+        "count": 12,
+        "percentile": 0.24,
+        "rarity_score": 4.166666666666667
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "mouth",
+        "value": "pog",
+        "count": 2,
+        "percentile": 0.04,
+        "rarity_score": 25
+      },
+      {
+        "trait_type": "clothes",
+        "value": "orange_skull",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 4,
+      "percentile": 0.34,
+      "rarity_score": 2.941176470588235
+    },
+    "rarity_score": 53.619825307131805,
+    "rarity_rank": 26
+  },
+  {
+    "name": "Celostrials #36",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/36.png",
+    "dna": "8abd39b193c26807c616d466dfa7ac9208d43f55",
+    "id": 36,
+    "date": 1640555161308,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "dark_pink",
+        "count": 9,
+        "percentile": 0.18,
+        "rarity_score": 5.555555555555555
+      },
+      {
+        "trait_type": "skin",
+        "value": "copper",
+        "count": 6,
+        "percentile": 0.12,
+        "rarity_score": 8.333333333333334
+      },
+      {
+        "trait_type": "clothes",
+        "value": "yellow_hoodie",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 37.33833197183647,
+    "rarity_rank": 39
+  },
+  {
+    "name": "Celostrials #37",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/37.png",
+    "dna": "cedcd17b929bb59523f840d587ddfa4cad7ee84c",
+    "id": 37,
+    "date": 1640555161540,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "pink_blue",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "orange_skull",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 41.39816103166552,
+    "rarity_rank": 35
+  },
+  {
+    "name": "Celostrials #38",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/38.png",
+    "dna": "ed86410be235bf6b9076a98f50ad6d977627fcef",
+    "id": 38,
+    "date": 1640555161780,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "purple_pink",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "mouth",
+        "value": "Scream",
+        "count": 1,
+        "percentile": 0.02,
+        "rarity_score": 50
+      },
+      {
+        "trait_type": "clothes",
+        "value": "blue_stripe",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 4,
+      "percentile": 0.34,
+      "rarity_score": 2.941176470588235
+    },
+    "rarity_score": 86.95315864046515,
+    "rarity_rank": 7
+  },
+  {
+    "name": "Celostrials #39",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/39.png",
+    "dna": "76a4680c809338ba8e9f8ecca4ba4557ad0dfe38",
+    "id": 39,
+    "date": 1640555162023,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "pink_yellow",
+        "count": 12,
+        "percentile": 0.24,
+        "rarity_score": 4.166666666666667
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "red_hoodie",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      },
+      {
+        "trait_type": "laser",
+        "value": "green",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 4,
+      "percentile": 0.34,
+      "rarity_score": 2.941176470588235
+    },
+    "rarity_score": 37.03630719922346,
+    "rarity_rank": 42
+  },
+  {
+    "name": "Celostrials #40",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/40.png",
+    "dna": "81afdf31c596467884ad2dc3d8545135a8ef950e",
+    "id": 40,
+    "date": 1640555162246,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "blue",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      },
+      {
+        "trait_type": "skin",
+        "value": "copper",
+        "count": 6,
+        "percentile": 0.12,
+        "rarity_score": 8.333333333333334
+      },
+      {
+        "trait_type": "mouth",
+        "value": "joint",
+        "count": 1,
+        "percentile": 0.02,
+        "rarity_score": 50
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "clothes",
+        "rarity_score": 6.25,
+        "count": 8,
+        "percentile": 0.16
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 82.6465975544923,
+    "rarity_rank": 10
+  },
+  {
+    "name": "Celostrials #41",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/41.png",
+    "dna": "f58da604332a88f10b60a7dca21dbb1a681f27d2",
+    "id": 41,
+    "date": 1640555162486,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "yellow",
+        "count": 5,
+        "percentile": 0.1,
+        "rarity_score": 10
+      },
+      {
+        "trait_type": "skin",
+        "value": "hot_pink",
+        "count": 2,
+        "percentile": 0.04,
+        "rarity_score": 25
+      },
+      {
+        "trait_type": "clothes",
+        "value": "red_stripe",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 58.44944308294758,
+    "rarity_rank": 23
+  },
+  {
+    "name": "Celostrials #42",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/42.png",
+    "dna": "fe1ed18f06e622c57e8e3b595141f758265bfe65",
+    "id": 42,
+    "date": 1640555162705,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "green",
+        "count": 6,
+        "percentile": 0.12,
+        "rarity_score": 8.333333333333334
+      },
+      {
+        "trait_type": "skin",
+        "value": "gray",
+        "count": 1,
+        "percentile": 0.02,
+        "rarity_score": 50
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "clothes",
+        "rarity_score": 6.25,
+        "count": 8,
+        "percentile": 0.16
+      },
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 2,
+      "percentile": 0.06,
+      "rarity_score": 16.666666666666668
+    },
+    "rarity_score": 86.03277641628092,
+    "rarity_rank": 8
+  },
+  {
+    "name": "Celostrials #43",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/43.png",
+    "dna": "7bb8d961703e62e38bb64bc968899f29f4f680af",
+    "id": 43,
+    "date": 1640555162936,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "pink_yellow",
+        "count": 12,
+        "percentile": 0.24,
+        "rarity_score": 4.166666666666667
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "mouth",
+        "value": "tongue_smile",
+        "count": 1,
+        "percentile": 0.02,
+        "rarity_score": 50
+      },
+      {
+        "trait_type": "clothes",
+        "value": "yee_haw",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 4,
+      "percentile": 0.34,
+      "rarity_score": 2.941176470588235
+    },
+    "rarity_score": 74.45315864046515,
+    "rarity_rank": 16
+  },
+  {
+    "name": "Celostrials #44",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/44.png",
+    "dna": "01d06e89bcb2a098a70ae0b97a727f307ceed190",
+    "id": 44,
+    "date": 1640555163172,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "purple_pink",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "pink",
+        "count": 2,
+        "percentile": 0.04,
+        "rarity_score": 25
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 3,
+      "percentile": 0.5,
+      "rarity_score": 2
+    },
+    "rarity_score": 49.73149436499886,
+    "rarity_rank": 30
+  },
+  {
+    "name": "Celostrials #45",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/45.png",
+    "dna": "a6bd0c830febc4d0c2f8cb44065cb59a593dbac9",
+    "id": 45,
+    "date": 1640555163400,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "gray",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "mouth",
+        "value": "green_smile",
+        "count": 1,
+        "percentile": 0.02,
+        "rarity_score": 50
+      },
+      {
+        "trait_type": "clothes",
+        "value": "orange_skull",
+        "count": 3,
+        "percentile": 0.06,
+        "rarity_score": 16.666666666666668
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      },
+      {
+        "trait_type": "special",
+        "rarity_score": 1.1111111111111112,
+        "count": 45,
+        "percentile": 0.9
+      }
+    ],
+    "trait_count": {
+      "count": 4,
+      "percentile": 0.34,
+      "rarity_score": 2.941176470588235
+    },
+    "rarity_score": 91.11982530713182,
+    "rarity_rank": 4
+  },
+  {
+    "name": "Celostrials #46",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/46.png",
+    "dna": "a74f984b2efcada6c0852b80d6cf5126cf5eefc2",
+    "id": 46,
+    "date": 1640555163636,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "pink_yellow",
+        "count": 12,
+        "percentile": 0.24,
+        "rarity_score": 4.166666666666667
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "red_hoodie",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      },
+      {
+        "trait_type": "special",
+        "value": "rainbow_throwup",
+        "count": 5,
+        "percentile": 0.1,
+        "rarity_score": 10
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "head",
+        "rarity_score": 1.3157894736842106,
+        "count": 38,
+        "percentile": 0.76
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      }
+    ],
+    "trait_count": {
+      "count": 4,
+      "percentile": 0.34,
+      "rarity_score": 2.941176470588235
+    },
+    "rarity_score": 34.561559724475984,
+    "rarity_rank": 43
+  },
+  {
+    "name": "Celostrials #47",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/47.png",
+    "dna": "7b194964aef560939e4829a58b18cb3d1ab1dcd1",
+    "id": 47,
+    "date": 1640555163875,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "pink_yellow",
+        "count": 12,
+        "percentile": 0.24,
+        "rarity_score": 4.166666666666667
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "red_hoodie",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      },
+      {
+        "trait_type": "head",
+        "value": "cowboy",
+        "count": 1,
+        "percentile": 0.02,
+        "rarity_score": 50
+      },
+      {
+        "trait_type": "special",
+        "value": "rainbow_throwup",
+        "count": 5,
+        "percentile": 0.1,
+        "rarity_score": 10
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      }
+    ],
+    "trait_count": {
+      "count": 5,
+      "percentile": 0.1,
+      "rarity_score": 10
+    },
+    "rarity_score": 90.30459378020355,
+    "rarity_rank": 5
+  },
+  {
+    "name": "Celostrials #48",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/48.png",
+    "dna": "18451c682d17c8f1bca31b43db9fbe5a01febaf1",
+    "id": 48,
+    "date": 1640555164108,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "pink_yellow",
+        "count": 12,
+        "percentile": 0.24,
+        "rarity_score": 4.166666666666667
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "head",
+        "value": "top_hat",
+        "count": 4,
+        "percentile": 0.08,
+        "rarity_score": 12.5
+      },
+      {
+        "trait_type": "special",
+        "value": "rainbow_throwup",
+        "count": 5,
+        "percentile": 0.1,
+        "rarity_score": 10
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "clothes",
+        "rarity_score": 6.25,
+        "count": 8,
+        "percentile": 0.16
+      },
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      }
+    ],
+    "trait_count": {
+      "count": 4,
+      "percentile": 0.34,
+      "rarity_score": 2.941176470588235
+    },
+    "rarity_score": 39.495770250791765,
+    "rarity_rank": 36
+  },
+  {
+    "name": "Celostrials #49",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/49.png",
+    "dna": "539599e327fda3b9d071db45b75df1cfe40de508",
+    "id": 49,
+    "date": 1640555164347,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "pink_yellow",
+        "count": 12,
+        "percentile": 0.24,
+        "rarity_score": 4.166666666666667
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "clothes",
+        "value": "pink",
+        "count": 2,
+        "percentile": 0.04,
+        "rarity_score": 25
+      },
+      {
+        "trait_type": "head",
+        "value": "brown_hair",
+        "count": 2,
+        "percentile": 0.04,
+        "rarity_score": 25
+      },
+      {
+        "trait_type": "special",
+        "value": "rainbow_throwup",
+        "count": 5,
+        "percentile": 0.1,
+        "rarity_score": 10
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      }
+    ],
+    "trait_count": {
+      "count": 5,
+      "percentile": 0.1,
+      "rarity_score": 10
+    },
+    "rarity_score": 77.80459378020355,
+    "rarity_rank": 13
+  },
+  {
+    "name": "Celostrials #50",
+    "description": "The worlds first nfETs",
+    "image": "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj/50.png",
+    "dna": "cb2858db6da60816b4f77c337d3f4030fae29d0c",
+    "id": 50,
+    "date": 1640555164571,
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "dark_pink",
+        "count": 9,
+        "percentile": 0.18,
+        "rarity_score": 5.555555555555555
+      },
+      {
+        "trait_type": "skin",
+        "value": "green",
+        "count": 39,
+        "percentile": 0.78,
+        "rarity_score": 1.282051282051282
+      },
+      {
+        "trait_type": "head",
+        "value": "horns",
+        "count": 1,
+        "percentile": 0.02,
+        "rarity_score": 50
+      },
+      {
+        "trait_type": "special",
+        "value": "rainbow_throwup",
+        "count": 5,
+        "percentile": 0.1,
+        "rarity_score": 10
+      }
+    ],
+    "missing_traits": [
+      {
+        "trait_type": "clothes",
+        "rarity_score": 6.25,
+        "count": 8,
+        "percentile": 0.16
+      },
+      {
+        "trait_type": "mouth",
+        "rarity_score": 1.2195121951219512,
+        "count": 41,
+        "percentile": 0.82
+      },
+      {
+        "trait_type": "laser",
+        "rarity_score": 1.1363636363636365,
+        "count": 44,
+        "percentile": 0.88
+      }
+    ],
+    "trait_count": {
+      "count": 4,
+      "percentile": 0.34,
+      "rarity_score": 2.941176470588235
+    },
+    "rarity_score": 78.38465913968066,
+    "rarity_rank": 12
+  }
+]

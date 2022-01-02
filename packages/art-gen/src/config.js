@@ -5,9 +5,9 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Celostrials";
+const namePrefix = "Celostrial";
 const description = "The worlds first nfETs";
-const baseUri = "ipfs://NewUriToReplace";
+const baseUri = "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj";
 
 const solanaMetadata = {
   symbol: "YC",
@@ -21,77 +21,68 @@ const solanaMetadata = {
   ],
 };
 
+// head can't be with head-gear
+// head-gear can't be with head
+// special can't be with mouth
+
 const layerConfigurations = [
+  {
+    growEditionSizeTo: 25,
+    layersOrder: [
+      {
+        name: "background",
+        options: {
+          bypassDNA: true,
+        },
+      },
+      { name: "background_effect" },
+      { name: "skin" },
+      { name: "eyes" },
+      { name: "mouth" },
+      { name: "clothes" },
+      { name: "facial_hair" },
+      { name: "glasses" },
+      { name: "head" },
+      { name: "laser" },
+    ],
+  },
+  {
+    growEditionSizeTo: 45,
+    layersOrder: [
+      {
+        name: "background",
+        options: {
+          bypassDNA: true,
+        },
+      },
+      { name: "background_effect" },
+      { name: "skin" },
+      { name: "eyes" },
+      { name: "mouth" },
+      { name: "clothes" },
+      { name: "facial_hair" },
+      { name: "glasses" },
+      { name: "head_gear" },
+      { name: "laser" },
+    ],
+  },
   {
     growEditionSizeTo: 50,
     layersOrder: [
-      { name: "background" },
+      {
+        name: "background",
+        options: {
+          bypassDNA: true,
+        },
+      },
+      { name: "background_effect" },
       { name: "skin" },
       { name: "eyes" },
-      // { name: "glasses" },
       { name: "clothes" },
-      { name: "mouth" },
-      // { name: "facial_hair" },
-      // { name: "hats" },
-      // { name: "laser" },
-      // { name: "special" },
-    ],
-  },
-  {
-    growEditionSizeTo: 100,
-    layersOrder: [
-      { name: "background" },
-      { name: "skin" },
-      { name: "eyes" },
-      // { name: "glasses" },
-      // { name: "clothes" },
-      { name: "mouth" },
-      // { name: "facial_hair" },
-      // { name: "hats" },
-      // { name: "laser" },
-      // { name: "special" },
-    ],
-  },
-  {
-    growEditionSizeTo: 150,
-    layersOrder: [
-      { name: "background" },
-      { name: "skin" },
-      { name: "eyes" },
-      { name: "glasses" },
-      { name: "clothes" },
-      { name: "mouth" },
       { name: "facial_hair" },
-      // { name: "hats" },
-      // { name: "laser" },
-      // { name: "special" },
-    ],
-  },
-  {
-    growEditionSizeTo: 175,
-    layersOrder: [
-      { name: "background" },
-      { name: "skin" },
-      { name: "eyes" },
       { name: "glasses" },
-      { name: "clothes" },
-      { name: "mouth" },
-      { name: "facial_hair" },
-      { name: "hats" },
-      // { name: "laser" },
-    ],
-  },
-  {
-    growEditionSizeTo: 200,
-    layersOrder: [
-      { name: "background" },
-      { name: "skin" },
-      { name: "eyes" },
-      { name: "glasses" },
-      { name: "clothes" },
-      { name: "mouth" },
-      { name: "facial_hair" },
-      { name: "hats" },
+      { name: "head" },
+      { name: "special" },
       { name: "laser" },
     ],
   },
@@ -113,7 +104,7 @@ const format = {
 };
 
 const gif = {
-  export: true,
+  export: false,
   repeat: 0,
   quality: 100,
   delay: 500,

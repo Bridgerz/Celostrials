@@ -280,3 +280,28 @@ code {
 .mintCard {
   border-radius: 0.5em;
 }
+
+.slick-dots {
+  bottom: -25px;
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  color: white;
+}
+
+.slick-slider {
+  width: inherit;
+}
+
+.custom-dots {
+  color: white;
+}
+
+.custom-dots li button:before {
+  color: #898989;
+}
+
+.custom-dots li.slick-active button:before {
+  color: white;
+}

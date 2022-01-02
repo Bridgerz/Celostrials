@@ -7,12 +7,19 @@ import {
   useToast,
   useBreakpointValue,
   IconButton,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
 } from "@chakra-ui/react";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import basicImage from "../../../assets/preview.gif";
-import mintImage from "../../../assets/basic.jpg";
+
 import logoImage from "../../../assets/Celostrials_Logo.png";
 import ufo from "../../../assets/ufo.svg";
 import { useDisclosure } from "@chakra-ui/react";
@@ -33,73 +40,21 @@ import {
   faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import Partnerships from "../../../components/Partnerships";
+import Mint from "../../../components/Mint";
+import About from "../../../components/About";
 
 const HomePage = () => {
-  // const { mint, totalSupply } = useCelostrialsContract();
-  const mintModal = useDisclosure();
-  const connect = useConnectWallet();
-
   const device = useBreakpointValue({ base: "mobile", md: "desktop" });
   const isMobile = device === "mobile";
-
-  const [tokens, setTokens] = useState<Token[]>([]);
-  const [loading, setLoading] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const myRef = useRef<null | HTMLDivElement>(null);
 
-  const executeScroll = () =>
-    myRef?.current?.scrollIntoView({ behavior: "smooth" });
-
-  const getTokens = (
-    event: ethers.Event,
-    receipt: ethers.ContractReceipt
-  ): Token => {
-    return {
-      id: Number(
-        ethers.utils.formatUnits(event?.args?.tokenId, "wei")
-      ).toString(),
-      txHash: receipt.transactionHash,
-    };
+  const executeScroll = () => {
+    onOpen();
+    // myRef?.current?.scrollIntoView({ behavior: "smooth" });
   };
-
-  // const submitTx = async (amount: number) => {
-  //   const test = ethers.utils.formatUnits((await totalSupply()) || 0, "wei");
-  //   setLoading(true);
-  //   let tx;
-  //   try {
-  //     tx = await mint(amount);
-  //   } catch (e) {
-  //     const error = e as any;
-  //     if (error.data)
-  //       toast({
-  //         title: getVMErrorMessage(error.data.message),
-  //         status: "error",
-  //       });
-  //     else {
-  //       let internalError = tryGetErrorMessage(error.message);
-  //       if (internalError)
-  //         toast({
-  //           title: internalError,
-  //           status: "error",
-  //         });
-  //       else
-  //         toast({
-  //           title: error.message,
-  //           status: "error",
-  //         });
-  //     }
-  //   }
-  //   if (!tx) {
-  //     connect();
-  //     return;
-  //   }
-  //   const receipt = await tx.wait();
-  //   const events = getTxEvents(receipt, "Transfer");
-  //   const tokens = events.map((event) => getTokens(event, receipt));
-  //   setTokens(tokens);
-  //   mintModal.onOpen();
-  //   setLoading(false);
-  // };
 
   return (
     <>
@@ -118,7 +73,7 @@ const HomePage = () => {
               nfETs on the Celo blockchain
               {/* https://www.npmjs.com/package/react-date-countdown-timer  FOR WHEN WE HAVE A DATE */}
             </Heading>
-            <VStack h="100vh">
+            <VStack h="90vh">
               <VStack className="preview" mb="5em">
                 <VStack className="homeCardContainer">
                   <Image className="homeCard" src={basicImage} />
@@ -134,99 +89,28 @@ const HomePage = () => {
                 Mint
               </Button>
             </VStack>
-            <VStack m="5em !important" mb="20em !important">
-              <Heading color="white" size="xl" ref={myRef}>
-                Mint - Coming Soon
-              </Heading>
-              {/* <Wrap justify="center" mt="6em !important" spacing="2em">
-                <WrapItem>
-                  <VStack
-                    cursor={"pointer"}
-                    onClick={() => {
-                      submitTx(1);
-                    }}
-                  >
-                    <Image
-                      height={"30vmin"}
-                      className="mintCard"
-                      src={mintImage}
-                    />
-                    <Heading color="white" size="2xl">
-                      1
-                    </Heading>
-                  </VStack>
-                </WrapItem>
-                <WrapItem>
-                  <VStack
-                    onClick={() => {
-                      submitTx(3);
-                    }}
-                  >
-                    <CardStack className="card card-top-left">
-                      <VStack className="card-inner">
-                        <Image
-                          height={"30vmin"}
-                          className="mintCard"
-                          src={mintImage}
-                        />
-                      </VStack>
-                    </CardStack>
-                    <Heading color="white" size="2xl">
-                      3
-                    </Heading>
-                  </VStack>
-                </WrapItem>
-                <WrapItem>
-                  <VStack
-                    onClick={() => {
-                      submitTx(5);
-                    }}
-                  >
-                    <CardStack className="card card-top-left">
-                      <VStack className="card-inner">
-                        <Image
-                          height={"30vmin"}
-                          className="mintCard"
-                          src={mintImage}
-                        />
-                      </VStack>
-                    </CardStack>
-                    <Heading color="white" size="2xl">
-                      5
-                    </Heading>
-                  </VStack>
-                </WrapItem>
-                <WrapItem>
-                  <VStack
-                    onClick={() => {
-                      submitTx(10);
-                    }}
-                  >
-                    <CardStack className="card card-top-left">
-                      <VStack className="card-inner">
-                        <Image
-                          height={"30vmin"}
-                          className="mintCard"
-                          src={mintImage}
-                        />
-                      </VStack>
-                    </CardStack>
-                    <Heading color="white" size="2xl">
-                      10
-                    </Heading>
-                  </VStack>
-                </WrapItem>
-              </Wrap> */}
-            </VStack>
+            <Partnerships />
+            <About />
+            {/* <Mint myRef={myRef} /> */}
           </VStack>
           {isMobile && <Socials />}
         </VStack>
       </Center>
-      <MintModal
-        isOpen={mintModal.isOpen}
-        onClose={mintModal.onClose}
-        tokens={tokens}
-      />
+      <Modal isCentered isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>
+            <Heading>Coming Soon!</Heading>
+          </ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            Follow our socials to get updates on the upcoming launch!
+          </ModalBody>
+          <ModalFooter>
+            <Socials color={colors.primary} />
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </>
   );
 };
@@ -243,7 +127,6 @@ export const Socials = ({ ...props }) => {
             target={"_blank"}
             aria-label="Telegram"
             size="lg"
-            color={colors.gray.cement}
             icon={<FontAwesomeIcon icon={faDiscord} />}
           />
         </WrapItem>
@@ -255,7 +138,6 @@ export const Socials = ({ ...props }) => {
             target={"_blank"}
             aria-label="Discord"
             size="lg"
-            color={colors.gray.cement}
             icon={<FontAwesomeIcon icon={faInstagram} />}
           />
         </WrapItem>
@@ -267,7 +149,6 @@ export const Socials = ({ ...props }) => {
             target={"_blank"}
             aria-label="Twitter"
             size="lg"
-            color={colors.gray.cement}
             icon={<FontAwesomeIcon icon={faTwitter} />}
           />
         </WrapItem>
@@ -276,22 +157,4 @@ export const Socials = ({ ...props }) => {
   );
 };
 
-const CardStack = ({ children, ...props }) => {
-  return (
-    <VStack
-      {...props}
-      _after={{
-        background: `url(${mintImage})`,
-        backgroundSize: "cover",
-      }}
-      _before={{
-        background: `url(${mintImage})`,
-        backgroundSize: "cover",
-      }}
-      className="card card-top-left"
-    >
-      {children}
-    </VStack>
-  );
-};
 export default HomePage;

@@ -14,7 +14,7 @@
     "fork": "yarn workspace @celostrials/hardhat fork",
     "node": "yarn workspace @celostrials/hardhat chain",
     "test": "yarn workspace @celostrials/hardhat test",
-    "start-dapp": "yarn workspace @celostrials/react-app start",
+    "start-dapp": "yarn workspace @celostrials/react-app start --port 3001",
     "start-rarity": "yarn workspace @celostrials/rarity dev",
     "build-art": "yarn workspace @celostrials/art-gen build",
     "build": "yarn workspace @celostrials/react-app build",
@@ -29,11 +29,7 @@
     "account": "yarn workspace @celostrials/hardhat account",
     "mineContractAddress": "cd packages/hardhat && npx hardhat mineContractAddress",
     "wallet": "cd packages/hardhat && npx hardhat wallet",
-    "fundedwallet": "cd packages/hardhat && npx hardhat fundedwallet",
-    "flatten": "cd packages/hardhat && npx hardhat flatten",
-    "clean": "cd packages/hardhat && npx hardhat clean",
-    "setup-local": "yarn workspace @celostrials/hardhat hardhat run scripts/setup-local.ts",
-    "start-all": "yarn deploy && yarn start-subgraph && yarn codegen && yarn setup-local && yarn start"
+    "fundedwallet": "cd packages/hardhat && npx hardhat fundedwallet"
   },
   "workspaces": {
     "packages": [

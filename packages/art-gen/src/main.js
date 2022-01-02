@@ -137,42 +137,19 @@ const addMetadata = (_dna, _edition) => {
     ...extraMetadata,
     attributes: attributesList,
   };
-  if (network == NETWORK.sol) {
-    tempMetadata = {
-      //Added metadata for solana
-      name: tempMetadata.name,
-      symbol: solanaMetadata.symbol,
-      description: tempMetadata.description,
-      //Added metadata for solana
-      seller_fee_basis_points: solanaMetadata.seller_fee_basis_points,
-      image: `image.png`,
-      //Added metadata for solana
-      external_url: solanaMetadata.external_url,
-      id: _edition,
-      ...extraMetadata,
-      attributes: tempMetadata.attributes,
-      properties: {
-        files: [
-          {
-            uri: "image.png",
-            type: "image/png",
-          },
-        ],
-        category: "image",
-        creators: solanaMetadata.creators,
-      },
-    };
-  }
+
   metadataList.push(tempMetadata);
   attributesList = [];
 };
 
 const addAttributes = (_element) => {
   let selectedElement = _element.layer.selectedElement;
-  attributesList.push({
-    trait_type: _element.layer.name,
-    value: selectedElement.name,
-  });
+  if (selectedElement.name !== "base") {
+    attributesList.push({
+      trait_type: _element.layer.name,
+      value: selectedElement.name,
+    });
+  }
 };
 
 const loadLayerImg = async (_layer) => {

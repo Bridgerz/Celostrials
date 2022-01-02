@@ -1,5 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 let nfts = require("../data/collection.json");
+const fs = require("fs");
 
 const get_all_traits = (nft_arr) => {
   let all_traits = {};
@@ -162,12 +163,15 @@ export const set_nft_rank = (nft, rank) => {
 };
 
 const set_nfts_rank = () => {
-  console.log("set nfts rank");
   nfts = nfts
     .map((nft) => getNFT(nft.id))
     .sort((x, y) => y["rarity_score"] - x["rarity_score"])
     .map((nft, index) => set_nft_rank(nft, index))
     .sort((x, y) => x["id"] - y["id"]);
+
+  const rankFile = "./ranks.json";
+  fs.writeFileSync(rankFile, JSON.stringify(nfts, null, 2));
+  console.log("UPDATED RANK FILE");
 };
 
 set_nfts_rank();

@@ -12,9 +12,15 @@ import {
   Center,
   Button,
 } from "@chakra-ui/react";
+import alien from "../../assets/alien.svg";
 import { gradients } from "../../theme/foundations/colors";
 import Slider from "react-slick";
 import config from "../../config";
+import { useEffectOnce } from "react-use";
+import Minted from "../Minted";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
 
 export interface Token {
   id: string;
@@ -28,57 +34,88 @@ export interface MintModalProps {
 }
 
 const MintModal = ({ isOpen, onClose, tokens }: MintModalProps) => {
-  const getTokenImage = (tokenId: string) => {
-    return `https://celostrials.mypinata.cloud/ipfs/QmZ3EFB1XhncBqg723mDPLjyyy3V6HnxtzKSt8bKwktXxo/${tokenId}.png`;
-  };
-  const getTransactionLink = (txHash: string) => {
-    return `${config.NETWORK_EXPLORER_URL}/${txHash}`;
-  };
+  const [mint, setMint] = useState(1);
+
+  useEffect(() => {
+    if (!isOpen) {
+      setMint(1);
+    }
+  }, [isOpen]);
+
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <HStack
+        className={className}
+        style={{ ...style, display: "block" }}
+        _before={{ color: "white" }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <HStack
+        className={className}
+        style={{ ...style, display: "block" }}
+        _before={{ color: "white" }}
+        onClick={onClick}
+      >
+        <Heading>Next</Heading>
+      </HStack>
+    );
+  }
 
   var settings = {
-    dots: true,
-    infinite: false,
-    speed: 0,
+    infinite: true,
+    lazyLoad: true,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    dots: false,
+    beforeChange: (current, next) => setMint(next + 1),
+    customPaging: function (i) {
+      return <FontAwesomeIcon size="xs" icon={faCircle} />;
+    },
+    dotsClass: "slick-dots slick-thumb",
   };
   return (
     <>
       <Modal size="4xl" isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
-        <ModalContent m="1em">
+        <ModalContent
+          m={{ sm: "0em", md: "1em" }}
+          color="white"
+          background="rgb(36 36 36 / 95%)"
+        >
           <ModalHeader alignSelf={"center"}>
-            <Heading color="white" size="xl">
-              Minted nfETs
+            <Heading size="xl">
+              {mint}/{tokens.length}
             </Heading>
           </ModalHeader>
-          <ModalBody>
+          <ModalBody padding="0em 2em">
             <Slider {...settings}>
               {tokens.map((token) => {
-                return (
-                  <VStack>
-                    <Center>
-                      <VStack>
-                        <Image
-                          height={"70vmin"}
-                          className="mintCard"
-                          src={getTokenImage(token.id)}
-                        />
-                        <Button
-                          size="lg"
-                          background={gradients.primary}
-                          as="a"
-                          target="_blank"
-                          href={getTransactionLink(token.txHash)}
-                        >
-                          View Transaction
-                        </Button>
-                      </VStack>
-                    </Center>
-                  </VStack>
-                );
+                return <Minted token={token} />;
               })}
             </Slider>
+            <VStack>
+              <Button
+                size="lg"
+                w="100%"
+                maxWidth="20em !important"
+                mt="3em"
+                background={gradients.primary}
+                onClick={onClose}
+                leftIcon={<Image width="1.5em" src={alien} />}
+              >
+                Mint More
+              </Button>
+            </VStack>
           </ModalBody>
           <ModalFooter>
             <HStack alignItems="center"></HStack>

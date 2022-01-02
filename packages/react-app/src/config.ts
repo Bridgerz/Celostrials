@@ -44,6 +44,9 @@ export const config = {
   ),
   NETWORK_NAME: process.env.REACT_APP_NETWORK_NAME!,
   CELOSTRIALS_ADDRESS: process.env.REACT_APP_CELOSTRIALS_ADDRESS!,
+  IPFS_JSON_CID: process.env.REACT_APP_IPFS_JSON_CID!,
+  IPFS_IMAGE_CID: process.env.REACT_APP_IPFS_IMAGE_CID!,
+  RARITY_URL: process.env.REACT_APP_RARITY_URL!,
 };
 
 export default config;
