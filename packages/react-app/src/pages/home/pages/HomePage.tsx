@@ -107,7 +107,7 @@ const HomePage = () => {
             Follow our socials to get updates on the upcoming launch!
           </ModalBody>
           <ModalFooter>
-            <Socials color={colors.primary} />
+            <Socials color={colors.gray.cement} />
           </ModalFooter>
         </ModalContent>
       </Modal>
