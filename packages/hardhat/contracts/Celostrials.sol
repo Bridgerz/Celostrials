@@ -17,16 +17,23 @@ contract Celostrials is Ownable, Pausable, ERC721Enumerable {
 
     string public baseURI;
     string public baseExtension = ".json";
-    uint256 public maxSupply = 50;
+    uint256 public maxSupply = 1500;
+    uint256 public maxWhiteListMint = 2000;
     uint256 private traunchSize = 50;
     uint256 private currentTraunch = 0;
     uint256 public maxMintAmount = 50;
     uint256 public cost = 2 ether;
+    bool public onlyWhitelist = true;
     mapping(uint256 => bool) private isMinted;
+    mapping(address => bool) whitelistedAddresses;
 
+    modifier isWhitelisted(address _address) {
+      require(whitelistedAddresses[_address], "You need to be whitelisted");
+      _;
+    }
 
     constructor() ERC721("Celostrials", "NFET") {
-        setBaseURI("https://ipfs.io/ipfs/QmRYoGfPKxXYkpRH4scsjrEVH3H8QuqtkgU4eeMD7j9CXf");
+        setBaseURI("https://ipfs.io/ipfs/QmeJXDHp6NpKAzbnz3FatKE7NUfjuUBRYRRNJqgPxT4hjb");
         for (uint16 i = 1; i <= 20; i++) {
           _safeMint(msg.sender, i);
           isMinted[i] = true;
@@ -38,6 +45,11 @@ contract Celostrials is Ownable, Pausable, ERC721Enumerable {
     }
 
     function mint(address _to, uint16 _mintAmount) public payable whenNotPaused {
+        if (onlyWhitelist) {
+          require(whitelistedAddresses[msg.sender], "Celostrials: Minting is only open to whitelisted wallets currently");
+          require(maxWhiteListMint < maxWhiteListMint, "Celostrials: Maximum white list limit has been reached");
+          maxWhiteListMint++;
+        }
         uint256 supply = totalSupply();
         require(_mintAmount > 0, "Celostrials: mintAmount should be greater than 0");
         require(_mintAmount <= maxMintAmount, "Celostrials: mintAmount should be less than max mint");
@@ -128,4 +140,16 @@ contract Celostrials is Ownable, Pausable, ERC721Enumerable {
     function withdrawERC20(IERC20 token) public onlyOwner {
         require(token.transfer(msg.sender, token.balanceOf(address(this))), "Transfer failed");
     }
+
+    function addUser(address _addressToWhitelist) public onlyOwner {
+      whitelistedAddresses[_addressToWhitelist] = true;
+    } 
+
+    function openWhitelist() public onlyOwner {
+        onlyWhitelist = true;
+    } 
+
+    function closeWhitelist() public onlyOwner {
+        onlyWhitelist = false;
+    } 
 }

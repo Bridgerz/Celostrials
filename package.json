@@ -17,6 +17,8 @@
     "start-dapp": "yarn workspace @celostrials/react-app start --port 3001",
     "start-rarity": "yarn workspace @celostrials/rarity dev",
     "build-art": "yarn workspace @celostrials/art-gen build",
+    "update_info": "yarn workspace @celostrials/art-gen update_info",
+    "generate_rarity": "yarn workspace @celostrials/art-gen generate_rarity",
     "build": "yarn workspace @celostrials/react-app build",
     "compile": "yarn workspace @celostrials/hardhat compile",
     "deploy": "yarn workspace @celostrials/hardhat deploy",

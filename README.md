@@ -27,27 +27,48 @@ yarn chain
 yarn deploy
 ```
 
-> start the local graph node
+# 👽 Create a new collection
+
+A few things to keep in mind.
+
+1. The skin and background layers shouldn't have "base" attributes
+2.
+
+> 🎨 Generate the collection images and metadata
 
 ```bash
-yarn run-graph-node
+yarn build-art
 ```
 
-> if old graph node, clean graph node
+> ↗️ Upload the collection images to pinata
+
+1. upload the `packages/art-gen/build/images` directory to pinata
+2. copy the generated IPFS CID
+3. paste the CID in `packages/art-gen/src/config.ts` as the "baseUri"
+
+> ➕ Update the collection metadata
 
 ```bash
-yarn clean-graph-node
+yarn update_info
 ```
 
-> build and deploy the subgraph
+> © Generate rarity
 
-```bash
-yarn graph-prepare
-yarn graph-codegen
-yarn graph-build
-yarn graph-create-local
-yarn graph-deploy-local
-```
+1. copy the contents of `packages/art-gen/build/json/_metadata.json`
+2. paste over the value of `packages/rarity/data/collection.json`
+3. start the rarity app by running `yarn start-rarity`
+4. update the collection metadata again by running `yarn generate_rarity`
+
+> ↗️ Upload the collection metadata to pinata
+
+1. upload the `packages/art-gen/build/json` directory to pinata
+2. copy the generated IPFS CID
+3. paste the CID in `packages/hardhat/contracts/Celostrials.sol` in the constructor of the contract
+4. deploy the contract
+
+> 🔄 Update contract and CID references
+
+1. paste the deployed contract address, and generated CID in the react-app env
 
 🔏 smart contracts in `packages/hardhat/contracts`
 

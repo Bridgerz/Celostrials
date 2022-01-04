@@ -23,6 +23,7 @@ describe("ReSourcetoken Tests", function() {
     const celostrialsFactory = await ethers.getContractFactory("Celostrials");
 
     celostrials = (await celostrialsFactory.deploy()) as Celostrials;
+    await (await celostrials.closeWhitelist()).wait();
     expect(celostrials.address).to.properAddress;
   });
 

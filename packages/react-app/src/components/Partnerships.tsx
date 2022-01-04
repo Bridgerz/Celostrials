@@ -2,6 +2,8 @@ import { VStack, Center, Heading, Image } from "@chakra-ui/react";
 import Slider from "react-slick";
 import ari from "../assets/partnerships/ari.jpeg";
 import celoPunks from "../assets/partnerships/celo-punks.jpeg";
+import celoApes from "../assets/partnerships/celo-apes.jpg";
+import goodGhosting from "../assets/partnerships/goodGhosting.jpg";
 import cybertime from "../assets/partnerships/cybertime.jpeg";
 import nomspace from "../assets/partnerships/nomspace.jpeg";
 import resource from "../assets/partnerships/ReSource.jpeg";
@@ -82,6 +84,38 @@ const Partnerships = () => {
             </Heading>
             <Center>
               <Image borderRadius="1em" h="auto" w="20em" src={celoPunks} />
+            </Center>
+          </VStack>
+          <VStack>
+            <Heading
+              background={gradients.primary}
+              position="absolute"
+              padding=".5em"
+              borderRadius="1em"
+              w="fit-content"
+              color="white"
+              ml={{ sm: "0em", md: "1em" }}
+            >
+              Celo Apes
+            </Heading>
+            <Center>
+              <Image borderRadius="1em" h="auto" w="20em" src={celoApes} />
+            </Center>
+          </VStack>
+          <VStack>
+            <Heading
+              background={gradients.primary}
+              position="absolute"
+              padding=".5em"
+              borderRadius="1em"
+              w="fit-content"
+              color="white"
+              ml={{ sm: "0em", md: "1em" }}
+            >
+              GoodGhosting
+            </Heading>
+            <Center>
+              <Image borderRadius="1em" h="auto" w="20em" src={goodGhosting} />
             </Center>
           </VStack>
           <VStack>

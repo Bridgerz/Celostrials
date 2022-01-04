@@ -7,7 +7,7 @@ const network = NETWORK.eth;
 // General metadata for Ethereum
 const namePrefix = "Celostrial";
 const description = "The worlds first nfETs";
-const baseUri = "ipfs://QmNsrPa5VqdikFKUxQcSzNW5sVtLyz3FA7kjxo6SAWxKxj";
+const baseUri = "ipfs://QmYBJQrXLQMuSuiPhZ85HfDTwmo6hHMjisYbaZpG2Nc6JR";
 
 const solanaMetadata = {
   symbol: "YC",
@@ -27,59 +27,50 @@ const solanaMetadata = {
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 25,
+    growEditionSizeTo: 500,
     layersOrder: [
       {
         name: "background",
-        options: {
-          bypassDNA: true,
-        },
       },
-      { name: "background_effect" },
+      { name: "special_behind" },
       { name: "skin" },
       { name: "eyes" },
       { name: "mouth" },
       { name: "clothes" },
-      { name: "facial_hair" },
+      { name: "facial" },
       { name: "glasses" },
       { name: "head" },
       { name: "laser" },
     ],
   },
   {
-    growEditionSizeTo: 45,
+    growEditionSizeTo: 1000,
     layersOrder: [
       {
         name: "background",
-        options: {
-          bypassDNA: true,
-        },
       },
-      { name: "background_effect" },
+      { name: "special_behind" },
       { name: "skin" },
       { name: "eyes" },
       { name: "mouth" },
       { name: "clothes" },
-      { name: "facial_hair" },
+      { name: "facial" },
       { name: "glasses" },
-      { name: "head_gear" },
+      { name: "head_ontop" },
       { name: "laser" },
     ],
   },
   {
-    growEditionSizeTo: 50,
+    growEditionSizeTo: 1500,
     layersOrder: [
       {
         name: "background",
-        options: {
-          bypassDNA: true,
-        },
       },
-      { name: "background_effect" },
+      { name: "special_behind" },
       { name: "skin" },
       { name: "eyes" },
       { name: "clothes" },
-      { name: "facial_hair" },
+      { name: "facial" },
       { name: "glasses" },
       { name: "head" },
       { name: "special" },
