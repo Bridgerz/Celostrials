@@ -21,7 +21,7 @@ const Roadmap = () => {
   const isMobile = device === "mobile";
 
   return !isMobile ? (
-    <VStack pb="5em !important" pt="1em" w="100%">
+    <VStack pb="5em !important" pt="1em" w="100%" maxW="75em">
       <Heading color="white" size="xl" mb="1em">
         Celostrials Roadmap
       </Heading>
@@ -31,9 +31,10 @@ const Roadmap = () => {
             <Image src={roadmap1} />
             <Image
               src={downArrows}
-              width="15em"
-              mt="-10em !important"
-              mr="9.4em !important"
+              className="ufo"
+              width="10em"
+              mt="-5em !important"
+              mr="6.5em !important"
             />
           </VStack>
           <VStack
@@ -95,9 +96,10 @@ const Roadmap = () => {
             <Image src={roadmap2} />
             <Image
               src={downArrows}
-              width="15em"
-              mt="-10em !important"
-              ml="9.4em !important"
+              className="ufo"
+              width="10em"
+              mt="-5em !important"
+              ml="6.5em !important"
             />
           </VStack>
         </HStack>
@@ -107,9 +109,10 @@ const Roadmap = () => {
             <Image src={roadmap3} />
             <Image
               src={downArrows}
-              width="15em"
-              mt="-10em !important"
-              mr="9.4em !important"
+              className="ufo"
+              width="10em"
+              mt="-5em !important"
+              mr="6.5em !important"
             />
           </VStack>
           <VStack
@@ -155,9 +158,10 @@ const Roadmap = () => {
             <Image src={roadmap4} />
             <Image
               src={downArrows}
-              width="15em"
-              mt="-10em !important"
-              ml="9.4em !important"
+              className="ufo"
+              width="10em"
+              mt="-5em !important"
+              ml="6.5em !important"
             />
           </VStack>
         </HStack>
@@ -167,9 +171,10 @@ const Roadmap = () => {
             <Image src={roadmap5} />
             <Image
               src={downArrows}
-              width="15em"
-              mt="-10em !important"
-              mr="9.4em !important"
+              className="ufo"
+              width="10em"
+              mt="-5em !important"
+              mr="6.5em !important"
             />
           </VStack>
           <VStack
@@ -202,7 +207,12 @@ const Roadmap = () => {
         <VStack w="100%" alignItems="start">
           <VStack width="100%" alignItems="flex-end">
             <Image src={roadmap1} />
-            <Image src={downArrows} width="5em" mt="-3em !important" />
+            <Image
+              src={downArrows}
+              className="ufo"
+              width="5em"
+              mt="-3em !important"
+            />
           </VStack>
           <VStack
             borderTop="2px solid white"
@@ -245,7 +255,12 @@ const Roadmap = () => {
         <VStack w="100%" alignItems="start">
           <VStack width="100%" alignItems="flex-start" ml="0 !important">
             <Image src={roadmap2} />
-            <Image src={downArrows} width="5em" mt="-3em !important" />
+            <Image
+              src={downArrows}
+              className="ufo"
+              width="5em"
+              mt="-3em !important"
+            />
           </VStack>
           <VStack
             borderTop="2px solid white"
@@ -253,15 +268,16 @@ const Roadmap = () => {
             p="2em !important"
             m="2em !important"
             alignItems="end"
+            textAlign="end"
           >
-            <Heading color="white" size="3xl" textAlign="right">
+            <Heading color="white" size="3xl" textAlign="end">
               2.
             </Heading>
             <Text
               fontSize="3xl"
               color="white"
               fontWeight="bold"
-              textAlign="right"
+              textAlign="end"
             >
               Whitelist mint
             </Text>
@@ -269,7 +285,7 @@ const Roadmap = () => {
               fontSize="1xl"
               color="white"
               fontWeight="bold"
-              textAlign="right"
+              textAlign="end"
             >
               Check out the{" "}
               <Link
@@ -287,7 +303,12 @@ const Roadmap = () => {
         <VStack w="100%" alignItems="start">
           <VStack width="100%" alignItems="flex-end">
             <Image src={roadmap3} />
-            <Image src={downArrows} width="5em" mt="-3em !important" />
+            <Image
+              src={downArrows}
+              className="ufo"
+              width="5em"
+              mt="-3em !important"
+            />
           </VStack>
           <VStack
             borderTop="2px solid white"
@@ -322,7 +343,12 @@ const Roadmap = () => {
         <VStack w="100%" alignItems="start">
           <VStack width="100%" alignItems="flex-start" ml="0 !important">
             <Image src={roadmap4} />
-            <Image src={downArrows} width="5em" mt="-3em !important" />
+            <Image
+              src={downArrows}
+              className="ufo"
+              width="5em"
+              mt="-3em !important"
+            />
           </VStack>
           <VStack
             borderTop="2px solid white"
@@ -330,15 +356,16 @@ const Roadmap = () => {
             p="2em !important"
             m="2em !important"
             alignItems="end"
+            textAlign="end"
           >
-            <Heading color="white" size="3xl" textAlign="right">
+            <Heading color="white" size="3xl" textAlign="end">
               4.
             </Heading>
             <Text
               fontSize="3xl"
               color="white"
               fontWeight="bold"
-              textAlign="right"
+              textAlign="end"
             >
               Ethestrials
             </Text>
@@ -346,7 +373,7 @@ const Roadmap = () => {
               fontSize="1xl"
               color="white"
               fontWeight="bold"
-              textAlign="right"
+              textAlign="end"
             >
               Ethereum special collection
             </Text>
@@ -356,7 +383,12 @@ const Roadmap = () => {
         <VStack w="100%" alignItems="start">
           <VStack width="100%" alignItems="flex-end">
             <Image src={roadmap5} />
-            <Image src={downArrows} width="5em" mt="-3em !important" />
+            <Image
+              src={downArrows}
+              className="ufo"
+              width="5em"
+              mt="-3em !important"
+            />
           </VStack>
           <VStack
             borderTop="2px solid white"

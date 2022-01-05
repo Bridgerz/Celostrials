@@ -6,7 +6,7 @@ import {
   HStack,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import basicImage from "../assets/basic.jpg";
+import basicImage from "../assets/no_background.png";
 
 const About = () => {
   const device = useBreakpointValue({ base: "mobile", md: "desktop" });
