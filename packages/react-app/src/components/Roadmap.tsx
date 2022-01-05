@@ -26,14 +26,14 @@ const Roadmap = () => {
         Celostrials Roadmap
       </Heading>
       <VStack w="100%">
-        <HStack w="100%" alignItems="start">
-          <VStack width="50%" pr="1.5em" alignItems="flex-end">
+        <HStack mb="2em !important" w="100%" alignItems="start">
+          <VStack width="50%" mr="3em !important" alignItems="flex-end">
             <Image src={roadmap1} />
             <Image
               src={downArrows}
               className="ufo"
-              width="10em"
-              mt="-5em !important"
+              width="5em"
+              mt="-3em !important"
               mr="6.5em !important"
             />
           </VStack>
@@ -42,8 +42,8 @@ const Roadmap = () => {
             borderLeft="2px solid white"
             p="2em"
             width="50%"
-            ml="3em !important"
             alignItems="start"
+            textAlign="start"
           >
             <Heading color="white" size="3xl">
               1.
@@ -65,14 +65,14 @@ const Roadmap = () => {
           </VStack>
         </HStack>
 
-        <HStack w="100%" alignItems="start">
+        <HStack mb="2em !important" w="100%" alignItems="start">
           <VStack
             borderTop="2px solid white"
             borderRight="2px solid white"
             p="2em"
             width="50%"
-            mr="5em"
-            alignItems="end"
+            mr="3em !important"
+            alignItems="flex-end"
           >
             <Heading color="white" size="3xl">
               2.
@@ -97,21 +97,20 @@ const Roadmap = () => {
             <Image
               src={downArrows}
               className="ufo"
-              width="10em"
-              mt="-5em !important"
-              ml="6.5em !important"
+              width="5em"
+              mt="-3em !important"
             />
           </VStack>
         </HStack>
 
-        <HStack w="100%" alignItems="start">
-          <VStack width="50%" pr="1.5em" alignItems="flex-end">
+        <HStack mb="2em !important" w="100%" alignItems="start">
+          <VStack width="50%" mr="3em !important" alignItems="flex-end">
             <Image src={roadmap3} />
             <Image
               src={downArrows}
               className="ufo"
-              width="10em"
-              mt="-5em !important"
+              width="5em"
+              mt="-3em !important"
               mr="6.5em !important"
             />
           </VStack>
@@ -120,7 +119,6 @@ const Roadmap = () => {
             borderLeft="2px solid white"
             p="2em"
             width="50%"
-            ml="3em !important"
             alignItems="start"
           >
             <Heading color="white" size="3xl">
@@ -135,14 +133,14 @@ const Roadmap = () => {
           </VStack>
         </HStack>
 
-        <HStack w="100%" alignItems="start">
+        <HStack mb="2em !important" w="100%" alignItems="start">
           <VStack
             borderTop="2px solid white"
             borderRight="2px solid white"
             p="2em"
             width="50%"
-            mr="5em"
-            alignItems="end"
+            mr="3em !important"
+            alignItems="flex-end"
           >
             <Heading color="white" size="3xl">
               4.
@@ -154,26 +152,26 @@ const Roadmap = () => {
               Ethereum special collection
             </Text>
           </VStack>
-          <VStack width="50%" alignItems="flex-start" ml="0 !important">
+          <VStack width="50%" alignItems="flex-start">
             <Image src={roadmap4} />
             <Image
               src={downArrows}
               className="ufo"
-              width="10em"
-              mt="-5em !important"
+              width="5em"
+              mt="-3em !important"
               ml="6.5em !important"
             />
           </VStack>
         </HStack>
 
-        <HStack w="100%" alignItems="start">
-          <VStack width="50%" pr="1.5em" alignItems="flex-end">
+        <HStack mb="2em !important" w="100%" alignItems="start">
+          <VStack width="50%" mr="3em !important" alignItems="flex-end">
             <Image src={roadmap5} />
             <Image
               src={downArrows}
               className="ufo"
-              width="10em"
-              mt="-5em !important"
+              width="5em"
+              mt="-3em !important"
               mr="6.5em !important"
             />
           </VStack>
@@ -182,7 +180,6 @@ const Roadmap = () => {
             borderLeft="2px solid white"
             p="2em"
             width="50%"
-            ml="3em !important"
             alignItems="start"
           >
             <Heading color="white" size="3xl">
@@ -199,7 +196,7 @@ const Roadmap = () => {
       </VStack>
     </VStack>
   ) : (
-    <VStack pb="5em !important" pt="1em" w="100%">
+    <VStack pt="1em" w="100%">
       <Heading color="white" size="xl" mb="1em">
         Celostrials Roadmap
       </Heading>
@@ -267,8 +264,7 @@ const Roadmap = () => {
             borderRight="2px solid white"
             p="2em !important"
             m="2em !important"
-            alignItems="end"
-            textAlign="end"
+            alignItems="flex-end !important"
           >
             <Heading color="white" size="3xl" textAlign="end">
               2.
@@ -355,7 +351,7 @@ const Roadmap = () => {
             borderRight="2px solid white"
             p="2em !important"
             m="2em !important"
-            alignItems="end"
+            alignItems="flex-end"
             textAlign="end"
           >
             <Heading color="white" size="3xl" textAlign="end">
