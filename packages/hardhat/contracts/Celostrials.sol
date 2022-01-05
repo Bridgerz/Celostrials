@@ -21,7 +21,7 @@ contract Celostrials is Ownable, Pausable, ERC721Enumerable {
     uint256 public maxWhiteListMint = 2000;
     uint256 private traunchSize = 50;
     uint256 private currentTraunch = 0;
-    uint256 public maxMintAmount = 50;
+    uint256 public maxMintAmount = 10;
     uint256 public cost = 2 ether;
     bool public onlyWhitelist = true;
     mapping(uint256 => bool) private isMinted;
