@@ -78,7 +78,7 @@ const About = () => {
             Follow our socials in order to stay up to date on the latest launch
             updates, future giveaways and sneak previews of the collection! 🛸{" "}
           </Text>
-          <Image w="100%" src={basicImage} mb="-2em" />
+          <Image w="100%" src={basicImage} mb="-2em !important" />
         </VStack>
       </VStack>
     </VStack>
