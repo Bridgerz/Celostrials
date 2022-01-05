@@ -20,10 +20,22 @@ const About = () => {
       pt="1em"
       mb="5em !important"
     >
-      <HStack maxW="50em" textAlign="initial" mt="1em">
-        <Image w="50%" maxW="14em" src={basicImage} mr="1em" />
+      <HStack textAlign="initial" mt="1em">
+        <Image
+          w="50%"
+          maxW="18em"
+          src={basicImage}
+          mr="-19em"
+          mb="2.5em"
+          zIndex="1"
+        />
 
-        <VStack>
+        <VStack
+          maxWidth="66em"
+          border="2px solid white"
+          padding="2em"
+          paddingLeft="20em"
+        >
           <Heading alignSelf="start" color="white" size="xl">
             What are Celostrials?
           </Heading>
@@ -51,7 +63,7 @@ const About = () => {
           <Heading alignSelf="start" color="white" size="xl">
             What are Celostrials?
           </Heading>
-          <Image w="100%" src={basicImage} />
+
           <Text marginTop="2em !important" fontSize="m" color="white">
             Celostrials are an intergalactic collection of unique beings, found
             exclusively on the Celo Blockchain. Their features are
@@ -66,6 +78,7 @@ const About = () => {
             Follow our socials in order to stay up to date on the latest launch
             updates, future giveaways and sneak previews of the collection! 🛸{" "}
           </Text>
+          <Image w="100%" src={basicImage} mb="-2em" />
         </VStack>
       </VStack>
     </VStack>
