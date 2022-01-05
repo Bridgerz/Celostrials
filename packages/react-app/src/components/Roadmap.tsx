@@ -312,6 +312,7 @@ const Roadmap = () => {
             p="2em !important"
             m="2em !important"
             alignItems="start"
+            width="-webkit-fill-available"
           >
             <Heading color="white" size="3xl">
               3.
@@ -353,6 +354,7 @@ const Roadmap = () => {
             m="2em !important"
             alignItems="flex-end"
             textAlign="end"
+            width="-webkit-fill-available"
           >
             <Heading color="white" size="3xl" textAlign="end">
               4.
@@ -392,6 +394,7 @@ const Roadmap = () => {
             p="2em !important"
             m="2em !important"
             alignItems="start"
+            width="-webkit-fill-available"
           >
             <Heading color="white" size="3xl">
               5.
