@@ -18,7 +18,7 @@ const About = () => {
       backgroundColor="#ffffff1f"
       w="100%"
       pt="1em"
-      mb="15em !important"
+      mb="5em !important"
     >
       <HStack maxW="50em" textAlign="initial" mt="1em">
         <Image w="50%" maxW="14em" src={basicImage} mr="1em" />

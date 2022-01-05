@@ -1,10 +1,8 @@
 import { VStack, Heading, HStack } from "@chakra-ui/layout";
 import {
   Center,
-  Text,
   Image,
   Button,
-  useToast,
   useBreakpointValue,
   IconButton,
   Modal,
@@ -16,7 +14,7 @@ import {
   ModalFooter,
 } from "@chakra-ui/react";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 import basicImage from "../../../assets/preview.gif";
 
@@ -25,15 +23,6 @@ import ufo from "../../../assets/ufo.svg";
 import { useDisclosure } from "@chakra-ui/react";
 import { Wrap, WrapItem } from "@chakra-ui/react";
 import colors, { gradients } from "../../../theme/foundations/colors";
-import MintModal, { Token } from "../../../components/modals/MintModal";
-import { useCelostrialsContract } from "../../../services/web3/contracts/celostrials";
-import { useConnectWallet } from "../../../services/web3/utils/useConnectWallet";
-import { ethers } from "ethers";
-import {
-  getVMErrorMessage,
-  tryGetErrorMessage,
-} from "../../../services/web3/utils/getVMErrorMessage";
-import { getTxEvents } from "../../../services/web3/utils/getTxEvent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faDiscord,
@@ -43,6 +32,7 @@ import {
 import Partnerships from "../../../components/Partnerships";
 import Mint from "../../../components/Mint";
 import About from "../../../components/About";
+import Roadmap from "../../../components/Roadmap";
 
 const HomePage = () => {
   const device = useBreakpointValue({ base: "mobile", md: "desktop" });
@@ -53,7 +43,6 @@ const HomePage = () => {
 
   const executeScroll = () => {
     onOpen();
-    // myRef?.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -91,6 +80,7 @@ const HomePage = () => {
             </VStack>
             <Partnerships />
             <About />
+            <Roadmap />
             {/* <Mint myRef={myRef} /> */}
           </VStack>
           {isMobile && (

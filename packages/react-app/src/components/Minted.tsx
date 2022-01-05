@@ -97,57 +97,58 @@ const Minted = ({ token }: MintProps) => {
               <Image className="homeCard" src={getTokenImage(token.id)} />
             </VStack>
           </VStack>
-          {tokenData?.rarity_rank && (
-            <VStack>
-              <HStack>
-                <Popover>
-                  <PopoverTrigger>
-                    <IconButton
-                      size="sm"
-                      margin="0"
-                      variant="ghost"
-                      aria-label="copy"
-                      color="white"
-                      icon={<FontAwesomeIcon icon={faQuestionCircle} />}
-                    />
-                  </PopoverTrigger>
-                  <PopoverContent color="black">
-                    <PopoverArrow />
-                    <PopoverCloseButton />
-                    <PopoverHeader>Rarity Rank</PopoverHeader>
-                    <PopoverBody>
-                      This is the nfET's rank out of 10,000. The lower the
-                      number, the rarer it is!
-                    </PopoverBody>
-                  </PopoverContent>
-                </Popover>
-                <Heading margin="0 !important">Rarity Rank: </Heading>
-                <Badge colorScheme="red" fontSize={"1.5em"}>
-                  #{tokenData?.rarity_rank + 1}
-                </Badge>
-              </HStack>
-
-              <Button
-                size="lg"
-                as="a"
-                target="_blank"
-                href={getRarityLink(token.id)}
-                leftIcon={<Image className="ufo" width="1.5em" src={ufo} />}
-              >
-                View Score
-              </Button>
-              <Button
-                size="sm"
-                variant="ghost"
-                as="a"
-                target="_blank"
-                href={getTransactionLink(token.txHash)}
-                rightIcon={<FontAwesomeIcon icon={faExternalLinkAlt} />}
-              >
-                View Transaction
-              </Button>
-            </VStack>
-          )}
+          <VStack>
+            <HStack>
+              {tokenData?.rarity_rank && (
+                <>
+                  <Popover>
+                    <PopoverTrigger>
+                      <IconButton
+                        size="sm"
+                        margin="0"
+                        variant="ghost"
+                        aria-label="copy"
+                        color="white"
+                        icon={<FontAwesomeIcon icon={faQuestionCircle} />}
+                      />
+                    </PopoverTrigger>
+                    <PopoverContent color="black">
+                      <PopoverArrow />
+                      <PopoverCloseButton />
+                      <PopoverHeader>Rarity Rank</PopoverHeader>
+                      <PopoverBody>
+                        This is the nfET's rank out of 10,000. The lower the
+                        number, the rarer it is!
+                      </PopoverBody>
+                    </PopoverContent>
+                  </Popover>
+                  <Heading margin="0 !important">Rarity Rank: </Heading>
+                  <Badge colorScheme="red" fontSize={"1.5em"}>
+                    #{tokenData?.rarity_rank + 1}
+                  </Badge>
+                </>
+              )}
+            </HStack>
+            <Button
+              size="lg"
+              as="a"
+              target="_blank"
+              href={getRarityLink(token.id)}
+              leftIcon={<Image className="ufo" width="1.5em" src={ufo} />}
+            >
+              View Score
+            </Button>
+            <Button
+              size="sm"
+              variant="ghost"
+              as="a"
+              target="_blank"
+              href={getTransactionLink(token.txHash)}
+              rightIcon={<FontAwesomeIcon icon={faExternalLinkAlt} />}
+            >
+              View Transaction
+            </Button>
+          </VStack>
         </VStack>
       </Center>
     </VStack>
