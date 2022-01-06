@@ -62,7 +62,7 @@ const HomePage = () => {
               nfETs on the Celo blockchain
               {/* https://www.npmjs.com/package/react-date-countdown-timer  FOR WHEN WE HAVE A DATE */}
             </Heading>
-            <VStack h="90vh">
+            <VStack mb="10em !important">
               <VStack className="preview" mb="5em">
                 <VStack className="homeCardContainer">
                   <Image className="homeCard" src={basicImage} />
