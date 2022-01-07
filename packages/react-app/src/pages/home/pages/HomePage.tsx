@@ -95,7 +95,7 @@ const HomePage = () => {
             Follow our socials to get updates on the upcoming launch!
           </ModalBody>
           <ModalFooter>
-            <Socials color={"white"} />
+            <Socials color={"black"} />
           </ModalFooter>
         </ModalContent>
       </Modal>
@@ -156,10 +156,7 @@ const countDown = ({ days, hours, minutes, seconds, completed }) => {
   } else {
     // Render a countdown
     return (
-      <VStack>
-        <Heading color="white" size="l">
-          Minting Live in:
-        </Heading>
+      <VStack mt="2em">
         <HStack spacing="1.5em">
           <VStack>
             <Heading className="countdown-gradient" size="2xl">
