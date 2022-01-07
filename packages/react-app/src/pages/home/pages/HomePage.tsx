@@ -54,14 +54,6 @@ const HomePage = () => {
             <Center>
               <Image w="30em" maxW="90%" src={logoImage} />
             </Center>
-            <Heading
-              size="subtitle"
-              color="white"
-              mb="1em !important"
-              maxW="350px"
-            >
-              nfETs on the Celo blockchain
-            </Heading>
             <HStack mb="3em !important">
               <Countdown
                 renderer={countDown}
