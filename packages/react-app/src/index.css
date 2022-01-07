@@ -305,3 +305,9 @@ code {
 .custom-dots li.slick-active button:before {
   color: white;
 }
+
+.countdown-gradient {
+  background: -webkit-linear-gradient(60deg, #ff0c0c 0%, #ff8e01 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

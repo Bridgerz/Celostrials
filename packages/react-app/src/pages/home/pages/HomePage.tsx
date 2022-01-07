@@ -12,6 +12,7 @@ import {
   ModalCloseButton,
   ModalBody,
   ModalFooter,
+  Text,
 } from "@chakra-ui/react";
 
 import { useRef } from "react";
@@ -33,14 +34,14 @@ import Partnerships from "../../../components/Partnerships";
 import Mint from "../../../components/Mint";
 import About from "../../../components/About";
 import Roadmap from "../../../components/Roadmap";
+import Countdown from "react-countdown";
 
 const HomePage = () => {
   const device = useBreakpointValue({ base: "mobile", md: "desktop" });
   const isMobile = device === "mobile";
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const myRef = useRef<null | HTMLDivElement>(null);
-
+  // const myRef = useRef<null | HTMLDivElement>(null);
   const executeScroll = () => {
     onOpen();
   };
@@ -55,13 +56,18 @@ const HomePage = () => {
             </Center>
             <Heading
               size="subtitle"
-              color="gray.500"
+              color="white"
               mb="1em !important"
               maxW="350px"
             >
               nfETs on the Celo blockchain
-              {/* https://www.npmjs.com/package/react-date-countdown-timer  FOR WHEN WE HAVE A DATE */}
             </Heading>
+            <HStack mb="3em !important">
+              <Countdown
+                renderer={countDown}
+                date={Date.parse("15 Feb 2022 12:00:00 GMT")}
+              />
+            </HStack>
             <VStack mb="10em !important">
               <VStack className="preview" mb="5em">
                 <VStack className="homeCardContainer">
@@ -83,9 +89,7 @@ const HomePage = () => {
             <Roadmap />
             {/* <Mint myRef={myRef} /> */}
           </VStack>
-          {isMobile && (
-            <Socials color={colors.gray.cement} margin="1em !important" />
-          )}
+          {isMobile && <Socials color={"white"} margin="1em !important" />}
         </VStack>
       </Center>
       <Modal isCentered isOpen={isOpen} onClose={onClose}>
@@ -99,7 +103,7 @@ const HomePage = () => {
             Follow our socials to get updates on the upcoming launch!
           </ModalBody>
           <ModalFooter>
-            <Socials color={colors.gray.cement} />
+            <Socials color={"white"} />
           </ModalFooter>
         </ModalContent>
       </Modal>
@@ -147,6 +151,60 @@ export const Socials = ({ ...props }) => {
       </Wrap>
     </HStack>
   );
+};
+
+const countDown = ({ days, hours, minutes, seconds, completed }) => {
+  if (completed) {
+    // Render a completed state
+    return (
+      <Heading color="white" size="xl">
+        Minting is live!
+      </Heading>
+    );
+  } else {
+    // Render a countdown
+    return (
+      <VStack>
+        <Heading color="white" size="l">
+          Minting Live in:
+        </Heading>
+        <HStack spacing="1.5em">
+          <VStack>
+            <Heading className="countdown-gradient" size="2xl">
+              {days}
+            </Heading>
+            <Text mt="0 !important" color="white">
+              days
+            </Text>
+          </VStack>
+          <VStack>
+            <Heading className="countdown-gradient" size="2xl">
+              {hours}
+            </Heading>
+            <Text mt="0 !important" color="white">
+              hours
+            </Text>
+          </VStack>
+          <VStack>
+            <Heading className="countdown-gradient" size="2xl">
+              {minutes}
+            </Heading>
+            <Text mt="0 !important" color="white">
+              minutes
+            </Text>
+          </VStack>
+          <VStack w="4em">
+            <Heading className="countdown-gradient" size="2xl">
+              {seconds}
+            </Heading>
+            <Text mt="0 !important" color="white">
+              seconds
+            </Text>
+          </VStack>
+        </HStack>
+      </VStack>
+    );
+  }
 };
 
 export default HomePage;

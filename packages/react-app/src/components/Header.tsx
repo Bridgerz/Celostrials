@@ -39,7 +39,7 @@ export const Header = () => {
       <Flex {...containerStyles}>
         <HStack>
           <Image w="2em" src={logoImage} />
-          {!isMobile && <Socials pl={"1em"} color={colors.gray.cement} />}
+          {!isMobile && <Socials pl={"1em"} color={"white"} />}
         </HStack>
         <HStack align="center" spacing={6}>
           {context.library && (
