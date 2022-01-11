@@ -128,7 +128,7 @@ const Roadmap = () => {
               Public mint
             </Text>
             <Text fontSize="1xl" color="white" fontWeight="bold">
-              Date to be announced soon!
+              February 15th 🚀
             </Text>
           </VStack>
         </HStack>
