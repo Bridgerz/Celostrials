@@ -332,7 +332,7 @@ const Roadmap = () => {
               fontWeight="bold"
               textAlign="left"
             >
-              Date to be announced soon!
+              February 15th 🚀
             </Text>
           </VStack>
         </VStack>
