@@ -55,10 +55,13 @@ const HomePage = () => {
               <Image w="30em" maxW="90%" src={logoImage} />
             </Center>
             <HStack mb="3em !important">
-              <Countdown
+              <Heading className="countdown-gradient" size="2xl">
+                February 15th
+              </Heading>
+              {/* <Countdown
                 renderer={countDown}
                 date={Date.parse("15 Feb 2022 12:00:00 GMT")}
-              />
+              /> */}
             </HStack>
             <VStack mb="10em !important">
               <VStack className="preview" mb="5em">

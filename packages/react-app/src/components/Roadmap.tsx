@@ -146,10 +146,10 @@ const Roadmap = () => {
               4.
             </Heading>
             <Text fontSize="3xl" color="white" fontWeight="bold">
-              Ethestrials
+              Solestrials
             </Text>
             <Text fontSize="1xl" color="white" fontWeight="bold">
-              Ethereum special collection
+              Solana special collection
             </Text>
           </VStack>
           <VStack width="50%" alignItems="flex-start">
@@ -186,10 +186,10 @@ const Roadmap = () => {
               5.
             </Heading>
             <Text fontSize="3xl" color="white" fontWeight="bold">
-              Solestrials
+              Ethestrials
             </Text>
             <Text fontSize="1xl" color="white" fontWeight="bold">
-              Solana special collection
+              Ethereum special collection
             </Text>
           </VStack>
         </HStack>
