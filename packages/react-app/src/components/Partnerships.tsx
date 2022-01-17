@@ -1,11 +1,11 @@
 import { VStack, Center, Heading, Image } from "@chakra-ui/react";
 import Slider from "react-slick";
-import ari from "../assets/partnerships/ari.jpeg";
+import ari from "../assets/partnerships/ari.jpg";
 import celoPunks from "../assets/partnerships/celo-punks.jpeg";
 import celoApes from "../assets/partnerships/celo-apes.jpg";
 import goodGhosting from "../assets/partnerships/goodGhosting.jpg";
-import cybertime from "../assets/partnerships/cybertime.jpeg";
-import nomspace from "../assets/partnerships/nomspace.jpeg";
+import cybertime from "../assets/partnerships/cybertime.jpg";
+import nomspace from "../assets/partnerships/nomspace.jpg";
 import resource from "../assets/partnerships/ReSource.jpeg";
 import { gradients } from "../theme/foundations/colors";
 
