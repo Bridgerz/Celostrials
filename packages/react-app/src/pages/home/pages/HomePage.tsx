@@ -35,6 +35,7 @@ import Mint from "../../../components/Mint";
 import About from "../../../components/About";
 import Roadmap from "../../../components/Roadmap";
 import Countdown from "react-countdown";
+import FAQ from "../../../components/FAQ";
 
 const HomePage = () => {
   const device = useBreakpointValue({ base: "mobile", md: "desktop" });
@@ -82,6 +83,7 @@ const HomePage = () => {
             <Partnerships />
             <About />
             <Roadmap />
+            <FAQ />
             {/* <Mint myRef={myRef} /> */}
           </VStack>
           {isMobile && <Socials color={"white"} margin="1em !important" />}

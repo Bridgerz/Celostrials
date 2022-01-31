@@ -1,8 +1,5 @@
-import { useDisclosure } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
 import { HashRouter } from "react-router-dom";
 import { RecoilRoot } from "recoil";
-import { useWeb3Context } from "web3-react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Routes from "./routes";
@@ -28,8 +25,6 @@ function App() {
 }
 
 const AppLayout = () => {
-  const connectModal = useDisclosure();
-
   return (
     <>
       <div className="stars"></div>

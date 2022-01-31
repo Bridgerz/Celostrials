@@ -1,10 +1,23 @@
-import { Flex, HStack, StackProps } from "@chakra-ui/layout";
+import {
+  Flex,
+  Heading,
+  HStack,
+  Link,
+  StackProps,
+  VStack,
+} from "@chakra-ui/layout";
 import {
   IconButton,
   Image,
+  Popover,
+  PopoverArrow,
+  PopoverBody,
+  PopoverCloseButton,
+  PopoverContent,
+  PopoverHeader,
+  PopoverTrigger,
   useBreakpointValue,
-  Wrap,
-  WrapItem,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { useHistory, useLocation } from "react-router-dom";
 import { useWeb3Context } from "web3-react";
@@ -15,12 +28,9 @@ import logoImage from "../assets/logo.png";
 import colors, { gradients } from "../theme/foundations/colors";
 import { useConnectWallet } from "../services/web3/utils/useConnectWallet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faDiscord,
-  faInstagram,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
 import { Socials } from "../pages/home/pages/HomePage";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 const metaMaskIcon =
   "https://cdn.iconscout.com/icon/free/png-256/metamask-2728406-2261817.png";
@@ -31,6 +41,18 @@ export const Header = () => {
   const context = useWeb3Context();
   const device = useBreakpointValue({ base: "mobile", md: "desktop" });
   const isMobile = device === "mobile";
+  const [isOpen, setIsOpen] = useState(false);
+  const open = () => setIsOpen(!isOpen);
+  const close = () => setIsOpen(false);
+
+  const scrollToElement = (name) => {
+    close();
+    const about = document?.getElementById(name);
+    about?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
 
   const connect = useConnectWallet();
 
@@ -38,6 +60,69 @@ export const Header = () => {
     <>
       <Flex {...containerStyles}>
         <HStack>
+          {isMobile && (
+            <Popover isOpen={isOpen} onClose={close}>
+              <PopoverTrigger>
+                <IconButton
+                  onClick={open}
+                  variant="ghost"
+                  color="white"
+                  aria-label="Add to friends"
+                  icon={<FontAwesomeIcon icon={faBars} />}
+                />
+              </PopoverTrigger>
+              <PopoverContent
+                ml="1em"
+                width={"fit-content"}
+                mt="1em"
+                border="0px"
+                boxShadow="white 0px 0px 20px !important"
+                background="rgba(0, 0, 0, 0.9) !important"
+              >
+                <PopoverArrow
+                  ml="-.5em"
+                  boxShadow="white 0px 0px 20px !important"
+                />
+                <PopoverBody width={"fit-content"} m=".5em">
+                  <VStack width="fit-content" alignItems={"flex-start"}>
+                    <Link
+                      isExternal={true}
+                      color={colors.secondary.main}
+                      onClick={() => {
+                        scrollToElement("about");
+                      }}
+                    >
+                      <Heading className="countdown-gradient" size="lg">
+                        About
+                      </Heading>
+                    </Link>
+                    <Link
+                      isExternal={true}
+                      color={colors.secondary.main}
+                      onClick={() => {
+                        scrollToElement("partnerships");
+                      }}
+                    >
+                      <Heading className="countdown-gradient" size="lg">
+                        Partnerships
+                      </Heading>
+                    </Link>
+                    <Link
+                      isExternal={true}
+                      color={colors.secondary.main}
+                      onClick={() => {
+                        scrollToElement("roadmap");
+                      }}
+                    >
+                      <Heading className="countdown-gradient" size="lg">
+                        Roadmap
+                      </Heading>
+                    </Link>
+                  </VStack>
+                </PopoverBody>
+              </PopoverContent>
+            </Popover>
+          )}
           <Image w="2em" src={logoImage} />
           {!isMobile && <Socials pl={"1em"} color={"white"} />}
         </HStack>

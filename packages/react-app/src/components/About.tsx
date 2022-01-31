@@ -19,6 +19,7 @@ const About = () => {
       w="100%"
       pt="1em"
       mb="5em !important"
+      id="about"
     >
       <HStack textAlign="initial" mt="1em">
         <Image
@@ -57,7 +58,7 @@ const About = () => {
       </HStack>
     </VStack>
   ) : (
-    <VStack p="2em" backgroundColor="#ffffff1f" w="100%" pt="1em">
+    <VStack p="2em" pt="4em" backgroundColor="#ffffff1f" w="100%" id="about">
       <VStack maxW="50em" textAlign="center">
         <VStack>
           <Heading alignSelf="start" color="white" size="xl">

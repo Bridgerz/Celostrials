@@ -22,7 +22,7 @@ const Roadmap = () => {
 
   return !isMobile ? (
     <VStack pb="5em !important" pt="1em" w="100%" maxW="75em">
-      <Heading color="white" size="xl" mb="1em">
+      <Heading color="white" size="xl" mb="1em" id="roadmap">
         Celostrials Roadmap
       </Heading>
       <VStack w="100%">
@@ -196,8 +196,8 @@ const Roadmap = () => {
       </VStack>
     </VStack>
   ) : (
-    <VStack pt="1em" w="100%">
-      <Heading color="white" size="xl" mb="1em">
+    <VStack pt="4em" w="100%" id="roadmap">
+      <Heading color="white" size="xl" m="1em" mb="1em">
         Celostrials Roadmap
       </Heading>
       <VStack w="100%">
