@@ -92,7 +92,7 @@ export const Header = () => {
                         scrollToElement("about");
                       }}
                     >
-                      <Heading className="countdown-gradient" size="lg">
+                      <Heading color="white" size="lg">
                         About
                       </Heading>
                     </Link>
@@ -103,7 +103,7 @@ export const Header = () => {
                         scrollToElement("partnerships");
                       }}
                     >
-                      <Heading className="countdown-gradient" size="lg">
+                      <Heading color="white" size="lg">
                         Partnerships
                       </Heading>
                     </Link>
@@ -114,7 +114,7 @@ export const Header = () => {
                         scrollToElement("roadmap");
                       }}
                     >
-                      <Heading className="countdown-gradient" size="lg">
+                      <Heading color="white" size="lg">
                         Roadmap
                       </Heading>
                     </Link>
