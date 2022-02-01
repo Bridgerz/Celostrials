@@ -28,9 +28,14 @@ const FAQ = () => {
         <Accordion allowToggle w="100%">
           <AccordionItem>
             <AccordionButton justifyContent="space-between">
-              <Heading color="white" textAlign={"left"}>
-                WHAT ARE CELOSTRIALS?
-              </Heading>
+              <Text
+                fontSize="lg"
+                color="white"
+                fontWeight="bold"
+                textAlign={"left"}
+              >
+                What are celostrials?
+              </Text>
               <AccordionIcon color="white" />
             </AccordionButton>
             <AccordionPanel pb={4}>
@@ -46,9 +51,14 @@ const FAQ = () => {
 
           <AccordionItem>
             <AccordionButton justifyContent="space-between">
-              <Heading color="white" textAlign={"left"}>
-                HOW CAN I MINT A CELOSTRIAL?
-              </Heading>
+              <Text
+                fontSize="lg"
+                color="white"
+                fontWeight="bold"
+                textAlign={"left"}
+              >
+                How can i mint a celostrial?
+              </Text>
               <AccordionIcon color="white" />
             </AccordionButton>
             <AccordionPanel pb={4}>
@@ -63,9 +73,14 @@ const FAQ = () => {
 
           <AccordionItem>
             <AccordionButton justifyContent="space-between">
-              <Heading color="white" textAlign={"left"}>
-                WHAT IS THE MINTING PRICE?
-              </Heading>
+              <Text
+                fontSize="lg"
+                color="white"
+                fontWeight="bold"
+                textAlign={"left"}
+              >
+                What is the minting price?
+              </Text>
               <AccordionIcon color="white" />
             </AccordionButton>
             <AccordionPanel pb={4}>
@@ -77,9 +92,14 @@ const FAQ = () => {
           </AccordionItem>
           <AccordionItem>
             <AccordionButton justifyContent="space-between">
-              <Heading color="white" textAlign={"left"}>
-                WHEN IS LAUNCH?
-              </Heading>
+              <Text
+                fontSize="lg"
+                color="white"
+                fontWeight="bold"
+                textAlign={"left"}
+              >
+                When is launch?
+              </Text>
               <AccordionIcon color="white" />
             </AccordionButton>
             <AccordionPanel pb={4}>
@@ -90,9 +110,14 @@ const FAQ = () => {
           </AccordionItem>
           <AccordionItem>
             <AccordionButton justifyContent="space-between">
-              <Heading color="white" textAlign={"left"}>
-                WHICH WALLET IS SUPPORTED FOR MINTING CELOSTRIALS?
-              </Heading>
+              <Text
+                fontSize="lg"
+                color="white"
+                fontWeight="bold"
+                textAlign={"left"}
+              >
+                Which wallet is supported for minting celostrials?
+              </Text>
               <AccordionIcon color="white" />
             </AccordionButton>
             <AccordionPanel pb={4}>
@@ -105,9 +130,14 @@ const FAQ = () => {
           </AccordionItem>
           <AccordionItem>
             <AccordionButton justifyContent="space-between">
-              <Heading color="white" textAlign={"left"}>
-                HOW MANY CELOSTRIALS ARE RESERVED?
-              </Heading>
+              <Text
+                fontSize="lg"
+                color="white"
+                fontWeight="bold"
+                textAlign={"left"}
+              >
+                How many celostrials are reserved?
+              </Text>
               <AccordionIcon color="white" />
             </AccordionButton>
             <AccordionPanel pb={4}>

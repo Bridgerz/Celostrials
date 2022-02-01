@@ -1,6 +1,6 @@
 import {
   Flex,
-  Heading,
+  Text,
   HStack,
   Link,
   StackProps,
@@ -92,9 +92,9 @@ export const Header = () => {
                         scrollToElement("about");
                       }}
                     >
-                      <Heading color="white" size="lg">
+                      <Text fontSize="lg" color="white" fontWeight="bold">
                         About
-                      </Heading>
+                      </Text>
                     </Link>
                     <Link
                       isExternal={true}
@@ -103,9 +103,9 @@ export const Header = () => {
                         scrollToElement("partnerships");
                       }}
                     >
-                      <Heading color="white" size="lg">
+                      <Text fontSize="lg" color="white" fontWeight="bold">
                         Partnerships
-                      </Heading>
+                      </Text>
                     </Link>
                     <Link
                       isExternal={true}
@@ -114,9 +114,9 @@ export const Header = () => {
                         scrollToElement("roadmap");
                       }}
                     >
-                      <Heading color="white" size="lg">
+                      <Text fontSize="lg" color="white" fontWeight="bold">
                         Roadmap
-                      </Heading>
+                      </Text>
                     </Link>
                   </VStack>
                 </PopoverBody>
