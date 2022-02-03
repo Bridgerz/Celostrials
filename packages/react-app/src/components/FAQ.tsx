@@ -122,7 +122,7 @@ const FAQ = () => {
             </AccordionButton>
             <AccordionPanel pb={4}>
               <Text color="white" textAlign={"left"}>
-                Most wallets can be used to mint your Celostrail at launch,
+                Most wallets can be used to mint your Celostrials at launch,
                 including Valora, WalletConnect, Ledger, Celo Wallet, Metamask,
                 and more.
               </Text>
