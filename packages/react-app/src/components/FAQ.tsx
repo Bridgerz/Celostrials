@@ -116,15 +116,15 @@ const FAQ = () => {
                 fontWeight="bold"
                 textAlign={"left"}
               >
-                Which wallet is supported for minting celostrials?
+                Which wallet is supported for minting Celostrials?
               </Text>
               <AccordionIcon color="white" />
             </AccordionButton>
             <AccordionPanel pb={4}>
               <Text color="white" textAlign={"left"}>
-                We currently only support Metamask for minting at launch, you
-                can transfer your nfET to any wallet of your choice after you've
-                minted.
+                Most wallets can be used to mint your Celostrail at launch,
+                including Valora, WalletConnect, Ledger, Celo Wallet, Metamask,
+                and more.
               </Text>
             </AccordionPanel>
           </AccordionItem>

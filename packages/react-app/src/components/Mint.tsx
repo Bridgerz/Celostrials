@@ -19,7 +19,6 @@ import mint1Image from "../assets/mint_green.jpg";
 import mint3Image from "../assets/mint_blue.jpg";
 import mint5Image from "../assets/mint_purple.jpg";
 import mint10Image from "../assets/mint_orange.jpg";
-import { useConnectWallet } from "../services/web3/utils/useConnectWallet";
 import MintModal, { Token } from "./modals/MintModal";
 
 const Mint = ({ myRef }: any) => {
@@ -28,8 +27,6 @@ const Mint = ({ myRef }: any) => {
   const [loading, setLoading] = useState(false);
   const toast = useToast();
   const mintModal = useDisclosure();
-
-  const connect = useConnectWallet();
 
   const getTokens = (
     event: ethers.Event,
@@ -71,7 +68,6 @@ const Mint = ({ myRef }: any) => {
       }
     }
     if (!tx) {
-      connect();
       return;
     }
     const receipt = await tx.wait();

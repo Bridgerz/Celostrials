@@ -1,25 +1,25 @@
+import { useContractKit } from "@celo-tools/use-contractkit";
 import { ethers } from "ethers";
 import { useEffect, useState } from "react";
-import { useWeb3Context } from "web3-react";
 
 export const useGetEthersProviderAndSigner = () => {
-  const context = useWeb3Context();
+  const { getConnectedKit, address } = useContractKit();
+
+  const getProvider = async () => {
+    const kit = await getConnectedKit();
+    return kit.web3.currentProvider;
+  };
+
   const [provider, setProvider] = useState(
-    context.library
-      ? new ethers.providers.Web3Provider(context.library.provider)
-      : null
+    address ? new ethers.providers.Web3Provider(getProvider) : null
   );
   const [signer, setSigner] = useState(provider ? provider.getSigner() : null);
-
   useEffect(() => {
-    if (context?.library?.provider) {
-      const newProvider = new ethers.providers.Web3Provider(
-        context.library.provider
-      );
+    if (address) {
+      const newProvider = new ethers.providers.Web3Provider(getProvider);
       setProvider(newProvider);
       setSigner(newProvider.getSigner());
     }
-  }, [context?.library?.provider]);
-
+  }, [address]);
   return { provider, signer };
 };
