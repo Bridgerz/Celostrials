@@ -7,7 +7,7 @@ const network = NETWORK.eth;
 // General metadata for Ethereum
 const namePrefix = "Celostrial";
 const description = "The worlds first nfETs";
-const baseUri = "ipfs://QmYBJQrXLQMuSuiPhZ85HfDTwmo6hHMjisYbaZpG2Nc6JR";
+const baseUri = "ipfs://QmYjqN6roir7FkZqwSYAf1C1LUc8qvBJeZZFwJkD5nzSLA";
 
 const solanaMetadata = {
   symbol: "YC",
@@ -27,19 +27,68 @@ const solanaMetadata = {
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 500,
+    growEditionSizeTo: 550,
     layersOrder: [
       {
         name: "background",
       },
-      { name: "special_behind" },
+      { name: "special_effect" },
       { name: "skin" },
       { name: "eyes" },
-      { name: "mouth" },
       { name: "clothes" },
-      { name: "facial" },
-      { name: "glasses" },
+      { name: "mouth" },
+      { name: "facial_hair" },
       { name: "head" },
+      { name: "glasses" },
+      { name: "laser" },
+    ],
+  },
+  {
+    growEditionSizeTo: 850,
+    layersOrder: [
+      {
+        name: "background",
+      },
+      { name: "special_effect" },
+      { name: "skin" },
+      { name: "eyes" },
+      { name: "clothes" },
+      { name: "mouth" },
+      { name: "facial_hair" },
+      { name: "special_head" },
+      { name: "laser" },
+    ],
+  },
+  {
+    growEditionSizeTo: 900,
+    layersOrder: [
+      {
+        name: "background",
+      },
+      { name: "special_effect" },
+      { name: "skin" },
+      { name: "eyes" },
+      { name: "clothes" },
+      { name: "facial_hair" },
+      { name: "head" },
+      { name: "glasses" },
+      { name: "special_mouth" },
+      { name: "laser" },
+    ],
+  },
+  {
+    growEditionSizeTo: 975,
+    layersOrder: [
+      {
+        name: "background",
+      },
+      { name: "special_effect" },
+      { name: "skin" },
+      { name: "eyes" },
+      { name: "clothes" },
+      { name: "mouth" },
+      { name: "special_facial_hair" },
+      { name: "glasses" },
       { name: "laser" },
     ],
   },
@@ -49,48 +98,25 @@ const layerConfigurations = [
       {
         name: "background",
       },
-      { name: "special_behind" },
-      { name: "skin" },
+      { name: "special_effect" },
+      { name: "special_skin" },
       { name: "eyes" },
       { name: "mouth" },
-      { name: "clothes" },
-      { name: "facial" },
-      { name: "glasses" },
-      { name: "head_ontop" },
-      { name: "laser" },
-    ],
-  },
-  {
-    growEditionSizeTo: 1500,
-    layersOrder: [
-      {
-        name: "background",
-      },
-      { name: "special_behind" },
-      { name: "skin" },
-      { name: "eyes" },
-      { name: "clothes" },
-      { name: "facial" },
-      { name: "glasses" },
+      { name: "facial_hair" },
       { name: "head" },
-      { name: "special" },
+      { name: "glasses" },
       { name: "laser" },
     ],
   },
 ];
 
-const shuffleLayerConfigurations = false;
+const shuffleLayerConfigurations = true;
 
 const debugLogs = false;
 
-// const format = {
-//   width: 702,
-//   height: 905,
-//   smoothing: false,
-// };
 const format = {
-  width: 70,
-  height: 90,
+  width: 560,
+  height: 720,
   smoothing: false,
 };
 

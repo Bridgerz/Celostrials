@@ -1,54 +1,62 @@
+import {
+  useContractKit,
+  useGetConnectedSigner,
+} from "@celo-tools/use-contractkit";
 import { ethers } from "ethers";
 import { useEffect, useState } from "react";
-import { useWeb3Context } from "web3-react";
-
 import { CONTRACTS } from "../constants";
 import { Celostrials, Celostrials__factory } from "../types";
-import { useGetEthersProviderAndSigner } from "../utils/useGetEthersProviderAndSigner";
 
 export const useCelostrialsContract = () => {
-  const context = useWeb3Context();
-  const { provider, signer } = useGetEthersProviderAndSigner();
-  const [contract, setContract] = useState<Celostrials | null>(
-    provider ? getCelostrialsContract(provider) : null
-  );
+  const getSigner = useGetConnectedSigner();
+  const { address, network } = useContractKit();
+
+  const [contract, setContract] = useState<Celostrials | null>();
 
   useEffect(() => {
-    if (provider && !contract?.provider) {
-      setContract(getCelostrialsContract(provider));
+    async function loadBalance() {
+      let signer;
+      if (address) {
+        signer = await getSigner();
+      } else {
+        const provider = new ethers.providers.JsonRpcProvider(network.rpcUrl);
+        signer = new ethers.VoidSigner(
+          "0x97597d6f7308281fe364c57d8492c058132281fa",
+          provider
+        );
+      }
+      setContract(Celostrials__factory.connect(CONTRACTS.Celostrials, signer));
     }
-  }, [provider]);
+    loadBalance();
+  }, [address, getSigner, network]);
 
   return {
     contract,
     mint: async (amount: number) => {
-      if (contract && signer) {
-        const gas = await contract
-          .connect(signer)
-          .estimateGas.mint(await signer.getAddress(), amount, {
-            value: ethers.utils.parseEther(String(amount * 3)),
-          });
-        return contract
-          .connect(signer)
-          .mint(await signer.getAddress(), amount, {
-            value: ethers.utils.parseEther(String(amount * 3)),
-            gasLimit: gas.mul(10),
-          });
+      if (address && contract) {
+        const gas = await contract.estimateGas.mint(address, amount, {
+          value: ethers.utils.parseEther(String(amount * 3)),
+        });
+        return contract.mint(address, amount, {
+          value: ethers.utils.parseEther(String(amount * 3)),
+          gasLimit: gas.mul(10),
+        });
       }
     },
-    totalSupply: async () => {
-      if (contract && signer) {
-        return contract?.connect(await signer.getAddress()).totalSupply();
+    getTotalSupply: async () => {
+      if (contract) {
+        return contract.totalSupply();
+      }
+    },
+    getMaxSupply: async () => {
+      if (contract) {
+        return contract.maxSupply();
+      }
+    },
+    onlyWhitelist: async () => {
+      if (contract) {
+        return contract.onlyWhitelist();
       }
     },
   };
 };
-
-export const getCelostrialsContract = (
-  provider: ethers.providers.Web3Provider
-) =>
-  new ethers.Contract(
-    CONTRACTS.Celostrials,
-    Celostrials__factory.createInterface(),
-    provider
-  ) as Celostrials;

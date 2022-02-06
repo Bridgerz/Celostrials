@@ -16,6 +16,7 @@ import {
   PopoverContent,
   PopoverHeader,
   PopoverTrigger,
+  Spinner,
   useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -29,7 +30,8 @@ import { useContractKit } from "@celo-tools/use-contractkit";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Socials } from "../pages/home/pages/HomePage";
 import { faBars, faWallet } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useCelostrialsContract } from "../services/web3/contracts/celostrials";
 
 export const Header = () => {
   const history = useHistory();
@@ -39,6 +41,7 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const open = () => setIsOpen(!isOpen);
   const close = () => setIsOpen(false);
+  const { connect, address } = useContractKit();
 
   const scrollToElement = (name) => {
     close();
@@ -48,7 +51,6 @@ export const Header = () => {
       block: "start",
     });
   };
-  const { connect, address } = useContractKit();
 
   return (
     <>
@@ -121,6 +123,7 @@ export const Header = () => {
           {!isMobile && <Socials pl={"1em"} color={"white"} />}
         </HStack>
         <HStack align="center" spacing={6}>
+          {/* {!isMobile && <TotalMintedInfo />} */}
           {address && (
             <>
               <AddressInfo />
@@ -140,6 +143,47 @@ export const Header = () => {
         </HStack>
       </Flex>
     </>
+  );
+};
+
+export const TotalMintedInfo = () => {
+  const [maxSupply, setMaxSupply] = useState("1500");
+  const [totalSupply, setTotalSupply] = useState("----");
+  const [isOnlyWhiteList, setIsOnlyWhiteList] = useState(true);
+  const { getMaxSupply, getTotalSupply, onlyWhitelist } =
+    useCelostrialsContract();
+  const { connect, initialised, address } = useContractKit();
+
+  useEffect(() => {
+    async function loadBalance() {
+      const _maxSupply = Number(await getMaxSupply());
+      const _totalSupply = Number(await getTotalSupply());
+      const _isOnlyWhiteList = await onlyWhitelist();
+      setIsOnlyWhiteList(_isOnlyWhiteList || false);
+      setMaxSupply(
+        _maxSupply
+          ? _maxSupply.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+          : "0"
+      );
+      setTotalSupply(
+        _totalSupply
+          ? _totalSupply.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+          : "0"
+      );
+    }
+    loadBalance();
+  }, [initialised, address, connect, getMaxSupply, getTotalSupply]);
+  if (isOnlyWhiteList) return <></>;
+  return (
+    <HStack>
+      <Text color={colors.orange.dark} fontWeight={"bold"}>
+        {totalSupply === "0" ? <Spinner /> : totalSupply}
+      </Text>
+      <Text ml=".4em !important" color={colors.gray.cement}>
+        {" "}
+        / {maxSupply === "0" ? <Spinner /> : maxSupply} MINTED
+      </Text>
+    </HStack>
   );
 };
 

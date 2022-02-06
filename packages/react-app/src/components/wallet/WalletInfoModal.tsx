@@ -55,6 +55,10 @@ const WalletInfoModal = ({
     onClose();
   };
 
+  if (walletType == WalletTypes.Unauthenticated) {
+    handleDisconnect();
+  }
+
   return (
     <Modal
       isOpen={isOpen}

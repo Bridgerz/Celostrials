@@ -22,10 +22,12 @@ import type { TypedEventFilter, TypedEvent, TypedListener } from "./common";
 
 interface CelostrialsInterface extends ethers.utils.Interface {
   functions: {
+    "addUser(address)": FunctionFragment;
     "approve(address,uint256)": FunctionFragment;
     "balanceOf(address)": FunctionFragment;
     "baseExtension()": FunctionFragment;
     "baseURI()": FunctionFragment;
+    "closeWhitelist()": FunctionFragment;
     "cost()": FunctionFragment;
     "getApproved(uint256)": FunctionFragment;
     "isApprovedForAll(address,address)": FunctionFragment;
@@ -33,6 +35,8 @@ interface CelostrialsInterface extends ethers.utils.Interface {
     "maxSupply()": FunctionFragment;
     "mint(address,uint16)": FunctionFragment;
     "name()": FunctionFragment;
+    "onlyWhitelist()": FunctionFragment;
+    "openWhitelist()": FunctionFragment;
     "owner()": FunctionFragment;
     "ownerOf(uint256)": FunctionFragment;
     "pause()": FunctionFragment;
@@ -58,6 +62,7 @@ interface CelostrialsInterface extends ethers.utils.Interface {
     "withdrawERC20(address)": FunctionFragment;
   };
 
+  encodeFunctionData(functionFragment: "addUser", values: [string]): string;
   encodeFunctionData(
     functionFragment: "approve",
     values: [string, BigNumberish]
@@ -68,6 +73,10 @@ interface CelostrialsInterface extends ethers.utils.Interface {
     values?: undefined
   ): string;
   encodeFunctionData(functionFragment: "baseURI", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "closeWhitelist",
+    values?: undefined
+  ): string;
   encodeFunctionData(functionFragment: "cost", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "getApproved",
@@ -87,6 +96,14 @@ interface CelostrialsInterface extends ethers.utils.Interface {
     values: [string, BigNumberish]
   ): string;
   encodeFunctionData(functionFragment: "name", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "onlyWhitelist",
+    values?: undefined
+  ): string;
+  encodeFunctionData(
+    functionFragment: "openWhitelist",
+    values?: undefined
+  ): string;
   encodeFunctionData(functionFragment: "owner", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "ownerOf",
@@ -159,6 +176,7 @@ interface CelostrialsInterface extends ethers.utils.Interface {
     values: [string]
   ): string;
 
+  decodeFunctionResult(functionFragment: "addUser", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "approve", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "balanceOf", data: BytesLike): Result;
   decodeFunctionResult(
@@ -166,6 +184,10 @@ interface CelostrialsInterface extends ethers.utils.Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "baseURI", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "closeWhitelist",
+    data: BytesLike
+  ): Result;
   decodeFunctionResult(functionFragment: "cost", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "getApproved",
@@ -182,6 +204,14 @@ interface CelostrialsInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: "maxSupply", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "mint", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "name", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "onlyWhitelist",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "openWhitelist",
+    data: BytesLike
+  ): Result;
   decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "ownerOf", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "pause", data: BytesLike): Result;
@@ -334,6 +364,11 @@ export class Celostrials extends BaseContract {
   interface: CelostrialsInterface;
 
   functions: {
+    addUser(
+      _addressToWhitelist: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
     approve(
       to: string,
       tokenId: BigNumberish,
@@ -345,6 +380,10 @@ export class Celostrials extends BaseContract {
     baseExtension(overrides?: CallOverrides): Promise<[string]>;
 
     baseURI(overrides?: CallOverrides): Promise<[string]>;
+
+    closeWhitelist(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
 
     cost(overrides?: CallOverrides): Promise<[BigNumber]>;
 
@@ -370,6 +409,12 @@ export class Celostrials extends BaseContract {
     ): Promise<ContractTransaction>;
 
     name(overrides?: CallOverrides): Promise<[string]>;
+
+    onlyWhitelist(overrides?: CallOverrides): Promise<[boolean]>;
+
+    openWhitelist(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
 
     owner(overrides?: CallOverrides): Promise<[string]>;
 
@@ -485,6 +530,11 @@ export class Celostrials extends BaseContract {
     ): Promise<ContractTransaction>;
   };
 
+  addUser(
+    _addressToWhitelist: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
   approve(
     to: string,
     tokenId: BigNumberish,
@@ -496,6 +546,10 @@ export class Celostrials extends BaseContract {
   baseExtension(overrides?: CallOverrides): Promise<string>;
 
   baseURI(overrides?: CallOverrides): Promise<string>;
+
+  closeWhitelist(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
 
   cost(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -521,6 +575,12 @@ export class Celostrials extends BaseContract {
   ): Promise<ContractTransaction>;
 
   name(overrides?: CallOverrides): Promise<string>;
+
+  onlyWhitelist(overrides?: CallOverrides): Promise<boolean>;
+
+  openWhitelist(
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
 
   owner(overrides?: CallOverrides): Promise<string>;
 
@@ -630,6 +690,11 @@ export class Celostrials extends BaseContract {
   ): Promise<ContractTransaction>;
 
   callStatic: {
+    addUser(
+      _addressToWhitelist: string,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
     approve(
       to: string,
       tokenId: BigNumberish,
@@ -641,6 +706,8 @@ export class Celostrials extends BaseContract {
     baseExtension(overrides?: CallOverrides): Promise<string>;
 
     baseURI(overrides?: CallOverrides): Promise<string>;
+
+    closeWhitelist(overrides?: CallOverrides): Promise<void>;
 
     cost(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -666,6 +733,10 @@ export class Celostrials extends BaseContract {
     ): Promise<void>;
 
     name(overrides?: CallOverrides): Promise<string>;
+
+    onlyWhitelist(overrides?: CallOverrides): Promise<boolean>;
+
+    openWhitelist(overrides?: CallOverrides): Promise<void>;
 
     owner(overrides?: CallOverrides): Promise<string>;
 
@@ -843,6 +914,11 @@ export class Celostrials extends BaseContract {
   };
 
   estimateGas: {
+    addUser(
+      _addressToWhitelist: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
     approve(
       to: string,
       tokenId: BigNumberish,
@@ -854,6 +930,10 @@ export class Celostrials extends BaseContract {
     baseExtension(overrides?: CallOverrides): Promise<BigNumber>;
 
     baseURI(overrides?: CallOverrides): Promise<BigNumber>;
+
+    closeWhitelist(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
 
     cost(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -879,6 +959,12 @@ export class Celostrials extends BaseContract {
     ): Promise<BigNumber>;
 
     name(overrides?: CallOverrides): Promise<BigNumber>;
+
+    onlyWhitelist(overrides?: CallOverrides): Promise<BigNumber>;
+
+    openWhitelist(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
 
     owner(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -995,6 +1081,11 @@ export class Celostrials extends BaseContract {
   };
 
   populateTransaction: {
+    addUser(
+      _addressToWhitelist: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
     approve(
       to: string,
       tokenId: BigNumberish,
@@ -1009,6 +1100,10 @@ export class Celostrials extends BaseContract {
     baseExtension(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     baseURI(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    closeWhitelist(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
 
     cost(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
@@ -1034,6 +1129,12 @@ export class Celostrials extends BaseContract {
     ): Promise<PopulatedTransaction>;
 
     name(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    onlyWhitelist(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    openWhitelist(
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
 
     owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 

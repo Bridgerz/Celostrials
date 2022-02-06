@@ -11,7 +11,9 @@ export const NFT = (nft) => {
         href={`/${nft.id}`}
       >
         <img
-          src={`https://ipfs.io/ipfs/${ipfs2http(nft.image)}`}
+          src={`https://celostrials.mypinata.cloud/ipfs/${ipfs2http(
+            nft.image
+          )}`}
           className="rounded-md px-2 pt-2 h-auto bg-black"
         />
         <div className="rounded-b-md py-2 px-2">

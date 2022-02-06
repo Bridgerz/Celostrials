@@ -18,17 +18,16 @@ contract Celostrials is Ownable, Pausable, ERC721Enumerable {
     string public baseURI;
     string public baseExtension = ".json";
     uint256 public maxSupply = 1500;
-    uint256 public maxWhiteListMint = 2000;
     uint256 private traunchSize = 50;
     uint256 private currentTraunch = 0;
     uint256 public maxMintAmount = 10;
-    uint256 public cost = 2 ether;
+    uint256 public cost = 3 ether;
     bool public onlyWhitelist = true;
     mapping(uint256 => bool) private isMinted;
-    mapping(address => bool) whitelistedAddresses;
+    mapping(address => uint256) whiteList;
 
     modifier isWhitelisted(address _address) {
-      require(whitelistedAddresses[_address], "You need to be whitelisted");
+      require(whiteList[_address] > 0, "Celostrials: Minting is only open to whitelisted wallets currently");
       _;
     }
 
@@ -45,15 +44,15 @@ contract Celostrials is Ownable, Pausable, ERC721Enumerable {
     }
 
     function mint(address _to, uint16 _mintAmount) public payable whenNotPaused {
-        if (onlyWhitelist) {
-          require(whitelistedAddresses[msg.sender], "Celostrials: Minting is only open to whitelisted wallets currently");
-          require(maxWhiteListMint < maxWhiteListMint, "Celostrials: Maximum white list limit has been reached");
-          maxWhiteListMint++;
-        }
-        uint256 supply = totalSupply();
         require(_mintAmount > 0, "Celostrials: mintAmount should be greater than 0");
         require(_mintAmount <= maxMintAmount, "Celostrials: mintAmount should be less than max mint");
+        uint256 supply = totalSupply();
         require(supply + _mintAmount <= maxSupply, "Celostrials: Supply not available");
+        if (onlyWhitelist) {
+          require(_mintAmount <= whiteList[msg.sender], "Celostrails: Maximum whitelist mint is 4");
+          require(whiteList[msg.sender] > 0, "Celostrials: Minting is only open to whitelisted wallets currently");
+          whiteList[msg.sender] -= _mintAmount;
+        }
         if (msg.sender != owner()) {
             require(msg.value >= cost * _mintAmount, "Celostrials: Insuffcient Celo");
         }
@@ -142,7 +141,7 @@ contract Celostrials is Ownable, Pausable, ERC721Enumerable {
     }
 
     function addUser(address _addressToWhitelist) public onlyOwner {
-      whitelistedAddresses[_addressToWhitelist] = true;
+      whiteList[_addressToWhitelist] = 4;
     } 
 
     function openWhitelist() public onlyOwner {

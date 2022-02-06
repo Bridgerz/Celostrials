@@ -42,7 +42,7 @@ const HomePage = () => {
   const isMobile = device === "mobile";
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  // const myRef = useRef<null | HTMLDivElement>(null);
+  const myRef = useRef<null | HTMLDivElement>(null);
   const executeScroll = () => {
     onOpen();
   };
@@ -56,20 +56,18 @@ const HomePage = () => {
               <Image w="30em" maxW="90%" src={logoImage} />
             </Center>
             <HStack mb="3em !important">
-              <Heading className="countdown-gradient" size="2xl">
-                February 15th
-              </Heading>
-              {/* <Countdown
+              <Countdown
                 renderer={countDown}
-                date={Date.parse("15 Feb 2022 12:00:00 GMT")}
-              /> */}
+                date={Date.parse("15 Feb 2022 14:00:00 GMT")}
+              />
             </HStack>
-            <VStack mb="10em !important">
-              <VStack className="preview" mb="5em">
-                <VStack className="homeCardContainer">
-                  <Image className="homeCard" src={basicImage} />
-                </VStack>
+            <VStack className="preview" mb="5em">
+              <VStack className="homeCardContainer">
+                <Image className="homeCard" src={basicImage} />
               </VStack>
+              {/* <VStack>
+                <Mint myRef={myRef} />
+              </VStack> */}
               <Button
                 size="lg"
                 onClick={executeScroll}
@@ -80,11 +78,15 @@ const HomePage = () => {
                 Mint
               </Button>
             </VStack>
+            {/* <VStack mb="10em !important">
+              <VStack>
+                <Mint myRef={myRef} />
+              </VStack>
+            </VStack> */}
             <Partnerships />
             <About />
             <Roadmap />
             <FAQ />
-            {/* <Mint myRef={myRef} /> */}
           </VStack>
           {isMobile && <Socials color={"white"} margin="1em !important" />}
         </VStack>

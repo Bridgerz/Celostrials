@@ -2,10 +2,12 @@ import {
   Image,
   VStack,
   Heading,
-  Wrap,
-  WrapItem,
   useToast,
   useDisclosure,
+  useNumberInput,
+  HStack,
+  Input,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { ethers } from "ethers";
 import { useState } from "react";
@@ -15,18 +17,25 @@ import {
   getVMErrorMessage,
   tryGetErrorMessage,
 } from "../services/web3/utils/getVMErrorMessage";
-import mint1Image from "../assets/mint_green.jpg";
-import mint3Image from "../assets/mint_blue.jpg";
-import mint5Image from "../assets/mint_purple.jpg";
-import mint10Image from "../assets/mint_orange.jpg";
 import MintModal, { Token } from "./modals/MintModal";
+import Button from "./Button";
+import { useContractKit } from "@celo-tools/use-contractkit";
+import { gradients } from "../theme/foundations/colors";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWallet } from "@fortawesome/free-solid-svg-icons";
+import basicImage from "../assets/no_background.png";
+import basicImage2 from "../assets/no_background_2.png";
+import colors from "../theme/foundations/colors";
+import ufo from "../assets/ufo.svg";
+import { TotalMintedInfo } from "./Header";
 
 const Mint = ({ myRef }: any) => {
   const [tokens, setTokens] = useState<Token[]>([]);
-  const { mint, totalSupply } = useCelostrialsContract();
+  const { mint, getTotalSupply } = useCelostrialsContract();
   const [loading, setLoading] = useState(false);
   const toast = useToast();
   const mintModal = useDisclosure();
+  const disabled = true;
 
   const getTokens = (
     event: ethers.Event,
@@ -41,13 +50,20 @@ const Mint = ({ myRef }: any) => {
   };
 
   const submitTx = async (amount: number) => {
-    const test = ethers.utils.formatUnits((await totalSupply()) || 0, "wei");
     setLoading(true);
     let tx;
     try {
       tx = await mint(amount);
     } catch (e) {
+      setLoading(false);
       const error = e as any;
+      console.log(error);
+      if (error.message.includes("denied")) {
+        toast({
+          title: "Transaction Denied",
+          status: "error",
+        });
+      }
       if (error.data)
         toast({
           title: getVMErrorMessage(error.data.message),
@@ -68,120 +84,133 @@ const Mint = ({ myRef }: any) => {
       }
     }
     if (!tx) {
+      setLoading(false);
       return;
     }
     const receipt = await tx.wait();
     const events = getTxEvents(receipt, "Transfer");
     const tokens = events.map((event) => getTokens(event, receipt));
+    setLoading(false);
     setTokens(tokens);
     mintModal.onOpen();
-    setLoading(false);
   };
 
+  const { connect, address } = useContractKit();
+  const [mintAmount, setMintAmount] = useState(1);
+
+  const { getInputProps, getIncrementButtonProps, getDecrementButtonProps } =
+    useNumberInput({
+      step: 1,
+      defaultValue: 1,
+      min: 1,
+      max: 10,
+      precision: 0,
+      onChange: (val) => {
+        setMintAmount(Number(val));
+      },
+    });
+
+  const inc = getIncrementButtonProps();
+  const dec = getDecrementButtonProps();
+  const input = getInputProps({ readOnly: true });
+  const device = useBreakpointValue({ base: "mobile", md: "desktop" });
+  const isMobile = device === "mobile";
+
   return (
-    <VStack m="5em !important" mb="20em !important">
-      <Heading color="white" size="xl" ref={myRef}>
+    <VStack m="3em !important">
+      {/* <Heading color="white" size="xl" ref={myRef}>
         Mint
-      </Heading>
-      <Wrap justify="center" mt="6em !important" spacing="2em">
-        <WrapItem>
-          <VStack
-            cursor={"pointer"}
-            onClick={() => {
-              submitTx(1);
-            }}
+      </Heading> */}
+      <HStack w="100%" justifyContent={"space-between"}>
+        <Image
+          w="70%"
+          maxW="18em"
+          src={basicImage}
+          mr="-19em"
+          mb="-.5em !important"
+          zIndex="1"
+          mt="0 !important"
+        />
+        <Image
+          w="70%"
+          maxW="18em"
+          src={basicImage2}
+          mr="-19em"
+          mb="-.5em !important"
+          zIndex="auto"
+          mt="0 !important"
+        />
+      </HStack>
+      <HStack
+        borderRadius="1em"
+        padding="2em"
+        backgroundColor="#ffffff1f"
+        flexFlow="wrap"
+        justifyContent={"center"}
+      >
+        <HStack
+          border="3px solid"
+          borderRadius={"1em"}
+          padding="1em"
+          backgroundColor={"#525252"}
+          borderColor={colors.gray.cement}
+          marginBottom={!isMobile ? "0em" : "2em"}
+          marginRight={!isMobile ? "2em" : "0em"}
+        >
+          <Button background={colors.gray.cement} {...dec}>
+            -
+          </Button>
+          <Input
+            w="5em"
+            textAlign="center"
+            border="none !important"
+            backgroundColor="transparent !important"
+            color="white"
+            fontSize={"2xl"}
+            fontWeight="bold"
+            {...input}
+          />
+          <Button background={colors.gray.cement} {...inc}>
+            +
+          </Button>
+        </HStack>
+        {address ? (
+          <Button
+            minW="8em"
+            size="md"
+            onClick={async () => await submitTx(mintAmount)}
+            background={gradients.primary}
+            justifyContent="space-between"
+            rightIcon={<Image className="ufo" width="2em" src={ufo} />}
+            isLoading={loading}
+            disabled={disabled}
           >
-            <Image height={"30vmin"} className="mintCard" src={mint1Image} />
-            <Heading color="white" size="2xl">
-              1
-            </Heading>
-          </VStack>
-        </WrapItem>
-        <WrapItem>
-          <VStack
-            onClick={() => {
-              submitTx(3);
-            }}
+            Mint
+          </Button>
+        ) : (
+          <Button
+            minW="14em"
+            size="md"
+            onClick={async () => await connect()}
+            background={gradients.primary}
+            justifyContent="space-between"
+            rightIcon={<FontAwesomeIcon icon={faWallet} />}
           >
-            <CardStack image={mint3Image} className="card card-top-left">
-              <VStack className="card-inner">
-                <Image
-                  height={"30vmin"}
-                  className="mintCard"
-                  src={mint3Image}
-                />
-              </VStack>
-            </CardStack>
-            <Heading color="white" size="2xl">
-              3
-            </Heading>
-          </VStack>
-        </WrapItem>
-        <WrapItem>
-          <VStack
-            onClick={() => {
-              submitTx(5);
-            }}
-          >
-            <CardStack image={mint5Image} className="card card-top-left">
-              <VStack className="card-inner">
-                <Image
-                  height={"30vmin"}
-                  className="mintCard"
-                  src={mint5Image}
-                />
-              </VStack>
-            </CardStack>
-            <Heading color="white" size="2xl">
-              5
-            </Heading>
-          </VStack>
-        </WrapItem>
-        <WrapItem>
-          <VStack
-            onClick={() => {
-              submitTx(10);
-            }}
-          >
-            <CardStack image={mint10Image} className="card card-top-left">
-              <VStack className="card-inner">
-                <Image
-                  height={"30vmin"}
-                  className="mintCard"
-                  src={mint10Image}
-                />
-              </VStack>
-            </CardStack>
-            <Heading color="white" size="2xl">
-              10
-            </Heading>
-          </VStack>
-        </WrapItem>
-      </Wrap>
+            Connect Wallet
+          </Button>
+        )}
+        {isMobile && (
+          <HStack pt="2em">
+            <TotalMintedInfo />
+          </HStack>
+        )}
+      </HStack>
+
       <MintModal
         isOpen={mintModal.isOpen}
         onClose={mintModal.onClose}
         tokens={tokens}
       />
-    </VStack>
-  );
-};
-
-const CardStack = ({ children, image, ...props }) => {
-  return (
-    <VStack
-      {...props}
-      _after={{
-        background: `url(${image})`,
-        backgroundSize: "cover",
-      }}
-      _before={{
-        background: `url(${image})`,
-        backgroundSize: "cover",
-      }}
-      className="card card-top-left"
-    >
-      {children}
     </VStack>
   );
 };

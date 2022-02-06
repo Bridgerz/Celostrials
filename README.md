@@ -32,7 +32,6 @@ yarn deploy
 A few things to keep in mind.
 
 1. The skin and background layers shouldn't have "base" attributes
-2.
 
 > 🎨 Generate the collection images and metadata
 

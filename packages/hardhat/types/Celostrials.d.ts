@@ -33,7 +33,6 @@ interface CelostrialsInterface extends ethers.utils.Interface {
     "isApprovedForAll(address,address)": FunctionFragment;
     "maxMintAmount()": FunctionFragment;
     "maxSupply()": FunctionFragment;
-    "maxWhiteListMint()": FunctionFragment;
     "mint(address,uint16)": FunctionFragment;
     "name()": FunctionFragment;
     "onlyWhitelist()": FunctionFragment;
@@ -92,10 +91,6 @@ interface CelostrialsInterface extends ethers.utils.Interface {
     values?: undefined
   ): string;
   encodeFunctionData(functionFragment: "maxSupply", values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: "maxWhiteListMint",
-    values?: undefined
-  ): string;
   encodeFunctionData(
     functionFragment: "mint",
     values: [string, BigNumberish]
@@ -207,10 +202,6 @@ interface CelostrialsInterface extends ethers.utils.Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "maxSupply", data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: "maxWhiteListMint",
-    data: BytesLike
-  ): Result;
   decodeFunctionResult(functionFragment: "mint", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "name", data: BytesLike): Result;
   decodeFunctionResult(
@@ -411,8 +402,6 @@ export class Celostrials extends BaseContract {
 
     maxSupply(overrides?: CallOverrides): Promise<[BigNumber]>;
 
-    maxWhiteListMint(overrides?: CallOverrides): Promise<[BigNumber]>;
-
     mint(
       _to: string,
       _mintAmount: BigNumberish,
@@ -579,8 +568,6 @@ export class Celostrials extends BaseContract {
 
   maxSupply(overrides?: CallOverrides): Promise<BigNumber>;
 
-  maxWhiteListMint(overrides?: CallOverrides): Promise<BigNumber>;
-
   mint(
     _to: string,
     _mintAmount: BigNumberish,
@@ -738,8 +725,6 @@ export class Celostrials extends BaseContract {
     maxMintAmount(overrides?: CallOverrides): Promise<BigNumber>;
 
     maxSupply(overrides?: CallOverrides): Promise<BigNumber>;
-
-    maxWhiteListMint(overrides?: CallOverrides): Promise<BigNumber>;
 
     mint(
       _to: string,
@@ -967,8 +952,6 @@ export class Celostrials extends BaseContract {
 
     maxSupply(overrides?: CallOverrides): Promise<BigNumber>;
 
-    maxWhiteListMint(overrides?: CallOverrides): Promise<BigNumber>;
-
     mint(
       _to: string,
       _mintAmount: BigNumberish,
@@ -1138,8 +1121,6 @@ export class Celostrials extends BaseContract {
     maxMintAmount(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     maxSupply(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    maxWhiteListMint(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     mint(
       _to: string,
