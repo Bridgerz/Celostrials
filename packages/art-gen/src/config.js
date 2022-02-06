@@ -27,7 +27,7 @@ const solanaMetadata = {
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 550,
+    growEditionSizeTo: 1100,
     layersOrder: [
       {
         name: "background",
@@ -44,7 +44,7 @@ const layerConfigurations = [
     ],
   },
   {
-    growEditionSizeTo: 850,
+    growEditionSizeTo: 1700,
     layersOrder: [
       {
         name: "background",
@@ -60,7 +60,7 @@ const layerConfigurations = [
     ],
   },
   {
-    growEditionSizeTo: 900,
+    growEditionSizeTo: 1800,
     layersOrder: [
       {
         name: "background",
@@ -77,7 +77,7 @@ const layerConfigurations = [
     ],
   },
   {
-    growEditionSizeTo: 975,
+    growEditionSizeTo: 1950,
     layersOrder: [
       {
         name: "background",
@@ -93,7 +93,7 @@ const layerConfigurations = [
     ],
   },
   {
-    growEditionSizeTo: 1000,
+    growEditionSizeTo: 2000,
     layersOrder: [
       {
         name: "background",
