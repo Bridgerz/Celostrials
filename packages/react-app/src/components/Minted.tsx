@@ -15,6 +15,7 @@ import {
   PopoverCloseButton,
   PopoverHeader,
   PopoverBody,
+  Spinner,
 } from "@chakra-ui/react";
 import { gradients } from "../theme/foundations/colors";
 import config from "../config";
@@ -56,21 +57,23 @@ const Minted = ({ token }: MintProps) => {
   };
 
   const [tokenData, setTokenData] = useState<TokenData>();
+  const [loading, setLoading] = useState(true);
 
   useEffectOnce(() => {
     getTokenStats(token.id).then((result) => {
       setTokenData(result);
+      setLoading(false);
     });
   });
 
   const getTokenStats = async (tokenId: string) => {
-    return fetch(
-      `https://celostrials.mypinata.cloud/ipfs/${config.IPFS_JSON_CID}/${tokenId}.json`
-    ).then((result) => {
-      return result.json().then((value) => {
-        return value;
-      });
-    });
+    return fetch(`https://celostrials.vercel.app/api/nft?id=${tokenId}`).then(
+      (result) => {
+        return result.json().then((value) => {
+          return value;
+        });
+      }
+    );
   };
 
   useEffectOnce(() => {});
@@ -126,10 +129,14 @@ const Minted = ({ token }: MintProps) => {
                   <Badge colorScheme="red" fontSize={"1.5em"}>
                     #{tokenData?.rarity_rank + 1}
                   </Badge>
+                  <Heading margin="0 !important" ml=".5em !important">
+                    / 10,000
+                  </Heading>
                 </>
               )}
+              {loading && <Spinner />}
             </HStack>
-            <Button
+            {/* <Button
               size="lg"
               as="a"
               target="_blank"
@@ -137,7 +144,7 @@ const Minted = ({ token }: MintProps) => {
               leftIcon={<Image className="ufo" width="1.5em" src={ufo} />}
             >
               View Score
-            </Button>
+            </Button> */}
             <Button
               size="sm"
               variant="ghost"

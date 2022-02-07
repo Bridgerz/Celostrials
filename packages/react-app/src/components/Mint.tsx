@@ -35,7 +35,7 @@ const Mint = ({ myRef }: any) => {
   const [loading, setLoading] = useState(false);
   const toast = useToast();
   const mintModal = useDisclosure();
-  const disabled = true;
+  const disabled = false;
 
   const getTokens = (
     event: ethers.Event,
