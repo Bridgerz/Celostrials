@@ -123,7 +123,7 @@ export const Header = () => {
           {!isMobile && <Socials pl={"1em"} color={"white"} />}
         </HStack>
         <HStack align="center" spacing={6}>
-          {/* {!isMobile && <TotalMintedInfo />} */}
+          {!isMobile && <TotalMintedInfo />}
           {address && (
             <>
               <AddressInfo />
