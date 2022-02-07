@@ -169,9 +169,9 @@ const set_nfts_rank = () => {
     .map((nft, index) => set_nft_rank(nft, index))
     .sort((x, y) => x["id"] - y["id"]);
 
-  const rankFile = "./ranks.json";
-  fs.writeFileSync(rankFile, JSON.stringify(nfts, null, 2));
-  console.log("UPDATED RANK FILE");
+  // const rankFile = "./ranks.json";
+  // fs.writeFileSync(rankFile, JSON.stringify(nfts, null, 2));
+  // console.log("UPDATED RANK FILE");
 };
 
 set_nfts_rank();
