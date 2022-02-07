@@ -1,5 +1,5 @@
 export const config = {
-  env: "local",
+  env: process.env.ENVIRONEMNT,
   LOCAL_API_URL: "localhost:3000",
   // API_URL: "odp-rarity.vercel.app",
   COLLECTION_NAME: "Celostrials",
