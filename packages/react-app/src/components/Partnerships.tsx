@@ -49,7 +49,7 @@ const Partnerships = () => {
   };
 
   return (
-    <VStack pb="15em !important" w="100%" id="partnerships" pt="4em">
+    <VStack pb="10em !important" w="100%" id="partnerships" pt="4em">
       <Heading color="white" size="xl">
         Partnerships
       </Heading>
