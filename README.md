@@ -32,6 +32,7 @@ yarn deploy
 A few things to keep in mind.
 
 1. The skin and background layers shouldn't have "base" attributes
+2. If the art generated order is shuffled use https://codeshack.io/json-sorter/ to sort by id so the rarity app works correctly
 
 > 🎨 Generate the collection images and metadata
 

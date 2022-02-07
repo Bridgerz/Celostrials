@@ -17,7 +17,7 @@ contract Celostrials is Ownable, Pausable, ERC721Enumerable {
 
     string public baseURI;
     string public baseExtension = ".json";
-    uint256 public maxSupply = 1500;
+    uint256 public maxSupply = 10000;
     uint256 private traunchSize = 50;
     uint256 private currentTraunch = 0;
     uint256 public maxMintAmount = 10;
@@ -32,7 +32,7 @@ contract Celostrials is Ownable, Pausable, ERC721Enumerable {
     }
 
     constructor() ERC721("Celostrials", "NFET") {
-        setBaseURI("https://ipfs.io/ipfs/QmeJXDHp6NpKAzbnz3FatKE7NUfjuUBRYRRNJqgPxT4hjb");
+        setBaseURI("https://ipfs.io/ipfs/Qmc7QMbG2CByCiP3p1HQgtJm3rphrhnjp8JCPakVMhKAy9");
         for (uint16 i = 1; i <= 20; i++) {
           _safeMint(msg.sender, i);
           isMinted[i] = true;
