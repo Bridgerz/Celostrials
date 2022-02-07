@@ -75,6 +75,8 @@ const colors = {
 
 export const gradients = {
   primary: "linear-gradient(260.01deg, #ff0c0c 0%, #ff8e01 100%);",
+  primaryTransparent:
+    "linear-gradient(260.01deg, #ff0c0c61 0%, #ff8e01b3 100%)",
   blue: "linear-gradient(225deg, #8bb3ff 0.39%, #1c5efa 100.39%);",
 } as Record<string, string>;
 

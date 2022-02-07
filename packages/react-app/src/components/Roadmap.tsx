@@ -117,6 +117,7 @@ const Roadmap = () => {
           <VStack
             borderTop="2px solid white"
             borderLeft="2px solid white"
+            textAlign="initial"
             p="2em"
             width="50%"
             alignItems="start"
@@ -128,7 +129,9 @@ const Roadmap = () => {
               Public mint
             </Text>
             <Text fontSize="1xl" color="white" fontWeight="bold">
-              February 15th 🚀
+              February 15th 🚀 5% of mint funds go to eradicating poverty around
+              the world via the Impact Market's decentralized poverty
+              alleviation protocol
             </Text>
           </VStack>
         </HStack>
@@ -312,6 +315,7 @@ const Roadmap = () => {
             p="2em !important"
             m="2em !important"
             alignItems="start"
+            textAlign="center"
             width="-webkit-fill-available"
           >
             <Heading color="white" size="3xl">
@@ -332,7 +336,9 @@ const Roadmap = () => {
               fontWeight="bold"
               textAlign="left"
             >
-              February 15th 🚀
+              February 15th 🚀 5% of mint funds go to eradicating poverty around
+              the world via the Impact Market's decentralized poverty
+              alleviation protocol
             </Text>
           </VStack>
         </VStack>

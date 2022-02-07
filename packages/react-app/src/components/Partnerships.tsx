@@ -7,6 +7,7 @@ import goodGhosting from "../assets/partnerships/goodGhosting.jpg";
 import cybertime from "../assets/partnerships/cybertime.jpg";
 import nomspace from "../assets/partnerships/nomspace.jpg";
 import resource from "../assets/partnerships/ReSource.jpeg";
+import impactMarket from "../assets/partnerships/ImpactMarket.png";
 import { gradients } from "../theme/foundations/colors";
 
 const Partnerships = () => {
@@ -148,6 +149,22 @@ const Partnerships = () => {
             </Heading>
             <Center>
               <Image borderRadius="1em" h="auto" w="20em" src={nomspace} />
+            </Center>
+          </VStack>
+          <VStack>
+            <Heading
+              background={gradients.primary}
+              position="absolute"
+              padding=".5em"
+              borderRadius="1em"
+              w="fit-content"
+              color="white"
+              ml={{ sm: "0em", md: "1em" }}
+            >
+              Impact Market
+            </Heading>
+            <Center>
+              <Image borderRadius="1em" h="auto" w="20em" src={impactMarket} />
             </Center>
           </VStack>
           <VStack>
