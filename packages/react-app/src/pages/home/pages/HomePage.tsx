@@ -61,13 +61,10 @@ const HomePage = () => {
                 date={Date.parse("15 Feb 2022 14:00:00 GMT")}
               />
             </HStack>
-            <VStack className="preview" mb="5em">
+            {/* <VStack className="preview" mb="5em">
               <VStack className="homeCardContainer">
                 <Image className="homeCard" src={basicImage} />
               </VStack>
-              {/* <VStack>
-                <Mint myRef={myRef} />
-              </VStack> */}
               <Button
                 size="lg"
                 onClick={executeScroll}
@@ -77,12 +74,12 @@ const HomePage = () => {
               >
                 Mint
               </Button>
-            </VStack>
-            {/* <VStack mb="10em !important">
+            </VStack> */}
+            <VStack mb="10em !important">
               <VStack>
                 <Mint myRef={myRef} />
               </VStack>
-            </VStack> */}
+            </VStack>
             <Partnerships />
             <About />
             <Roadmap />
