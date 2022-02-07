@@ -1,4 +1,4 @@
-import { VStack, Heading, HStack } from "@chakra-ui/layout";
+import { VStack, Heading, HStack, Link } from "@chakra-ui/layout";
 import {
   Center,
   Image,
@@ -88,7 +88,14 @@ const HomePage = () => {
               <Text color="white">
                 5% of the mint funds go to eradicating poverty around the world
                 via the{" "}
-                <span style={{ fontWeight: "bold" }}>Impact Market's</span>{" "}
+                <Link
+                  fontWeight={"bold"}
+                  isExternal={true}
+                  href="https://www.impactmarket.com/"
+                >
+                  {" "}
+                  Impact Market's{" "}
+                </Link>
                 decentralized poverty alleviation protocol.{" "}
               </Text>
             </VStack>
