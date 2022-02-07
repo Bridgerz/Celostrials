@@ -67,13 +67,13 @@ const Minted = ({ token }: MintProps) => {
   });
 
   const getTokenStats = async (tokenId: string) => {
-    return fetch(
-      `https://celostrials.mypinata.cloud/ipfs/${config.IPFS_JSON_CID}/${tokenId}.json`
-    ).then((result) => {
-      return result.json().then((value) => {
-        return value;
-      });
-    });
+    return fetch(`https://celostrials.vercel.app/api/nft?id=${tokenId}`).then(
+      (result) => {
+        return result.json().then((value) => {
+          return value;
+        });
+      }
+    );
   };
 
   useEffectOnce(() => {});
