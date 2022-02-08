@@ -32,7 +32,7 @@ contract Celostrials is Ownable, Pausable, ERC721Enumerable {
     }
 
     constructor() ERC721("Celostrials", "NFET") {
-        setBaseURI("https://ipfs.io/ipfs/Qmc7QMbG2CByCiP3p1HQgtJm3rphrhnjp8JCPakVMhKAy9");
+        setBaseURI("https://ipfs.io/ipfs/Qmc7QMbG2CByCiP3p1HQgtJm3rphrhnjp8JCPakVMhKAy9/");
         for (uint16 i = 1; i <= 20; i++) {
           _safeMint(msg.sender, i);
           isMinted[i] = true;
