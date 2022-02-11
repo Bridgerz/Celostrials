@@ -1,4 +1,4 @@
-import { formatPrice, getDesc, ipfs2http } from "../util";
+import { formatPrice, getDesc, getToken } from "../util";
 import { FiArrowLeft } from "react-icons/fi";
 import { NextSeo } from "next-seo";
 import { getNFT, getNFTInfo } from "../util/requests";
@@ -29,7 +29,7 @@ const Trait = (attribute) => {
 
 function NFT({ nft, title }) {
   const router = useRouter();
-  const img_url = `https://celostrials.mypinata.cloud/ipfs/${ipfs2http(
+  const img_url = `https://celostrials.s3.us-west-2.amazonaws.com/${getToken(
     nft.image
   )}`;
 

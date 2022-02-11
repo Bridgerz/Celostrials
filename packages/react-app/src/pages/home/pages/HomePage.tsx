@@ -1,4 +1,4 @@
-import { VStack, Heading, HStack } from "@chakra-ui/layout";
+import { VStack, Heading, HStack, Link } from "@chakra-ui/layout";
 import {
   Center,
   Image,
@@ -51,7 +51,7 @@ const HomePage = () => {
     <>
       <Center mt="5em" zIndex={10}>
         <VStack w="100%" h="100%">
-          <VStack zIndex={1} w="100%" h="100%">
+          <VStack zIndex={1} w="100%" h="100%" mt="1em">
             <Center>
               <Image w="30em" maxW="90%" src={logoImage} />
             </Center>
@@ -79,6 +79,27 @@ const HomePage = () => {
               <VStack>
                 <Mint myRef={myRef} />
               </VStack>
+            </VStack>
+            <VStack
+              width={"100%"}
+              background={gradients.primaryTransparent}
+              padding="1em"
+              mt="5em !important"
+            >
+              <Heading color="white">Impact Market Donations</Heading>
+              <Text color="white">
+                5% of the mint funds go to eradicating poverty around the world
+                via the{" "}
+                <Link
+                  fontWeight={"bold"}
+                  isExternal={true}
+                  href="https://www.impactmarket.com/"
+                >
+                  {" "}
+                  Impact Market's{" "}
+                </Link>
+                decentralized poverty alleviation protocol.{" "}
+              </Text>
             </VStack>
             <Partnerships />
             <About />

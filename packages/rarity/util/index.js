@@ -15,10 +15,11 @@ export const getDesc = (nft) => {
   `;
   return desc;
 };
-export const ipfs2http = (ipfs_url) => {
+
+export const getToken = (ipfs_url) => {
+  "ipfs://QmbvPkRjZbNSjM5rKUTAPHfkeZZfngqoLpDPjqs3jL8Jz3/6186.png";
   if (ipfs_url) {
-    let url = new URL(ipfs_url);
-    return url.href.substr(7);
+    return ipfs_url.split("/")[3];
   } else {
     return "";
   }

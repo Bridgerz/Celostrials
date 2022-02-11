@@ -1,5 +1,5 @@
 import React from "react";
-import { ipfs2http } from "../util";
+import { getToken } from "../util";
 
 export const NFT = (nft) => {
   return (
@@ -11,7 +11,7 @@ export const NFT = (nft) => {
         href={`/${nft.id}`}
       >
         <img
-          src={`https://celostrials.mypinata.cloud/ipfs/${ipfs2http(
+          src={`https://celostrials.s3.us-west-2.amazonaws.com/${getToken(
             nft.image
           )}`}
           className="rounded-md px-2 pt-2 h-auto bg-black"

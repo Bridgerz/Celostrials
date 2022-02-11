@@ -146,7 +146,6 @@ export const getNFT = (id) => {
   // Precompute the frequency of each trait
   nfts = nfts.sort((x, y) => x["id"] - y["id"]);
   let nft = nfts[id - 1];
-  // console.log(nft);
   if (nft) {
     filter_nft_attributes(nft);
     set_trait_rarity(nft, all_traits);
@@ -168,10 +167,6 @@ const set_nfts_rank = () => {
     .sort((x, y) => y["rarity_score"] - x["rarity_score"])
     .map((nft, index) => set_nft_rank(nft, index))
     .sort((x, y) => x["id"] - y["id"]);
-
-  // const rankFile = "./ranks.json";
-  // fs.writeFileSync(rankFile, JSON.stringify(nfts, null, 2));
-  // console.log("UPDATED RANK FILE");
 };
 
 set_nfts_rank();

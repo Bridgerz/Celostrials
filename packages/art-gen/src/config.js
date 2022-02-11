@@ -7,7 +7,7 @@ const network = NETWORK.eth;
 // General metadata for Ethereum
 const namePrefix = "Celostrial";
 const description = "The worlds first nfETs";
-const baseUri = "ipfs://QmXXoDfByeruNgaRAMHwWqCsMnaEfQRYHExtJEdRyS6WqH";
+const baseUri = "ipfs://QmbvPkRjZbNSjM5rKUTAPHfkeZZfngqoLpDPjqs3jL8Jz3";
 
 const solanaMetadata = {
   symbol: "YC",
@@ -86,7 +86,6 @@ const layerConfigurations = [
       { name: "skin" },
       { name: "eyes" },
       { name: "clothes" },
-      { name: "mouth" },
       { name: "special_facial_hair" },
       { name: "glasses" },
       { name: "laser" },
@@ -115,14 +114,14 @@ const shuffleLayerConfigurations = true;
 const debugLogs = false;
 
 const format = {
-  width: 560,
-  height: 720,
+  width: 702,
+  height: 905,
   smoothing: false,
 };
 
 const gif = {
   export: false,
-  repeat: 0,
+  repeat: 1,
   quality: 100,
   delay: 500,
 };
