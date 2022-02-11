@@ -53,7 +53,7 @@ export interface MintProps {
 
 const Minted = ({ token }: MintProps) => {
   const getTokenImage = (tokenId: string) => {
-    return `https://celostrials.mypinata.cloud/ipfs/${config.IPFS_IMAGE_CID}/${tokenId}.png`;
+    return `https://celostrials.s3.us-west-2.amazonaws.com/${tokenId}.png`;
   };
 
   const [tokenData, setTokenData] = useState<TokenData>();

@@ -152,6 +152,7 @@ export const TotalMintedInfo = () => {
   const [isOnlyWhiteList, setIsOnlyWhiteList] = useState(true);
   const { getMaxSupply, getTotalSupply, onlyWhitelist } =
     useCelostrialsContract();
+
   const { connect, initialised, address } = useContractKit();
 
   useEffect(() => {

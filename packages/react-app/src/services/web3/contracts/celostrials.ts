@@ -58,5 +58,10 @@ export const useCelostrialsContract = () => {
         return contract.onlyWhitelist();
       }
     },
+    isWhiteListed: async () => {
+      if (contract) {
+        return contract.isWhitelist();
+      }
+    },
   };
 };
