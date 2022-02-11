@@ -31,6 +31,7 @@ interface CelostrialsInterface extends ethers.utils.Interface {
     "cost()": FunctionFragment;
     "getApproved(uint256)": FunctionFragment;
     "isApprovedForAll(address,address)": FunctionFragment;
+    "isWhitelist()": FunctionFragment;
     "maxMintAmount()": FunctionFragment;
     "maxSupply()": FunctionFragment;
     "mint(address,uint16)": FunctionFragment;
@@ -85,6 +86,10 @@ interface CelostrialsInterface extends ethers.utils.Interface {
   encodeFunctionData(
     functionFragment: "isApprovedForAll",
     values: [string, string]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "isWhitelist",
+    values?: undefined
   ): string;
   encodeFunctionData(
     functionFragment: "maxMintAmount",
@@ -195,6 +200,10 @@ interface CelostrialsInterface extends ethers.utils.Interface {
   ): Result;
   decodeFunctionResult(
     functionFragment: "isApprovedForAll",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "isWhitelist",
     data: BytesLike
   ): Result;
   decodeFunctionResult(
@@ -398,6 +407,8 @@ export class Celostrials extends BaseContract {
       overrides?: CallOverrides
     ): Promise<[boolean]>;
 
+    isWhitelist(overrides?: CallOverrides): Promise<[boolean]>;
+
     maxMintAmount(overrides?: CallOverrides): Promise<[BigNumber]>;
 
     maxSupply(overrides?: CallOverrides): Promise<[BigNumber]>;
@@ -564,6 +575,8 @@ export class Celostrials extends BaseContract {
     overrides?: CallOverrides
   ): Promise<boolean>;
 
+  isWhitelist(overrides?: CallOverrides): Promise<boolean>;
+
   maxMintAmount(overrides?: CallOverrides): Promise<BigNumber>;
 
   maxSupply(overrides?: CallOverrides): Promise<BigNumber>;
@@ -721,6 +734,8 @@ export class Celostrials extends BaseContract {
       operator: string,
       overrides?: CallOverrides
     ): Promise<boolean>;
+
+    isWhitelist(overrides?: CallOverrides): Promise<boolean>;
 
     maxMintAmount(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -948,6 +963,8 @@ export class Celostrials extends BaseContract {
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
+    isWhitelist(overrides?: CallOverrides): Promise<BigNumber>;
+
     maxMintAmount(overrides?: CallOverrides): Promise<BigNumber>;
 
     maxSupply(overrides?: CallOverrides): Promise<BigNumber>;
@@ -1117,6 +1134,8 @@ export class Celostrials extends BaseContract {
       operator: string,
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
+
+    isWhitelist(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     maxMintAmount(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 

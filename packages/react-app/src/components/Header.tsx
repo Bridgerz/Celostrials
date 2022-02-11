@@ -123,7 +123,7 @@ export const Header = () => {
           {!isMobile && <Socials pl={"1em"} color={"white"} />}
         </HStack>
         <HStack align="center" spacing={6}>
-          {/* {!isMobile && <TotalMintedInfo />} */}
+          {!isMobile && <TotalMintedInfo />}
           {address && (
             <>
               <AddressInfo />
@@ -152,6 +152,7 @@ export const TotalMintedInfo = () => {
   const [isOnlyWhiteList, setIsOnlyWhiteList] = useState(true);
   const { getMaxSupply, getTotalSupply, onlyWhitelist } =
     useCelostrialsContract();
+
   const { connect, initialised, address } = useContractKit();
 
   useEffect(() => {

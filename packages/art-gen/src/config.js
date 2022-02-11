@@ -7,7 +7,7 @@ const network = NETWORK.eth;
 // General metadata for Ethereum
 const namePrefix = "Celostrial";
 const description = "The worlds first nfETs";
-const baseUri = "ipfs://QmbvPkRjZbNSjM5rKUTAPHfkeZZfngqoLpDPjqs3jL8Jz3";
+const baseUri = "ipfs://Qme97ifAexrMDfjE3DZRMasWhe7D276uYsCGonyprSA2MJ";
 
 const solanaMetadata = {
   symbol: "YC",

@@ -15,7 +15,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import basicImage from "../../../assets/preview.gif";
 
@@ -36,16 +36,34 @@ import About from "../../../components/About";
 import Roadmap from "../../../components/Roadmap";
 import Countdown from "react-countdown";
 import FAQ from "../../../components/FAQ";
+import { useCelostrialsContract } from "../../../services/web3/contracts/celostrials";
+import { useContractKit } from "@celo-tools/use-contractkit";
 
 const HomePage = () => {
   const device = useBreakpointValue({ base: "mobile", md: "desktop" });
   const isMobile = device === "mobile";
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isWhiteListed, onlyWhitelist } = useCelostrialsContract();
+  const { connect, initialised, address } = useContractKit();
+  const [isWalletWhiteListed, setIsWalletWhiteListed] = useState(false);
+  const [isOnlyWhiteList, setIsOnlyWhiteList] = useState(true);
 
   const myRef = useRef<null | HTMLDivElement>(null);
-  const executeScroll = () => {
-    onOpen();
-  };
+
+  useEffect(() => {
+    async function loadBalance() {
+      const _isWhiteListed = await isWhiteListed();
+      const _isOnlyWhiteList = await onlyWhitelist();
+      if (_isWhiteListed !== undefined) {
+        setIsWalletWhiteListed(_isWhiteListed);
+      }
+      if (_isOnlyWhiteList !== undefined) {
+        setIsOnlyWhiteList(_isOnlyWhiteList);
+      }
+    }
+
+    loadBalance();
+  }, [initialised, address, connect, isWhiteListed, onlyWhitelist]);
 
   return (
     <>
@@ -61,23 +79,19 @@ const HomePage = () => {
                 date={Date.parse("15 Feb 2022 14:00:00 GMT")}
               />
             </HStack>
-            <VStack className="preview" mb="5em">
-              <VStack className="homeCardContainer">
-                <Image className="homeCard" src={basicImage} />
-              </VStack>
-              {/* <VStack>
+
+            {!isOnlyWhiteList || (isOnlyWhiteList && isWalletWhiteListed) ? (
+              <VStack>
                 <Mint myRef={myRef} />
-              </VStack> */}
-              <Button
-                size="lg"
-                onClick={executeScroll}
-                background={gradients.primary}
-                justifyContent="space-between"
-                rightIcon={<Image className="ufo" width="2em" src={ufo} />}
-              >
-                Mint
-              </Button>
-            </VStack>
+              </VStack>
+            ) : (
+              <VStack className="preview" mb="5em">
+                <VStack className="homeCardContainer">
+                  <Image className="homeCard" src={basicImage} />
+                </VStack>
+              </VStack>
+            )}
+
             <VStack
               width={"100%"}
               background={gradients.primaryTransparent}
@@ -99,11 +113,6 @@ const HomePage = () => {
                 decentralized poverty alleviation protocol.{" "}
               </Text>
             </VStack>
-            {/* <VStack mb="10em !important">
-              <VStack>
-                <Mint myRef={myRef} />
-              </VStack>
-            </VStack> */}
             <Partnerships />
             <About />
             <Roadmap />
