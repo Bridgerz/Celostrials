@@ -54,6 +54,11 @@ const HomePage = () => {
     async function loadBalance() {
       const _isWhiteListed = await isWhiteListed();
       const _isOnlyWhiteList = await onlyWhitelist();
+      if (!address) {
+        setIsWalletWhiteListed(false);
+        setIsOnlyWhiteList(true);
+        return;
+      }
       if (_isWhiteListed !== undefined) {
         setIsWalletWhiteListed(_isWhiteListed);
       }
