@@ -16,7 +16,7 @@ contract Celostrials is Ownable, Pausable, ERC721Enumerable {
 
     string public baseURI;
     string public baseExtension = ".json";
-    uint256 public maxSupply = 200;
+    uint256 public maxSupply = 10000;
     uint256 private batchSize = 50;
     uint256 private currentBatch = 1;
     uint256 public maxMintAmount = 10;

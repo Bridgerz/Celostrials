@@ -31,6 +31,7 @@ import { TotalMintedInfo } from "./Header";
 
 const Mint = ({ myRef }: any) => {
   const [tokens, setTokens] = useState<Token[]>([]);
+  const [txHash, setTxHash] = useState("");
   const { mint, getTotalSupply } = useCelostrialsContract();
   const [loading, setLoading] = useState(false);
   const toast = useToast();
@@ -92,6 +93,7 @@ const Mint = ({ myRef }: any) => {
     const tokens = events.map((event) => getTokens(event, receipt));
     setLoading(false);
     setTokens(tokens);
+    setTxHash(receipt.transactionHash);
     mintModal.onOpen();
   };
 
@@ -118,9 +120,6 @@ const Mint = ({ myRef }: any) => {
 
   return (
     <VStack m="3em !important">
-      {/* <Heading color="white" size="xl" ref={myRef}>
-        Mint
-      </Heading> */}
       <HStack w="100%" justifyContent={"space-between"}>
         <Image
           w="70%"
@@ -210,6 +209,7 @@ const Mint = ({ myRef }: any) => {
         isOpen={mintModal.isOpen}
         onClose={mintModal.onClose}
         tokens={tokens}
+        txHash={txHash}
       />
     </VStack>
   );

@@ -49,9 +49,10 @@ export interface TokenData {
 
 export interface MintProps {
   token: Token;
+  txHash: String;
 }
 
-const Minted = ({ token }: MintProps) => {
+const Minted = ({ token, txHash }: MintProps) => {
   const getTokenImage = (tokenId: string) => {
     return `https://celostrials.s3.us-west-2.amazonaws.com/${tokenId}.png`;
   };
@@ -78,8 +79,8 @@ const Minted = ({ token }: MintProps) => {
 
   useEffectOnce(() => {});
 
-  const getTransactionLink = (txHash: string) => {
-    return `${config.NETWORK_EXPLORER_URL}/${txHash}`;
+  const getTransactionLink = () => {
+    return `${config.NETWORK_EXPLORER_URL}/tx/${txHash}`;
   };
 
   const getRarityLink = (token: string) => {
@@ -150,7 +151,7 @@ const Minted = ({ token }: MintProps) => {
               variant="ghost"
               as="a"
               target="_blank"
-              href={getTransactionLink(token.txHash)}
+              href={getTransactionLink()}
               rightIcon={<FontAwesomeIcon icon={faExternalLinkAlt} />}
             >
               View Transaction

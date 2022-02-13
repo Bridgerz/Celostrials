@@ -43,7 +43,7 @@ const About = () => {
           <Text fontSize="m" color="white">
             Celostrials are an intergalactic collection of unique beings, found
             exclusively on the Celo Blockchain. Their features are
-            algorithmically generated resulting in a interstellar collectible
+            algorithmically generated resulting in an interstellar collectible
             completely unique to you! Minting will be available soon.
             <br />
             <br />
@@ -68,7 +68,7 @@ const About = () => {
           <Text marginTop="2em !important" fontSize="m" color="white">
             Celostrials are an intergalactic collection of unique beings, found
             exclusively on the Celo Blockchain. Their features are
-            algorithmically generated resulting in a interstellar collectible
+            algorithmically generated resulting in an interstellar collectible
             completely unique to you! Minting will be available soon.
             <br />
             <br />
