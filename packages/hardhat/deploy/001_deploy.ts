@@ -15,7 +15,7 @@ const func: DeployFunction = async function(
     celostrialsDeployment.address,
     signer
   );
-  for (var i = 0; i <= 18; i++) {
+  for (var i = 0; i <= 14; i++) {
     await (
       await celostrials.mint(signer.address, 10, {
         gasLimit: 20000000,
@@ -28,7 +28,7 @@ const func: DeployFunction = async function(
   }
 
   await (
-    await celostrials.mint(signer.address, 3, {
+    await celostrials.mint(signer.address, 9, {
       gasLimit: 20000000,
     })
   ).wait();
