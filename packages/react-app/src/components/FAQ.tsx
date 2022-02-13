@@ -57,7 +57,7 @@ const FAQ = () => {
                 fontWeight="bold"
                 textAlign={"left"}
               >
-                How can i mint a celostrial?
+                How can I mint a celostrial?
               </Text>
               <AccordionIcon color="white" />
             </AccordionButton>

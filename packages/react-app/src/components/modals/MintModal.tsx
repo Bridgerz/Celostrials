@@ -31,9 +31,10 @@ export interface MintModalProps {
   isOpen: boolean;
   onClose: () => void;
   tokens: Token[];
+  txHash: String;
 }
 
-const MintModal = ({ isOpen, onClose, tokens }: MintModalProps) => {
+const MintModal = ({ isOpen, onClose, tokens, txHash }: MintModalProps) => {
   const [mint, setMint] = useState(1);
 
   useEffect(() => {
@@ -100,7 +101,7 @@ const MintModal = ({ isOpen, onClose, tokens }: MintModalProps) => {
           <ModalBody padding="0em 2em">
             <Slider {...settings}>
               {tokens.map((token) => {
-                return <Minted token={token} />;
+                return <Minted token={token} txHash={txHash} />;
               })}
             </Slider>
             <VStack>
