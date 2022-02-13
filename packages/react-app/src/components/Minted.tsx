@@ -115,7 +115,7 @@ const Minted = ({ token }: MintProps) => {
                         icon={<FontAwesomeIcon icon={faQuestionCircle} />}
                       />
                     </PopoverTrigger>
-                    <PopoverContent color="black">
+                    <PopoverContent color="black" zIndex="10000000">
                       <PopoverArrow />
                       <PopoverCloseButton />
                       <PopoverHeader>Rarity Rank</PopoverHeader>
@@ -136,7 +136,7 @@ const Minted = ({ token }: MintProps) => {
               )}
               {loading && <Spinner />}
             </HStack>
-            {/* <Button
+            <Button
               size="lg"
               as="a"
               target="_blank"
@@ -144,7 +144,7 @@ const Minted = ({ token }: MintProps) => {
               leftIcon={<Image className="ufo" width="1.5em" src={ufo} />}
             >
               View Score
-            </Button> */}
+            </Button>
             <Button
               size="sm"
               variant="ghost"
