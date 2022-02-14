@@ -77,6 +77,12 @@ const config: HardhatUserConfig = {
       saveDeployments: true,
       tags: ["production", "mainnet"],
     },
+    "celo-hot": {
+      url: "https://forno.celo.org",
+      chainId: chainIds.mainnet,
+      saveDeployments: true,
+      tags: ["production", "mainnet"],
+    },
     "frame-celo-alfajores": {
       url: "http://127.0.0.1:1248",
       chainId: 280455,
