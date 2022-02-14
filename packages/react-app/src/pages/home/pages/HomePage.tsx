@@ -43,9 +43,10 @@ const HomePage = () => {
   const device = useBreakpointValue({ base: "mobile", md: "desktop" });
   const isMobile = device === "mobile";
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { isWhiteListed, onlyWhitelist } = useCelostrialsContract();
+  const { isWhiteListed, onlyWhitelist, isPaused } = useCelostrialsContract();
   const { connect, initialised, address } = useContractKit();
   const [isWalletWhiteListed, setIsWalletWhiteListed] = useState(false);
+  const [isMintPaused, setIsMintPaused] = useState(true);
   const [isOnlyWhiteList, setIsOnlyWhiteList] = useState(true);
 
   const myRef = useRef<null | HTMLDivElement>(null);
@@ -59,8 +60,13 @@ const HomePage = () => {
         setIsOnlyWhiteList(true);
         return;
       }
+      const _isPaused = await isPaused();
       if (_isWhiteListed !== undefined) {
         setIsWalletWhiteListed(_isWhiteListed);
+      }
+      if (_isPaused !== undefined) {
+        setIsMintPaused(_isPaused);
+        console.log("PAUSHED: ", _isPaused);
       }
       if (_isOnlyWhiteList !== undefined) {
         setIsOnlyWhiteList(_isOnlyWhiteList);
@@ -81,22 +87,21 @@ const HomePage = () => {
             <HStack mb="3em !important">
               <Countdown
                 renderer={countDown}
-                date={Date.parse("15 Feb 2022 14:00:00 GMT")}
+                date={Date.parse("15 Feb 2022 13:00:00 GMT")}
               />
             </HStack>
 
-            {!isOnlyWhiteList || (isOnlyWhiteList && isWalletWhiteListed) ? (
-              <VStack>
-                <Mint myRef={myRef} />
-              </VStack>
-            ) : (
+            {isMintPaused || (isOnlyWhiteList && !isWalletWhiteListed) ? (
               <VStack className="preview" mb="5em">
                 <VStack className="homeCardContainer">
                   <Image className="homeCard" src={basicImage} />
                 </VStack>
               </VStack>
+            ) : (
+              <VStack>
+                <Mint myRef={myRef} />
+              </VStack>
             )}
-
             <VStack
               width={"100%"}
               background={gradients.primaryTransparent}

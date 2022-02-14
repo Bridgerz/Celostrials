@@ -34,7 +34,7 @@ const FAQ = () => {
                 fontWeight="bold"
                 textAlign={"left"}
               >
-                What are celostrials?
+                What are Celostrials?
               </Text>
               <AccordionIcon color="white" />
             </AccordionButton>
@@ -57,7 +57,7 @@ const FAQ = () => {
                 fontWeight="bold"
                 textAlign={"left"}
               >
-                How can I mint a celostrial?
+                How can I mint a Celostrial?
               </Text>
               <AccordionIcon color="white" />
             </AccordionButton>
