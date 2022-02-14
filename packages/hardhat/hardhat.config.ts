@@ -80,6 +80,7 @@ const config: HardhatUserConfig = {
     "celo-hot": {
       url: "https://forno.celo.org",
       chainId: chainIds.mainnet,
+      accounts: { mnemonic: mnemonic() },
       saveDeployments: true,
       tags: ["production", "mainnet"],
     },

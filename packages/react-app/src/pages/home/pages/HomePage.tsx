@@ -61,7 +61,6 @@ const HomePage = () => {
       }
       if (_isPaused !== undefined) {
         setIsMintPaused(_isPaused);
-        console.log("PAUSHED: ", _isPaused);
       }
       if (_isOnlyWhiteList !== undefined) {
         setIsOnlyWhiteList(_isOnlyWhiteList);

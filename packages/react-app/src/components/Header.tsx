@@ -32,6 +32,7 @@ import { Socials } from "../pages/home/pages/HomePage";
 import { faBars, faWallet } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import { useCelostrialsContract } from "../services/web3/contracts/celostrials";
+import { useInterval } from "react-use";
 
 export const Header = () => {
   const history = useHistory();
@@ -154,6 +155,16 @@ export const TotalMintedInfo = () => {
     useCelostrialsContract();
 
   const { connect, initialised, address } = useContractKit();
+
+  useInterval(async () => {
+    console.log("checking total supply");
+    const _totalSupply = Number(await getTotalSupply());
+    if (_totalSupply != undefined) {
+      setTotalSupply(
+        _totalSupply.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+      );
+    }
+  }, 2000);
 
   useEffect(() => {
     async function loadBalance() {
