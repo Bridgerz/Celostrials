@@ -47,6 +47,7 @@ export const config = {
   IPFS_JSON_CID: process.env.REACT_APP_IPFS_JSON_CID!,
   IPFS_IMAGE_CID: process.env.REACT_APP_IPFS_IMAGE_CID!,
   RARITY_URL: process.env.REACT_APP_RARITY_URL!,
+  CONTRACT_URL: process.env.REACT_APP_CONTRACT_URL!,
 };
 
 export default config;

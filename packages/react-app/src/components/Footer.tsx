@@ -4,6 +4,7 @@ import { VStack, Center } from "@chakra-ui/react";
 import { Flex } from "@chakra-ui/react";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import React, { useEffect, useState } from "react";
+import { config } from "../config";
 import colors from "../theme/foundations/colors";
 import Icon from "./Icon";
 
@@ -22,14 +23,14 @@ const Footer = ({ ...rest }: BoxProps) => {
       <VStack>
         <Text>© 2021 Celostrials. All Rights Reserved</Text>
         <Text>
-          Official Contract Address -{" "}
+          Official Contract Address:{" "}
           <Text
             as="a"
             target={"_blank"}
             fontWeight={"bold"}
-            href="https://explorer.celo.org/"
+            href={config.CONTRACT_URL}
           >
-            Coming soon!
+            {config.CELOSTRIALS_ADDRESS}
           </Text>
         </Text>
       </VStack>
