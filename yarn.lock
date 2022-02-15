@@ -1236,10 +1236,10 @@
   resolved "https://registry.yarnpkg.com/@celo-tools/celo-ethers-wrapper/-/celo-ethers-wrapper-0.0.5.tgz#a0bd4553e59c0fc4e97dcec97f719fd27dc4498b"
   integrity sha512-an5TaLv/esjQLEYtF79f8isBUtHEN+ZiHci2H4gVTEAgRgS+nSp5QCq8/LV/biAh9kJJEpojEzlxJALSKu8Klg==
 
-"@celo-tools/use-contractkit@^2.1.2":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@celo-tools/use-contractkit/-/use-contractkit-2.1.2.tgz#a98c7874bf31340cd8aa3405116e99fb18d74a28"
-  integrity sha512-7gMqYz5ukVgGhDfotzW+g1EUG/VadWaROoF5srqRVN9GNJtRAEyq0QjoKWKW09xdX3QAJyjcFTQFQKpKnw9Tig==
+"@celo-tools/use-contractkit@^2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@celo-tools/use-contractkit/-/use-contractkit-2.1.4.tgz#1461f7b8e3e24d12a2e6e0b47c22f925bbd8cec5"
+  integrity sha512-LeH9h2G2QayJEjrhqWYE7PNq9CrOthc3c8ul6eny3go+RvW7LnVq/PxtDRS8pNWBtU3AJoaZjVCIyDzGy0AqOQ==
   dependencies:
     "@celo/contractkit" "1.5.0"
     "@celo/utils" "1.5.0"
@@ -1247,8 +1247,8 @@
     "@celo/wallet-ledger" "1.5.0"
     "@celo/wallet-local" "1.5.0"
     "@celo/wallet-remote" "1.5.0"
-    "@celo/wallet-walletconnect" "2.1.2"
-    "@celo/wallet-walletconnect-v1" "2.1.2"
+    "@celo/wallet-walletconnect" "2.1.4"
+    "@celo/wallet-walletconnect-v1" "2.1.4"
     "@ethersproject/providers" "^5.3.0"
     "@ledgerhq/hw-transport-webusb" "^5.43.0"
     "@types/isomorphic-fetch" "^0.0.35"
@@ -1478,22 +1478,22 @@
     eth-lib "^0.2.8"
     ethereumjs-util "^5.2.0"
 
-"@celo/wallet-walletconnect-v1@2.1.2":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@celo/wallet-walletconnect-v1/-/wallet-walletconnect-v1-2.1.2.tgz#9756f00f52f57fbb2ff287887fdff5aaafd23423"
-  integrity sha512-dVMBO5/NZlKBS6B95Eq7qIsqzisr6hJlNQMr5TbqYfmcoIybV0FzZBz9vTnf44Q5OYOlH7tFNj4USyDA850wKQ==
+"@celo/wallet-walletconnect-v1@2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@celo/wallet-walletconnect-v1/-/wallet-walletconnect-v1-2.1.4.tgz#9cb5b8d567d3ce6df9da8155c93dd513e4b2fa17"
+  integrity sha512-ecDuwH5Bd5PwJcjvGTpEcPvqQ1ilHkcEi30cNmjpsELDQFJgtKMKW5CmQrkJ9pjQAKmvnZUqP/d/IzkqiGw0Lg==
   dependencies:
-    "@celo/wallet-walletconnect" "2.1.2"
+    "@celo/wallet-walletconnect" "2.1.4"
     "@walletconnect/client-v1" "npm:@walletconnect/client@1.6.6"
     "@walletconnect/types-v1" "npm:@walletconnect/types@1.6.6"
     "@walletconnect/utils-v1" "npm:@walletconnect/utils@1.6.6"
     debug "^4.1.1"
     ethereumjs-util "^7.0.8"
 
-"@celo/wallet-walletconnect@2.1.2":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@celo/wallet-walletconnect/-/wallet-walletconnect-2.1.2.tgz#44f6c1b640b6cfa015f9c59397f8a5ae1d1902eb"
-  integrity sha512-NHXKOouM2eiFkhJmj2ld0LcItTJZoo+kztyikZlqEXq6HTN9LItkqgxn7aytemqdRBVSSqjUhUYAP85jg9pEqg==
+"@celo/wallet-walletconnect@2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@celo/wallet-walletconnect/-/wallet-walletconnect-2.1.4.tgz#58793270367e4b65ef93944deae8dad54d962c9c"
+  integrity sha512-EvpCYPzp99PTytpcRE8vCfewTy7oevbimUCW6Qpyjao0cVWYhPWvxOHPeZazFABoDwfV0bQxxXVZHEMU8jijFw==
   dependencies:
     "@celo/connect" "1.5.0"
     "@celo/utils" "1.5.0"
