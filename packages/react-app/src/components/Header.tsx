@@ -150,9 +150,8 @@ export const Header = () => {
 export const TotalMintedInfo = () => {
   const [maxSupply, setMaxSupply] = useState("1500");
   const [totalSupply, setTotalSupply] = useState("----");
-  const [isOnlyWhiteList, setIsOnlyWhiteList] = useState(true);
-  const { getMaxSupply, getTotalSupply, onlyWhitelist } =
-    useCelostrialsContract();
+
+  const { getMaxSupply, getTotalSupply } = useCelostrialsContract();
 
   const { connect, initialised, address } = useContractKit();
 
@@ -170,8 +169,6 @@ export const TotalMintedInfo = () => {
     async function loadBalance() {
       const _maxSupply = Number(await getMaxSupply());
       const _totalSupply = Number(await getTotalSupply());
-      const _isOnlyWhiteList = await onlyWhitelist();
-      setIsOnlyWhiteList(_isOnlyWhiteList || false);
       setMaxSupply(
         _maxSupply
           ? _maxSupply.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
@@ -185,7 +182,6 @@ export const TotalMintedInfo = () => {
     }
     loadBalance();
   }, [initialised, address, connect, getMaxSupply, getTotalSupply]);
-  if (isOnlyWhiteList) return <></>;
   return (
     <HStack>
       <Text color={colors.orange.dark} fontWeight={"bold"}>

@@ -45,30 +45,8 @@ const HomePage = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { isWhiteListed, onlyWhitelist, isPaused } = useCelostrialsContract();
   const { connect, initialised, address } = useContractKit();
-  const [isWalletWhiteListed, setIsWalletWhiteListed] = useState(false);
-  const [isMintPaused, setIsMintPaused] = useState(true);
-  const [isOnlyWhiteList, setIsOnlyWhiteList] = useState(true);
 
   const myRef = useRef<null | HTMLDivElement>(null);
-
-  useEffect(() => {
-    async function loadBalance() {
-      const _isWhiteListed = await isWhiteListed();
-      const _isOnlyWhiteList = await onlyWhitelist();
-      const _isPaused = await isPaused();
-      if (_isWhiteListed !== undefined) {
-        setIsWalletWhiteListed(_isWhiteListed);
-      }
-      if (_isPaused !== undefined) {
-        setIsMintPaused(_isPaused);
-      }
-      if (_isOnlyWhiteList !== undefined) {
-        setIsOnlyWhiteList(_isOnlyWhiteList);
-      }
-    }
-
-    loadBalance();
-  }, [initialised, address, connect, isWhiteListed, onlyWhitelist]);
 
   return (
     <>
@@ -85,17 +63,10 @@ const HomePage = () => {
               />
             </HStack>
 
-            {isMintPaused || (isOnlyWhiteList && !isWalletWhiteListed) ? (
-              <VStack className="preview" mb="5em">
-                <VStack className="homeCardContainer">
-                  <Image className="homeCard" src={basicImage} />
-                </VStack>
-              </VStack>
-            ) : (
-              <VStack>
-                <Mint myRef={myRef} />
-              </VStack>
-            )}
+            <VStack>
+              <Mint myRef={myRef} />
+            </VStack>
+
             <VStack
               width={"100%"}
               background={gradients.primaryTransparent}
