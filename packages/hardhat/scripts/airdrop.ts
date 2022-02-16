@@ -36,8 +36,8 @@ async function main(): Promise<void> {
       await (
         await celostrials.transferFrom(signer.address, address, tokenID)
       ).wait();
-      tokenID++;
       console.log("📦 airdropeed ", tokenID, " to ", address);
+      tokenID++;
     } catch (e) {
       console.log("❌ Error adding: ", address);
       receipts[address] = {
