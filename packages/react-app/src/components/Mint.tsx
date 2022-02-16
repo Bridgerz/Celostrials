@@ -58,30 +58,23 @@ const Mint = ({ myRef }: any) => {
     } catch (e) {
       setLoading(false);
       const error = e as any;
-      console.log(error);
       if (error.message.includes("denied")) {
         toast({
           title: "Transaction Denied",
           status: "error",
         });
-      }
-      if (error.data)
+      } else if (error.data) {
         toast({
           title: getVMErrorMessage(error.data.message),
           status: "error",
         });
-      else {
-        let internalError = tryGetErrorMessage(error.message);
-        if (internalError)
-          toast({
-            title: internalError,
-            status: "error",
-          });
-        else
-          toast({
-            title: error.message,
-            status: "error",
-          });
+      } else {
+        toast({
+          title: "Mint Error",
+          description:
+            "Make sure you're connected to Celo and you have sufficient funds!",
+          status: "error",
+        });
       }
     }
     if (!tx) {
