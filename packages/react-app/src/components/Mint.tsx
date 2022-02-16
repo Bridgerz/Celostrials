@@ -57,6 +57,7 @@ const Mint = ({ myRef }: any) => {
       tx = await mint(amount);
     } catch (e) {
       setLoading(false);
+      console.log(e);
       const error = e as any;
       if (error.message.includes("denied")) {
         toast({
