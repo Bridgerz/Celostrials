@@ -28,7 +28,7 @@ function App() {
                   "An intergalactic collection of unique beings, found exclusively on the Celo Blockchain.",
                 url: "https://celostrials.com",
               }}
-              networks={[Alfajores, Mainnet]}
+              networks={[Mainnet]}
               network={{
                 name: prod ? Mainnet.name : Alfajores.name,
                 rpcUrl: prod ? Mainnet.rpcUrl : Alfajores.rpcUrl,
